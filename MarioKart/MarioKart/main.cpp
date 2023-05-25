@@ -12,16 +12,25 @@
 #include <util/delay.h>
 #include "DriveController\DriveControl.h"
 
+
+#define INIT_BUTTON_PORT PORTA
+#define INIT_BUTTON_PIN PINA
+
+
+
 volatile unsigned int reflexCount = 0;
+bool reflexTimeout = false;
 
 void reflex() {
 	//Interrupt fra refleks
+	if (reflexTimeout) {
+		return;
+	}
 	
-	
-	// Slukker interrupt i 1 sekund så vi ikke registrerer dobbelt.
-	cli();
+	reflexTimeout = true;
+	reflexCount++;
 	_delay_ms(100);
-	sei();
+	reflexTimeout = false;
 }
 
 ISR(INT2_vect) {
@@ -37,15 +46,8 @@ ISR(INT3_vect) {
 int main(void)
 {
     /* Replace with your application code */
-    while (1)
-    {
-		sei();
-		DriveControl controller;
+	DriveControl controller;
 		
-		controller.startDriveControl();
-		while (1)
-		{
-		}
-    }
+	controller.startDriveControl();
 }
 

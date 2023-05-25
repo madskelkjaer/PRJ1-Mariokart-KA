@@ -35,4 +35,54 @@ DriveControl::~DriveControl()
 void DriveControl::startDriveControl()
 {
 	sound_.playSound(1);
+	
+	// Vent på at bruger initialiserer kørsel med knap.
+	// Derefter kan vi lave noget sejt med lysene i nogle sekunder, ellers kører bilen jo ind i ens hånd når man trykker på knappen.
+	
+	
+	// Sæt reflekscount til 0
+	
+	// Afspil startlyd
+	// Begynd kørsel fremad i kontrolleret tempo
+	
+	// Afvent interrupt fra refleks detektor
+	// Sæt antalreflekser +1
+	// afspil reflekslyd
+	// Sæt en timeout på næste refleks detektering
+	
+	// Hvis reflekscount er 2
+	// Vi kører op af bakken. Så det skal gå lidt langsommere
+	// Sæt antalreflekser +1
+	// afspil reflekslyd
+	// Sæt en timeout på næste refleks detektering
+	
+	// Hvis reflekscount er 3, er vi på toppen af bakken
+	// Samme
+	
+	// Hvis rc er 4, så er vi forbi bakken.
+	// Samme
+	
+	// Ved rc 5 kører vi videre
+	// Samme
+	
+	// ved rc 6 bremser vi og påbegynder bak
+	// Samme
+	
+	// ved rc 7 bakker vi forbi (6).
+	// Samme
+	
+	// Rc 8 skal vi bremse og køre fremad igen.
+	// Samme
+	
+	// rc 9 kører vi forbi igen.
+	// Samme
+	
+	// rc 10 kører vi forbi
+	// Samme
+	
+	// rc 11 er vi forbi målstregen, og vi bremser.
+	
+	// afspil slutlyd
+	
+	
 }
