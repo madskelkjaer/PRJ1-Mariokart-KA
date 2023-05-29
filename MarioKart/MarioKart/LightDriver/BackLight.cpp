@@ -24,11 +24,6 @@ BackLight::BackLight()
 	PORTB=0x00;
 } //BackLight
 
-// default destructor
-BackLight::~BackLight()
-{
-} //~BackLight
-
 void BackLight::backLightDrive()
 {
 	//Giver en middelstrøm på 10mA - beregning kommer senere

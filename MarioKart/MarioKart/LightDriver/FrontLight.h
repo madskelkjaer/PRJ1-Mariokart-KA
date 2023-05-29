@@ -20,7 +20,7 @@ private:
 //functions
 public:
 	FrontLight();
-	~FrontLight();
+	FrontLight(int pin);
 	void frontLightOn();
 	void frontLightOff();
 protected:

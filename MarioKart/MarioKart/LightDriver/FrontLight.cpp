@@ -24,11 +24,6 @@ FrontLight::FrontLight()
 	PORTB=0x00;
 } //FrontLight
 
-// default destructor
-FrontLight::~FrontLight()
-{
-} //~FrontLight
-
 void FrontLight::frontLightOn()
 {
 	//Dutycycle omkring 50% - beregning kommer senere = middelstrøm på 50mA

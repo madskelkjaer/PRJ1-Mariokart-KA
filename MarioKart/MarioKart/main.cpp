@@ -12,14 +12,13 @@
 #include <util/delay.h>
 #include "DriveController\DriveControl.h"
 
-
-#define INIT_BUTTON_PORT PORTA
+#define INIT_BUTTON_DDR DDRA
 #define INIT_BUTTON_PIN PINA
 
 
 
 volatile unsigned int reflexCount = 0;
-bool reflexTimeout = false;
+volatile bool reflexTimeout = false;
 
 void reflex() {
 	//Interrupt fra refleks
@@ -33,21 +32,25 @@ void reflex() {
 	reflexTimeout = false;
 }
 
-ISR(INT2_vect) {
+ISR(INT0_vect) { // Com pin 21
 	// Reflekssensor 1
 	reflex();
 }
 
-ISR(INT3_vect) {
+ISR(INT1_vect) { // com pin 20
 	// Reflekssensor 2
 	reflex();
 }
 
 int main(void)
 {
-    /* Replace with your application code */
+	INIT_BUTTON_DDR = 0xFF;
+	
+	while ((INIT_BUTTON_PIN & 0b10000000) != 0) {}
+	
+	sei();
+
 	DriveControl controller;
-		
 	controller.startDriveControl();
 }
 

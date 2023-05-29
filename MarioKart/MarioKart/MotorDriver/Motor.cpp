@@ -13,7 +13,17 @@ Motor::Motor()
 {
 } //Motor
 
-// default destructor
-Motor::~Motor()
+void Motor::driveForward(int speed)
 {
-} //~Motor
+
+}
+
+void Motor::driveBackwards(int speed)
+{
+
+}
+
+void Motor::driveStop()
+{
+ // 0% dutycycle
+}

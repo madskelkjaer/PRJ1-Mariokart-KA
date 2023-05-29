@@ -20,7 +20,6 @@ private:
 //functions
 public:
 	BackLight();
-	~BackLight();
 	void backLightDrive();
 	void backLightBrake();
 	void backLightOff();

@@ -25,25 +25,23 @@ DriveControl::DriveControl()
 	
 	BackLight backLight;
 	backLight_ = backLight;
+	
+	Motor motor;
+	motor_ = motor;
 } //DriveControl
-
-// default destructor
-DriveControl::~DriveControl()
-{
-} //~DriveControl
 
 void DriveControl::startDriveControl()
 {
-	sound_.playSound(1);
-	
 	// Vent på at bruger initialiserer kørsel med knap.
 	// Derefter kan vi lave noget sejt med lysene i nogle sekunder, ellers kører bilen jo ind i ens hånd når man trykker på knappen.
 	
 	
-	// Sæt reflekscount til 0
-	
 	// Afspil startlyd
+	sound_.playSound(1);
 	// Begynd kørsel fremad i kontrolleret tempo
+	motor_.driveForward(100);
+	
+	
 	
 	// Afvent interrupt fra refleks detektor
 	// Sæt antalreflekser +1

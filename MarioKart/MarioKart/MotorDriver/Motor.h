@@ -20,12 +20,10 @@ private:
 //functions
 public:
 	Motor();
-	~Motor();
-protected:
+	void driveForward(int speed);
+	void driveBackwards(int speed);
+	void driveStop();
 private:
-	Motor( const Motor &c );
-	Motor& operator=( const Motor &c );
-
 }; //Motor
 
 #endif //__MOTOR_H__

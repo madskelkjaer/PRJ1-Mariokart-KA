@@ -16,6 +16,9 @@
 // ## SoundDriver ##
 #include "..\SoundDriver/Sound.h"
 
+// ## MotorDriver ""
+#include "..\MotorDriver\Motor.h"
+
 class DriveControl
 {
 //variables
@@ -25,12 +28,12 @@ private:
 	Sound sound_;
 	FrontLight frontLight_;
 	BackLight backLight_;
+	Motor motor_;
 	
 
 //functions
 public:
 	DriveControl();
-	~DriveControl();
 	void startDriveControl();
 protected:
 private:
