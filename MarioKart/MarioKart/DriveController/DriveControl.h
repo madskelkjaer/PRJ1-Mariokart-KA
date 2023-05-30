@@ -23,20 +23,16 @@ class DriveControl
 {
 //variables
 public:
-protected:
+	DriveControl();
+	void reflexController(int reflexCount);
+	void startDriveControl();
+
 private:
 	Sound sound_;
 	FrontLight frontLight_;
 	BackLight backLight_;
 	Motor motor_;
-	
-
-//functions
-public:
-	DriveControl();
-	void startDriveControl();
-protected:
-private:
+	int reflexCount_;
 }; //DriveControl
 
 #endif //__DRIVECONTROL_H__

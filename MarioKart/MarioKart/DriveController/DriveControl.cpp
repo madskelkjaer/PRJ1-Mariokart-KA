@@ -32,32 +32,25 @@ DriveControl::DriveControl()
 	motor_ = motor;
 } //DriveControl
 
+void DriveControl::reflexController(int reflexCount)
+{
+	reflexCount_ = reflexCount;
+	if (reflexCount_ >= 1 && 10 >= reflexCount_) {
+		sound_.playSound(2);
+	}
+}
+
 void DriveControl::startDriveControl()
 {
-	// Vent på at bruger initialiserer kørsel med knap.
-	// Derefter kan vi lave noget sejt med lysene i nogle sekunder, ellers kører bilen jo ind i ens hånd når man trykker på knappen.
-	
-	
 	// Afspil startlyd
 	sound_.playSound(1);
 	// Begynd kørsel fremad i kontrolleret tempo
+	_delay_ms(2500);
 	
-	_delay_ms(2000);
-	
-	sound_.playSound(2);
-	// Begynd kørsel fremad i kontrolleret tempo
-	
-	_delay_ms(2000);
-	
-	sound_.playSound(3);
-	// motor_.driveForward(100);
+	motor_.driveForward(100);
 	
 	
 	
-	// Afvent interrupt fra refleks detektor
-	// Sæt antalreflekser +1
-	// afspil reflekslyd
-	// Sæt en timeout på næste refleks detektering
 	
 	// Hvis reflekscount er 2
 	// Vi kører op af bakken. Så det skal gå lidt langsommere

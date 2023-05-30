@@ -32,27 +32,6 @@ void reflex();
 
 volatile unsigned int reflexCount = 0;
 
-void reflex() {
-	//Interrupt fra refleks
-	stopReflexSensors();
-	
-	reflexCount++;
-	PORTB = reflexCount;
-	_delay_ms(REFLEKS_TIMEOUT);
-	
-	startReflexSensors();
-}
-
-void startReflexSensors() {
-	EIMSK |= REFLEKS_ENABLE_MASK;
-	EICRA |= REFLEKS_TRIGGER_MASK;
-}
-
-void stopReflexSensors() {
-	EIMSK &= ~REFLEKS_ENABLE_MASK;
-	EICRA &= ~REFLEKS_TRIGGER_MASK;
-}
-
 ISR(REFLEKS1) { // Com pin 21
 	// Reflekssensor 1
 	reflex();
@@ -62,6 +41,11 @@ ISR(REFLEKS2) {
 	// Reflekssensor 2
 	reflex();
 }
+
+
+DriveControl controller;
+
+
 
 int main(void)
 {
@@ -77,8 +61,31 @@ int main(void)
 	
 	
 
-	DriveControl controller;
+	
 	controller.startDriveControl();
 	while(true) {};
 }
 
+
+
+void reflex() {
+	//Interrupt fra refleks
+	stopReflexSensors();
+	
+	reflexCount++;
+	controller.reflexController(reflexCount);
+	PORTB = reflexCount;
+	_delay_ms(REFLEKS_TIMEOUT);
+	
+	startReflexSensors();
+}
+
+void startReflexSensors() {
+	EIMSK |= REFLEKS_ENABLE_MASK;
+	EICRA |= REFLEKS_TRIGGER_MASK;
+}
+
+void stopReflexSensors() {
+	EIMSK &= ~REFLEKS_ENABLE_MASK;
+	EICRA &= ~REFLEKS_TRIGGER_MASK;
+}
