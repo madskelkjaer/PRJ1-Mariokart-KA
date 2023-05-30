@@ -12,18 +12,14 @@
 
 class Motor
 {
-//variables
-public:
-protected:
-private:
-
-//functions
 public:
 	Motor();
 	void driveForward(int speed);
 	void driveBackwards(int speed);
 	void driveStop();
+	void adjustSpeed(int toSpeed, int delayMS);
 private:
+	int currentSpeed_;
 }; //Motor
 
 #endif //__MOTOR_H__

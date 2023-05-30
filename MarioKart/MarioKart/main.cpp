@@ -25,6 +25,7 @@
 #define REFLEKS2 INT3_vect
 #define REFLEKS_TIMEOUT 400
 
+void ledfun();
 void awaitStartButton();
 void startReflexSensors();
 void stopReflexSensors();
@@ -52,21 +53,15 @@ int main(void)
 	DDRB = 0xFF;
 	PORTB = 0;
 	
+	awaitStartButton();
+	
 	EIMSK = EIMSK | 0b00000100;
 	EICRA |= 0b00110000;
 	sei();
-	// INIT_BUTTON_DDR = 0xFF;
-	
-	// while ((INIT_BUTTON_PIN & 0b10000000) != 0) {}
-	
-	
-
 	
 	controller.startDriveControl();
 	while(true) {};
 }
-
-
 
 void reflex() {
 	//Interrupt fra refleks
@@ -89,3 +84,32 @@ void stopReflexSensors() {
 	EIMSK &= ~REFLEKS_ENABLE_MASK;
 	EICRA &= ~REFLEKS_TRIGGER_MASK;
 }
+
+
+void awaitStartButton()
+{
+	INIT_BUTTON_DDR = 0x00;
+	while((~INIT_BUTTON_PIN & INIT_BUTTON_MASK) == 0) {}
+	ledfun();
+}
+
+void ledfun() {
+	int led = 1;
+
+	for (int i = 1; i < 100; i++)
+	{
+		PORTB = led;
+		
+		led = led << 1;
+
+		if (led > 128) {
+			led = 1;
+		}
+
+		_delay_ms(20);
+	}
+
+	PORTB = 0;
+}
+
+

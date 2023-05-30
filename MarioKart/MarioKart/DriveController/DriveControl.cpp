@@ -14,7 +14,10 @@
 #include "..\LightDriver\BackLight.h"
 
 // ## SoundDriver ##
-#include "..\SoundDriver/Sound.h"
+#include "..\SoundDriver\Sound.h"
+
+// ## MotorDriver ##
+#include "..\MotorDriver\Motor.h"
 
 // default constructor
 DriveControl::DriveControl()
@@ -38,51 +41,46 @@ void DriveControl::reflexController(int reflexCount)
 	if (reflexCount_ >= 1 && 10 >= reflexCount_) {
 		sound_.playSound(2);
 	}
+	
+	if (reflexCount_ == 11) {
+		sound_.playSound(3);
+	}
+	
+	switch (reflexCount_)
+	{
+		case 2:
+			motor_.driveForward(100);
+			break;
+		case 3:
+			motor_.driveForward(60);
+			break;
+		case 4:
+			motor_.driveForward(100);
+			break;
+		case 6:
+			motor_.driveStop();
+			motor_.driveBackwards(20);
+			break;
+		case 8:
+			motor_.driveStop();
+			motor_.driveForward(100);
+			break;
+		case 11:
+			motor_.driveStop();
+			break;
+	}
+	
 }
 
 void DriveControl::startDriveControl()
 {
+	
 	// Afspil startlyd
 	sound_.playSound(1);
 	// Begynd kørsel fremad i kontrolleret tempo
 	_delay_ms(2500);
 	
-	motor_.driveForward(100);
-	
-	
-	
-	
-	// Hvis reflekscount er 2
-	// Vi kører op af bakken. Så det skal gå lidt langsommere
-	// Sæt antalreflekser +1
-	// afspil reflekslyd
-	// Sæt en timeout på næste refleks detektering
-	
-	// Hvis reflekscount er 3, er vi på toppen af bakken
-	// Samme
-	
-	// Hvis rc er 4, så er vi forbi bakken.
-	// Samme
-	
-	// Ved rc 5 kører vi videre
-	// Samme
-	
-	// ved rc 6 bremser vi og påbegynder bak
-	// Samme
-	
-	// ved rc 7 bakker vi forbi (6).
-	// Samme
-	
-	// Rc 8 skal vi bremse og køre fremad igen.
-	// Samme
-	
-	// rc 9 kører vi forbi igen.
-	// Samme
-	
-	// rc 10 kører vi forbi
-	// Samme
-	
-	// rc 11 er vi forbi målstregen, og vi bremser.
-	
-	// afspil slutlyd	
+	frontLight_.frontLightOn();
+	backLight_.backLightDrive();
+	// motor_.driveForward(100);
 }
