@@ -12,45 +12,73 @@
 #include <util/delay.h>
 #include "DriveController\DriveControl.h"
 
+#include "SoundDriver/Sound.h"
+
+
 #define INIT_BUTTON_DDR DDRA
 #define INIT_BUTTON_PIN PINA
+#define INIT_BUTTON_MASK 0b10000000
 
+#define REFLEKS_ENABLE_MASK 0b00001100
+#define REFLEKS_TRIGGER_MASK 0b11110000
+#define REFLEKS1 INT2_vect
+#define REFLEKS2 INT3_vect
+#define REFLEKS_TIMEOUT 400
 
+void awaitStartButton();
+void startReflexSensors();
+void stopReflexSensors();
+void reflex();
 
 volatile unsigned int reflexCount = 0;
-volatile bool reflexTimeout = false;
 
 void reflex() {
 	//Interrupt fra refleks
-	if (reflexTimeout) {
-		return;
-	}
+	stopReflexSensors();
 	
-	reflexTimeout = true;
 	reflexCount++;
-	_delay_ms(100);
-	reflexTimeout = false;
+	PORTB = reflexCount;
+	_delay_ms(REFLEKS_TIMEOUT);
+	
+	startReflexSensors();
 }
 
-ISR(INT0_vect) { // Com pin 21
+void startReflexSensors() {
+	EIMSK |= REFLEKS_ENABLE_MASK;
+	EICRA |= REFLEKS_TRIGGER_MASK;
+}
+
+void stopReflexSensors() {
+	EIMSK &= ~REFLEKS_ENABLE_MASK;
+	EICRA &= ~REFLEKS_TRIGGER_MASK;
+}
+
+ISR(REFLEKS1) { // Com pin 21
 	// Reflekssensor 1
 	reflex();
 }
 
-ISR(INT1_vect) { // com pin 20
+ISR(REFLEKS2) {
 	// Reflekssensor 2
 	reflex();
 }
 
 int main(void)
 {
-	INIT_BUTTON_DDR = 0xFF;
+	DDRB = 0xFF;
+	PORTB = 0;
 	
-	while ((INIT_BUTTON_PIN & 0b10000000) != 0) {}
-	
+	EIMSK = EIMSK | 0b00000100;
+	EICRA |= 0b00110000;
 	sei();
+	// INIT_BUTTON_DDR = 0xFF;
+	
+	// while ((INIT_BUTTON_PIN & 0b10000000) != 0) {}
+	
+	
 
 	DriveControl controller;
 	controller.startDriveControl();
+	while(true) {};
 }
 

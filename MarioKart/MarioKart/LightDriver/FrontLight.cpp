@@ -27,7 +27,7 @@ FrontLight::FrontLight()
 void FrontLight::frontLightOn()
 {
 	//Dutycycle omkring 50% - beregning kommer senere = middelstrøm på 50mA
-	OCR1A = 540;
+	OCR1A = 62486;
 }
 
 void FrontLight::frontLightOff()

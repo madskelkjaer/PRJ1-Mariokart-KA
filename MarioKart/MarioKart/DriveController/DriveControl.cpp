@@ -4,6 +4,8 @@
 * Created: 25-05-2023 10:42:55
 * Author: madse
 */
+#define F_CPU 16000000
+#include <util/delay.h>
 
 #include "DriveControl.h"
 
@@ -39,7 +41,16 @@ void DriveControl::startDriveControl()
 	// Afspil startlyd
 	sound_.playSound(1);
 	// Begynd kørsel fremad i kontrolleret tempo
-	motor_.driveForward(100);
+	
+	_delay_ms(2000);
+	
+	sound_.playSound(2);
+	// Begynd kørsel fremad i kontrolleret tempo
+	
+	_delay_ms(2000);
+	
+	sound_.playSound(3);
+	// motor_.driveForward(100);
 	
 	
 	
@@ -80,7 +91,5 @@ void DriveControl::startDriveControl()
 	
 	// rc 11 er vi forbi målstregen, og vi bremser.
 	
-	// afspil slutlyd
-	
-	
+	// afspil slutlyd	
 }

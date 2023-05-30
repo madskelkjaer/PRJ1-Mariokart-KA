@@ -24,9 +24,9 @@ Data bits = 8.
 // default constructor
 UART::UART()
 {
-	UBRR1 = 104;
-	UCSR1B = 0b00011000;
-	UCSR1C = 0b00000110;
+	UBRR2 = 104;
+	UCSR2B = 0b00011000;
+	UCSR2C = 0b00000110;
 
 } //UART
 
@@ -42,7 +42,7 @@ Returns value <> 0 (TRUE), if the UART HAS received a new character.
 
 unsigned char UART::CharReady()
 {
-	return (UCSR1A & 0b10000000);
+	return (UCSR2A & 0b10000000);
 }
 
 /*************************************************************************
@@ -53,7 +53,7 @@ Then this character is returned.
 char UART::ReadChar()
 {
 	while (!CharReady()) {}
-	char Text = UDR1;
+	char Text = UDR2;
 	return Text;
 
 }
@@ -66,8 +66,8 @@ Tegn : Character for sending.
 *************************************************************************/
 void UART::SendChar(char Tegn)
 {
-	while ((UCSR1A & 0b00100000) == 0) {}
-	UDR1 = Tegn;
+	while ((UCSR2A & 0b00100000) == 0) {}
+	UDR2 = Tegn;
 
 }
 
