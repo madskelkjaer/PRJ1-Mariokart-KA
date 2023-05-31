@@ -12,25 +12,26 @@
 #include <util/delay.h>
 #include "DriveController\DriveControl.h"
 
-#include "SoundDriver/Sound.h"
-
-
+// Definerer konstanter til startknappen (Knap 7)
 #define INIT_BUTTON_DDR DDRA
 #define INIT_BUTTON_PIN PINA
 #define INIT_BUTTON_MASK 0b10000000
 
+// Definerer konstanter til reflekssensore
 #define REFLEKS_ENABLE_MASK 0b00001100
 #define REFLEKS_TRIGGER_MASK 0b11110000
 #define REFLEKS1 INT2_vect
 #define REFLEKS2 INT3_vect
 #define REFLEKS_TIMEOUT 400
 
+// Prototyper. skal de i en seperat header fil?
 void ledfun();
 void awaitStartButton();
 void startReflexSensors();
 void stopReflexSensors();
 void reflex();
 
+// Refleks tæller. Global variabel.
 volatile unsigned int reflexCount = 0;
 
 ISR(REFLEKS1) { // Com pin 21
