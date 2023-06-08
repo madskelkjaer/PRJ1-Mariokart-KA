@@ -13,19 +13,12 @@
 
 class Sound
 {
-//variables
-public:
-protected:
-private:
-	UART uart_driver_;
-
-//functions
 public:
 	Sound();
-	~Sound();
 	void playSound(int sound);
 protected:
 private:
+	UART uartDriver_;
 }; //Sound
 
 #endif //__SOUND_H__

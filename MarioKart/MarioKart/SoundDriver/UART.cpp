@@ -30,11 +30,6 @@ UART::UART()
 
 } //UART
 
-// default destructor
-UART::~UART()
-{
-} //~UART
-
 /*************************************************************************
 Returns 0 (FALSE), if the UART has NOT received a new character.
 Returns value <> 0 (TRUE), if the UART HAS received a new character.

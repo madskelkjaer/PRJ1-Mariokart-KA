@@ -12,15 +12,8 @@
 
 class UART
 {
-//variables
-public:
-protected:
-private:
-
-//functions
 public:
 	UART();
-	~UART();
 	unsigned char CharReady();
 	char ReadChar();
 	void SendChar(char Tegn);
