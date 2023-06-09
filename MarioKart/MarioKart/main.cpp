@@ -47,30 +47,9 @@ ISR(REFLEKS2) {
 
 DriveControl controller;
 
-#include "MotorDriver/Motor.h"
-
-
 int main(void)
 {	
-	Motor motortest;
-	while(true) {
-		motortest.driveForward(100);
-		
-		_delay_ms(1000);
-		
-		motortest.driveBackwards(20);
-				
-		_delay_ms(1000);
-		
-		// motortest.driveStop();
-	
-		_delay_ms(1000);
-		
-	};
-	
-	
-	
-	/* DDRB = 0xFF;
+	DDRB = 0xFF;
 	PORTB = 0;
 	
 	awaitStartButton();
@@ -80,7 +59,7 @@ int main(void)
 	sei();
 	
 	controller.startDriveControl();
-	while(true) {}; */
+	while(true) {};
 }
 
 void reflex() {

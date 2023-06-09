@@ -14,11 +14,12 @@ class Motor
 {
 public:
 	Motor();
-	void driveForward(int speed);
-	void driveBackwards(int speed);
-	void driveStop();
+	void driveForward(int speed, int delay);
+	void driveBackwards(int speed, int delay);
+	void driveStop(int delay);
 private:
-	int direction_;
+	int currentDirection_;
+	int currentSpeed_;
 }; //Motor
 
 #endif //__MOTOR_H__
