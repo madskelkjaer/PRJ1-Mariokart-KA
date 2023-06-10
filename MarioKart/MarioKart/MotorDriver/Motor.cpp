@@ -15,6 +15,7 @@
 #define MOTOR_TIMER_A TCCR0A
 #define MOTOT_TIMER_B TCCR0B
 
+// _delay_ms() kan ikke tage en variabel som delay. Derfor en for loop hvor den venter 1ms for hver iteration.
 void delay_ms(int duration_ms) {
 	for (int i = 0; i < duration_ms; i++) {
 		_delay_ms(1);

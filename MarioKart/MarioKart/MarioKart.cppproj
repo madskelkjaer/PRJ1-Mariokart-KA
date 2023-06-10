@@ -177,6 +177,9 @@
     <Compile Include="DriveController\DriveControl.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="header.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="LightDriver\BackLight.cpp">
       <SubType>compile</SubType>
     </Compile>

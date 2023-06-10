@@ -503,9 +503,9 @@ void FrontLight::frontLightOn()
  29c:	6f 3f       	cpi	r22, 0xFF	; 255
  29e:	7f 4f       	sbci	r23, 0xFF	; 255
  2a0:	19 f4       	brne	.+6      	; 0x2a8 <_Z41__static_initialization_and_destruction_0ii+0x10>
-	// Reflekssensor 2
 	reflex();
 }
+
 
 
 DriveControl controller;
@@ -549,9 +549,9 @@ void stopReflexSensors() {
  2cc:	08 95       	ret
 
 000002ce <_Z6reflexv>:
-	while(true) {};
-}
 
+
+// Funktioner
 void reflex() {
 	//Interrupt fra refleks
 	stopReflexSensors();
@@ -589,11 +589,11 @@ void reflex() {
  30e:	08 95       	ret
 
 00000310 <__vector_3>:
-void reflex();
 
 // Refleks tæller. Global variabel.
 volatile unsigned int reflexCount = 0;
 
+// Interrupts til reflekssensorerne.
 ISR(REFLEKS1) { // Com pin 21
  310:	1f 92       	push	r1
  312:	0f 92       	push	r0

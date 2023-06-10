@@ -11,6 +11,7 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 #include "DriveController\DriveControl.h"
+#include "header.h"
 
 // Definerer konstanter til startknappen (Knap 7)
 #define INIT_BUTTON_DDR DDRA
@@ -24,16 +25,10 @@
 #define REFLEKS2 INT3_vect
 #define REFLEKS_TIMEOUT 400
 
-// Prototyper. skal de i en seperat header fil?
-void ledfun();
-void awaitStartButton();
-void startReflexSensors();
-void stopReflexSensors();
-void reflex();
-
 // Refleks tæller. Global variabel.
 volatile unsigned int reflexCount = 0;
 
+// Interrupts til reflekssensorerne.
 ISR(REFLEKS1) { // Com pin 21
 	// Reflekssensor 1
 	reflex();
@@ -43,6 +38,7 @@ ISR(REFLEKS2) {
 	// Reflekssensor 2
 	reflex();
 }
+
 
 
 DriveControl controller;
@@ -62,6 +58,8 @@ int main(void)
 	while(true) {};
 }
 
+
+// Funktioner
 void reflex() {
 	//Interrupt fra refleks
 	stopReflexSensors();
