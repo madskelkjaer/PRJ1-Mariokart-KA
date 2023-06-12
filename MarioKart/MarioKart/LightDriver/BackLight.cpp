@@ -27,13 +27,13 @@ BackLight::BackLight()
 void BackLight::backLightDrive()
 {
 	//Giver en middelstrøm på 10mA - beregning kommer senere
-	OCR1B = (1023*8)/100;
+	OCR1B = 195;
 }
 
 void BackLight::backLightBrake()
 {
 	//Duty cycle at 50% - beregning kommer senere = middelstrøm på 51mA
-	OCR1B = 540;
+	OCR1B = 875;
 }
 
 void BackLight::backLightOff()

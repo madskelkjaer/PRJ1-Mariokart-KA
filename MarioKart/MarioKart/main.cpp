@@ -23,7 +23,7 @@
 #define REFLEKS_TRIGGER_MASK 0b11110000
 #define REFLEKS1 INT2_vect
 #define REFLEKS2 INT3_vect
-#define REFLEKS_TIMEOUT 400
+#define REFLEKS_TIMEOUT 800
 
 // Refleks tæller. Global variabel.
 volatile unsigned int reflexCount = 0;

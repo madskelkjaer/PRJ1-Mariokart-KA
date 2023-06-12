@@ -3,1456 +3,1604 @@ MarioKart.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000000  00800200  00800200  000007ec  2**0
+  0 .data         00000000  00800200  00800200  000008be  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         00000778  00000000  00000000  00000074  2**1
+  1 .text         0000084a  00000000  00000000  00000074  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .bss          0000000b  00800200  00800200  000007ec  2**0
+  2 .bss          0000000b  00800200  00800200  000008be  2**0
                   ALLOC
-  3 .comment      00000030  00000000  00000000  000007ec  2**0
+  3 .comment      00000030  00000000  00000000  000008be  2**0
                   CONTENTS, READONLY
-  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000081c  2**2
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000008f0  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 000001b0  00000000  00000000  0000085c  2**0
+  5 .debug_aranges 000001b0  00000000  00000000  00000930  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00002c62  00000000  00000000  00000a0c  2**0
+  6 .debug_info   00002e24  00000000  00000000  00000ae0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00001686  00000000  00000000  0000366e  2**0
+  7 .debug_abbrev 00001686  00000000  00000000  00003904  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000efc  00000000  00000000  00004cf4  2**0
+  8 .debug_line   00000f68  00000000  00000000  00004f8a  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  0000041c  00000000  00000000  00005bf0  2**2
+  9 .debug_frame  00000424  00000000  00000000  00005ef4  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000bc8  00000000  00000000  0000600c  2**0
+ 10 .debug_str    00000bc8  00000000  00000000  00006318  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000d29  00000000  00000000  00006bd4  2**0
+ 11 .debug_loc    00000d43  00000000  00000000  00006ee0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000158  00000000  00000000  000078fd  2**0
+ 12 .debug_ranges 00000158  00000000  00000000  00007c23  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
-   0:	72 c0       	rjmp	.+228    	; 0xe6 <__ctors_end>
+   0:	7d c0       	rjmp	.+250    	; 0xfc <__ctors_end>
    2:	00 00       	nop
-   4:	91 c0       	rjmp	.+290    	; 0x128 <__bad_interrupt>
+   4:	9c c0       	rjmp	.+312    	; 0x13e <__bad_interrupt>
    6:	00 00       	nop
-   8:	8f c0       	rjmp	.+286    	; 0x128 <__bad_interrupt>
+   8:	9a c0       	rjmp	.+308    	; 0x13e <__bad_interrupt>
    a:	00 00       	nop
-   c:	81 c1       	rjmp	.+770    	; 0x310 <__vector_3>
+   c:	ea c1       	rjmp	.+980    	; 0x3e2 <__vector_3>
    e:	00 00       	nop
-  10:	a6 c1       	rjmp	.+844    	; 0x35e <__vector_4>
+  10:	0f c2       	rjmp	.+1054   	; 0x430 <__vector_4>
   12:	00 00       	nop
-  14:	89 c0       	rjmp	.+274    	; 0x128 <__bad_interrupt>
+  14:	94 c0       	rjmp	.+296    	; 0x13e <__bad_interrupt>
   16:	00 00       	nop
-  18:	87 c0       	rjmp	.+270    	; 0x128 <__bad_interrupt>
+  18:	92 c0       	rjmp	.+292    	; 0x13e <__bad_interrupt>
   1a:	00 00       	nop
-  1c:	85 c0       	rjmp	.+266    	; 0x128 <__bad_interrupt>
+  1c:	90 c0       	rjmp	.+288    	; 0x13e <__bad_interrupt>
   1e:	00 00       	nop
-  20:	83 c0       	rjmp	.+262    	; 0x128 <__bad_interrupt>
+  20:	8e c0       	rjmp	.+284    	; 0x13e <__bad_interrupt>
   22:	00 00       	nop
-  24:	81 c0       	rjmp	.+258    	; 0x128 <__bad_interrupt>
+  24:	8c c0       	rjmp	.+280    	; 0x13e <__bad_interrupt>
   26:	00 00       	nop
-  28:	7f c0       	rjmp	.+254    	; 0x128 <__bad_interrupt>
+  28:	8a c0       	rjmp	.+276    	; 0x13e <__bad_interrupt>
   2a:	00 00       	nop
-  2c:	7d c0       	rjmp	.+250    	; 0x128 <__bad_interrupt>
+  2c:	88 c0       	rjmp	.+272    	; 0x13e <__bad_interrupt>
   2e:	00 00       	nop
-  30:	7b c0       	rjmp	.+246    	; 0x128 <__bad_interrupt>
+  30:	86 c0       	rjmp	.+268    	; 0x13e <__bad_interrupt>
   32:	00 00       	nop
-  34:	79 c0       	rjmp	.+242    	; 0x128 <__bad_interrupt>
+  34:	84 c0       	rjmp	.+264    	; 0x13e <__bad_interrupt>
   36:	00 00       	nop
-  38:	77 c0       	rjmp	.+238    	; 0x128 <__bad_interrupt>
+  38:	82 c0       	rjmp	.+260    	; 0x13e <__bad_interrupt>
   3a:	00 00       	nop
-  3c:	75 c0       	rjmp	.+234    	; 0x128 <__bad_interrupt>
+  3c:	80 c0       	rjmp	.+256    	; 0x13e <__bad_interrupt>
   3e:	00 00       	nop
-  40:	73 c0       	rjmp	.+230    	; 0x128 <__bad_interrupt>
+  40:	7e c0       	rjmp	.+252    	; 0x13e <__bad_interrupt>
   42:	00 00       	nop
-  44:	71 c0       	rjmp	.+226    	; 0x128 <__bad_interrupt>
+  44:	7c c0       	rjmp	.+248    	; 0x13e <__bad_interrupt>
   46:	00 00       	nop
-  48:	6f c0       	rjmp	.+222    	; 0x128 <__bad_interrupt>
+  48:	7a c0       	rjmp	.+244    	; 0x13e <__bad_interrupt>
   4a:	00 00       	nop
-  4c:	6d c0       	rjmp	.+218    	; 0x128 <__bad_interrupt>
+  4c:	78 c0       	rjmp	.+240    	; 0x13e <__bad_interrupt>
   4e:	00 00       	nop
-  50:	6b c0       	rjmp	.+214    	; 0x128 <__bad_interrupt>
+  50:	76 c0       	rjmp	.+236    	; 0x13e <__bad_interrupt>
   52:	00 00       	nop
-  54:	69 c0       	rjmp	.+210    	; 0x128 <__bad_interrupt>
+  54:	74 c0       	rjmp	.+232    	; 0x13e <__bad_interrupt>
   56:	00 00       	nop
-  58:	67 c0       	rjmp	.+206    	; 0x128 <__bad_interrupt>
+  58:	72 c0       	rjmp	.+228    	; 0x13e <__bad_interrupt>
   5a:	00 00       	nop
-  5c:	65 c0       	rjmp	.+202    	; 0x128 <__bad_interrupt>
+  5c:	70 c0       	rjmp	.+224    	; 0x13e <__bad_interrupt>
   5e:	00 00       	nop
-  60:	63 c0       	rjmp	.+198    	; 0x128 <__bad_interrupt>
+  60:	6e c0       	rjmp	.+220    	; 0x13e <__bad_interrupt>
   62:	00 00       	nop
-  64:	61 c0       	rjmp	.+194    	; 0x128 <__bad_interrupt>
+  64:	6c c0       	rjmp	.+216    	; 0x13e <__bad_interrupt>
   66:	00 00       	nop
-  68:	5f c0       	rjmp	.+190    	; 0x128 <__bad_interrupt>
+  68:	6a c0       	rjmp	.+212    	; 0x13e <__bad_interrupt>
   6a:	00 00       	nop
-  6c:	5d c0       	rjmp	.+186    	; 0x128 <__bad_interrupt>
+  6c:	68 c0       	rjmp	.+208    	; 0x13e <__bad_interrupt>
   6e:	00 00       	nop
-  70:	5b c0       	rjmp	.+182    	; 0x128 <__bad_interrupt>
+  70:	66 c0       	rjmp	.+204    	; 0x13e <__bad_interrupt>
   72:	00 00       	nop
-  74:	59 c0       	rjmp	.+178    	; 0x128 <__bad_interrupt>
+  74:	64 c0       	rjmp	.+200    	; 0x13e <__bad_interrupt>
   76:	00 00       	nop
-  78:	57 c0       	rjmp	.+174    	; 0x128 <__bad_interrupt>
+  78:	62 c0       	rjmp	.+196    	; 0x13e <__bad_interrupt>
   7a:	00 00       	nop
-  7c:	55 c0       	rjmp	.+170    	; 0x128 <__bad_interrupt>
+  7c:	60 c0       	rjmp	.+192    	; 0x13e <__bad_interrupt>
   7e:	00 00       	nop
-  80:	53 c0       	rjmp	.+166    	; 0x128 <__bad_interrupt>
+  80:	5e c0       	rjmp	.+188    	; 0x13e <__bad_interrupt>
   82:	00 00       	nop
-  84:	51 c0       	rjmp	.+162    	; 0x128 <__bad_interrupt>
+  84:	5c c0       	rjmp	.+184    	; 0x13e <__bad_interrupt>
   86:	00 00       	nop
-  88:	4f c0       	rjmp	.+158    	; 0x128 <__bad_interrupt>
+  88:	5a c0       	rjmp	.+180    	; 0x13e <__bad_interrupt>
   8a:	00 00       	nop
-  8c:	4d c0       	rjmp	.+154    	; 0x128 <__bad_interrupt>
+  8c:	58 c0       	rjmp	.+176    	; 0x13e <__bad_interrupt>
   8e:	00 00       	nop
-  90:	4b c0       	rjmp	.+150    	; 0x128 <__bad_interrupt>
+  90:	56 c0       	rjmp	.+172    	; 0x13e <__bad_interrupt>
   92:	00 00       	nop
-  94:	49 c0       	rjmp	.+146    	; 0x128 <__bad_interrupt>
+  94:	54 c0       	rjmp	.+168    	; 0x13e <__bad_interrupt>
   96:	00 00       	nop
-  98:	47 c0       	rjmp	.+142    	; 0x128 <__bad_interrupt>
+  98:	52 c0       	rjmp	.+164    	; 0x13e <__bad_interrupt>
   9a:	00 00       	nop
-  9c:	45 c0       	rjmp	.+138    	; 0x128 <__bad_interrupt>
+  9c:	50 c0       	rjmp	.+160    	; 0x13e <__bad_interrupt>
   9e:	00 00       	nop
-  a0:	43 c0       	rjmp	.+134    	; 0x128 <__bad_interrupt>
+  a0:	4e c0       	rjmp	.+156    	; 0x13e <__bad_interrupt>
   a2:	00 00       	nop
-  a4:	41 c0       	rjmp	.+130    	; 0x128 <__bad_interrupt>
+  a4:	4c c0       	rjmp	.+152    	; 0x13e <__bad_interrupt>
   a6:	00 00       	nop
-  a8:	3f c0       	rjmp	.+126    	; 0x128 <__bad_interrupt>
+  a8:	4a c0       	rjmp	.+148    	; 0x13e <__bad_interrupt>
   aa:	00 00       	nop
-  ac:	3d c0       	rjmp	.+122    	; 0x128 <__bad_interrupt>
+  ac:	48 c0       	rjmp	.+144    	; 0x13e <__bad_interrupt>
   ae:	00 00       	nop
-  b0:	3b c0       	rjmp	.+118    	; 0x128 <__bad_interrupt>
+  b0:	46 c0       	rjmp	.+140    	; 0x13e <__bad_interrupt>
   b2:	00 00       	nop
-  b4:	39 c0       	rjmp	.+114    	; 0x128 <__bad_interrupt>
+  b4:	44 c0       	rjmp	.+136    	; 0x13e <__bad_interrupt>
   b6:	00 00       	nop
-  b8:	37 c0       	rjmp	.+110    	; 0x128 <__bad_interrupt>
+  b8:	42 c0       	rjmp	.+132    	; 0x13e <__bad_interrupt>
   ba:	00 00       	nop
-  bc:	35 c0       	rjmp	.+106    	; 0x128 <__bad_interrupt>
+  bc:	40 c0       	rjmp	.+128    	; 0x13e <__bad_interrupt>
   be:	00 00       	nop
-  c0:	33 c0       	rjmp	.+102    	; 0x128 <__bad_interrupt>
+  c0:	3e c0       	rjmp	.+124    	; 0x13e <__bad_interrupt>
   c2:	00 00       	nop
-  c4:	31 c0       	rjmp	.+98     	; 0x128 <__bad_interrupt>
+  c4:	3c c0       	rjmp	.+120    	; 0x13e <__bad_interrupt>
   c6:	00 00       	nop
-  c8:	2f c0       	rjmp	.+94     	; 0x128 <__bad_interrupt>
+  c8:	3a c0       	rjmp	.+116    	; 0x13e <__bad_interrupt>
   ca:	00 00       	nop
-  cc:	2d c0       	rjmp	.+90     	; 0x128 <__bad_interrupt>
+  cc:	38 c0       	rjmp	.+112    	; 0x13e <__bad_interrupt>
   ce:	00 00       	nop
-  d0:	2b c0       	rjmp	.+86     	; 0x128 <__bad_interrupt>
+  d0:	36 c0       	rjmp	.+108    	; 0x13e <__bad_interrupt>
   d2:	00 00       	nop
-  d4:	29 c0       	rjmp	.+82     	; 0x128 <__bad_interrupt>
+  d4:	34 c0       	rjmp	.+104    	; 0x13e <__bad_interrupt>
   d6:	00 00       	nop
-  d8:	27 c0       	rjmp	.+78     	; 0x128 <__bad_interrupt>
+  d8:	32 c0       	rjmp	.+100    	; 0x13e <__bad_interrupt>
   da:	00 00       	nop
-  dc:	25 c0       	rjmp	.+74     	; 0x128 <__bad_interrupt>
+  dc:	30 c0       	rjmp	.+96     	; 0x13e <__bad_interrupt>
   de:	00 00       	nop
-  e0:	23 c0       	rjmp	.+70     	; 0x128 <__bad_interrupt>
-	...
+  e0:	2e c0       	rjmp	.+92     	; 0x13e <__bad_interrupt>
+  e2:	00 00       	nop
+  e4:	fa 00       	.word	0x00fa	; ????
+  e6:	01 01       	movw	r0, r2
+  e8:	09 01       	movw	r0, r18
+  ea:	11 01       	movw	r2, r2
+  ec:	19 01       	movw	r2, r18
+  ee:	21 01       	movw	r4, r2
+  f0:	5e 01       	movw	r10, r28
+  f2:	34 01       	movw	r6, r8
+  f4:	5e 01       	movw	r10, r28
+  f6:	47 01       	movw	r8, r14
+  f8:	4f 01       	movw	r8, r30
 
-000000e4 <__ctors_start>:
-  e4:	09 02       	muls	r16, r25
+000000fa <__ctors_start>:
+  fa:	72 02       	muls	r23, r18
 
-000000e6 <__ctors_end>:
-  e6:	11 24       	eor	r1, r1
-  e8:	1f be       	out	0x3f, r1	; 63
-  ea:	cf ef       	ldi	r28, 0xFF	; 255
-  ec:	d1 e2       	ldi	r29, 0x21	; 33
-  ee:	de bf       	out	0x3e, r29	; 62
-  f0:	cd bf       	out	0x3d, r28	; 61
-  f2:	00 e0       	ldi	r16, 0x00	; 0
-  f4:	0c bf       	out	0x3c, r16	; 60
+000000fc <__ctors_end>:
+  fc:	11 24       	eor	r1, r1
+  fe:	1f be       	out	0x3f, r1	; 63
+ 100:	cf ef       	ldi	r28, 0xFF	; 255
+ 102:	d1 e2       	ldi	r29, 0x21	; 33
+ 104:	de bf       	out	0x3e, r29	; 62
+ 106:	cd bf       	out	0x3d, r28	; 61
+ 108:	00 e0       	ldi	r16, 0x00	; 0
+ 10a:	0c bf       	out	0x3c, r16	; 60
 
-000000f6 <__do_clear_bss>:
-  f6:	22 e0       	ldi	r18, 0x02	; 2
-  f8:	a0 e0       	ldi	r26, 0x00	; 0
-  fa:	b2 e0       	ldi	r27, 0x02	; 2
-  fc:	01 c0       	rjmp	.+2      	; 0x100 <.do_clear_bss_start>
+0000010c <__do_clear_bss>:
+ 10c:	22 e0       	ldi	r18, 0x02	; 2
+ 10e:	a0 e0       	ldi	r26, 0x00	; 0
+ 110:	b2 e0       	ldi	r27, 0x02	; 2
+ 112:	01 c0       	rjmp	.+2      	; 0x116 <.do_clear_bss_start>
 
-000000fe <.do_clear_bss_loop>:
-  fe:	1d 92       	st	X+, r1
+00000114 <.do_clear_bss_loop>:
+ 114:	1d 92       	st	X+, r1
 
-00000100 <.do_clear_bss_start>:
- 100:	ab 30       	cpi	r26, 0x0B	; 11
- 102:	b2 07       	cpc	r27, r18
- 104:	e1 f7       	brne	.-8      	; 0xfe <.do_clear_bss_loop>
+00000116 <.do_clear_bss_start>:
+ 116:	ab 30       	cpi	r26, 0x0B	; 11
+ 118:	b2 07       	cpc	r27, r18
+ 11a:	e1 f7       	brne	.-8      	; 0x114 <.do_clear_bss_loop>
 
-00000106 <__do_global_ctors>:
- 106:	10 e0       	ldi	r17, 0x00	; 0
- 108:	c3 e7       	ldi	r28, 0x73	; 115
- 10a:	d0 e0       	ldi	r29, 0x00	; 0
- 10c:	00 e0       	ldi	r16, 0x00	; 0
- 10e:	05 c0       	rjmp	.+10     	; 0x11a <__do_global_ctors+0x14>
- 110:	21 97       	sbiw	r28, 0x01	; 1
- 112:	01 09       	sbc	r16, r1
- 114:	80 2f       	mov	r24, r16
- 116:	fe 01       	movw	r30, r28
- 118:	25 d3       	rcall	.+1610   	; 0x764 <__tablejump2__>
- 11a:	c2 37       	cpi	r28, 0x72	; 114
- 11c:	d1 07       	cpc	r29, r17
- 11e:	80 e0       	ldi	r24, 0x00	; 0
- 120:	08 07       	cpc	r16, r24
- 122:	b1 f7       	brne	.-20     	; 0x110 <__do_global_ctors+0xa>
- 124:	65 d1       	rcall	.+714    	; 0x3f0 <main>
- 126:	26 c3       	rjmp	.+1612   	; 0x774 <_exit>
+0000011c <__do_global_ctors>:
+ 11c:	10 e0       	ldi	r17, 0x00	; 0
+ 11e:	ce e7       	ldi	r28, 0x7E	; 126
+ 120:	d0 e0       	ldi	r29, 0x00	; 0
+ 122:	00 e0       	ldi	r16, 0x00	; 0
+ 124:	05 c0       	rjmp	.+10     	; 0x130 <__do_global_ctors+0x14>
+ 126:	21 97       	sbiw	r28, 0x01	; 1
+ 128:	01 09       	sbc	r16, r1
+ 12a:	80 2f       	mov	r24, r16
+ 12c:	fe 01       	movw	r30, r28
+ 12e:	83 d3       	rcall	.+1798   	; 0x836 <__tablejump2__>
+ 130:	cd 37       	cpi	r28, 0x7D	; 125
+ 132:	d1 07       	cpc	r29, r17
+ 134:	80 e0       	ldi	r24, 0x00	; 0
+ 136:	08 07       	cpc	r16, r24
+ 138:	b1 f7       	brne	.-20     	; 0x126 <__do_global_ctors+0xa>
+ 13a:	c3 d1       	rcall	.+902    	; 0x4c2 <main>
+ 13c:	84 c3       	rjmp	.+1800   	; 0x846 <_exit>
 
-00000128 <__bad_interrupt>:
- 128:	6b cf       	rjmp	.-298    	; 0x0 <__vectors>
+0000013e <__bad_interrupt>:
+ 13e:	60 cf       	rjmp	.-320    	; 0x0 <__vectors>
 
-0000012a <_ZN12DriveControlC1Ev>:
+00000140 <_ZN12DriveControlC1Ev>:
 
 // ## MotorDriver ##
 #include "..\MotorDriver\Motor.h"
 
 // default constructor
 DriveControl::DriveControl()
- 12a:	0f 93       	push	r16
- 12c:	1f 93       	push	r17
- 12e:	cf 93       	push	r28
- 130:	df 93       	push	r29
- 132:	cd b7       	in	r28, 0x3d	; 61
- 134:	de b7       	in	r29, 0x3e	; 62
- 136:	27 97       	sbiw	r28, 0x07	; 7
- 138:	0f b6       	in	r0, 0x3f	; 63
- 13a:	f8 94       	cli
- 13c:	de bf       	out	0x3e, r29	; 62
- 13e:	0f be       	out	0x3f, r0	; 63
- 140:	cd bf       	out	0x3d, r28	; 61
- 142:	8c 01       	movw	r16, r24
- 144:	5e d2       	rcall	.+1212   	; 0x602 <_ZN5SoundC1Ev>
- 146:	c8 01       	movw	r24, r16
- 148:	01 96       	adiw	r24, 0x01	; 1
- 14a:	95 d0       	rcall	.+298    	; 0x276 <_ZN10FrontLightC1Ev>
- 14c:	c8 01       	movw	r24, r16
- 14e:	02 96       	adiw	r24, 0x02	; 2
- 150:	81 d0       	rcall	.+258    	; 0x254 <_ZN9BackLightC1Ev>
- 152:	c8 01       	movw	r24, r16
- 154:	03 96       	adiw	r24, 0x03	; 3
- 156:	72 d1       	rcall	.+740    	; 0x43c <_ZN5MotorC1Ev>
+ 140:	0f 93       	push	r16
+ 142:	1f 93       	push	r17
+ 144:	cf 93       	push	r28
+ 146:	df 93       	push	r29
+ 148:	cd b7       	in	r28, 0x3d	; 61
+ 14a:	de b7       	in	r29, 0x3e	; 62
+ 14c:	27 97       	sbiw	r28, 0x07	; 7
+ 14e:	0f b6       	in	r0, 0x3f	; 63
+ 150:	f8 94       	cli
+ 152:	de bf       	out	0x3e, r29	; 62
+ 154:	0f be       	out	0x3f, r0	; 63
+ 156:	cd bf       	out	0x3d, r28	; 61
+ 158:	8c 01       	movw	r16, r24
+ 15a:	bc d2       	rcall	.+1400   	; 0x6d4 <_ZN5SoundC1Ev>
+ 15c:	c8 01       	movw	r24, r16
+ 15e:	01 96       	adiw	r24, 0x01	; 1
+ 160:	ee d0       	rcall	.+476    	; 0x33e <_ZN10FrontLightC1Ev>
+ 162:	c8 01       	movw	r24, r16
+ 164:	02 96       	adiw	r24, 0x02	; 2
+ 166:	ce d0       	rcall	.+412    	; 0x304 <_ZN9BackLightC1Ev>
+ 168:	c8 01       	movw	r24, r16
+ 16a:	03 96       	adiw	r24, 0x03	; 3
+ 16c:	d0 d1       	rcall	.+928    	; 0x50e <_ZN5MotorC1Ev>
 {
 	Sound sound;
- 158:	ce 01       	movw	r24, r28
- 15a:	07 96       	adiw	r24, 0x07	; 7
- 15c:	52 d2       	rcall	.+1188   	; 0x602 <_ZN5SoundC1Ev>
+ 16e:	ce 01       	movw	r24, r28
+ 170:	07 96       	adiw	r24, 0x07	; 7
+ 172:	b0 d2       	rcall	.+1376   	; 0x6d4 <_ZN5SoundC1Ev>
 	sound_ = sound;
 	
 	FrontLight frontLight;
- 15e:	ce 01       	movw	r24, r28
- 160:	06 96       	adiw	r24, 0x06	; 6
- 162:	89 d0       	rcall	.+274    	; 0x276 <_ZN10FrontLightC1Ev>
+ 174:	ce 01       	movw	r24, r28
+ 176:	06 96       	adiw	r24, 0x06	; 6
+ 178:	e2 d0       	rcall	.+452    	; 0x33e <_ZN10FrontLightC1Ev>
 	frontLight_ = frontLight;
 	
 	BackLight backLight;
- 164:	ce 01       	movw	r24, r28
- 166:	05 96       	adiw	r24, 0x05	; 5
- 168:	75 d0       	rcall	.+234    	; 0x254 <_ZN9BackLightC1Ev>
- 16a:	ce 01       	movw	r24, r28
+ 17a:	ce 01       	movw	r24, r28
+ 17c:	05 96       	adiw	r24, 0x05	; 5
+ 17e:	c2 d0       	rcall	.+388    	; 0x304 <_ZN9BackLightC1Ev>
+ 180:	ce 01       	movw	r24, r28
 	backLight_ = backLight;
 	
 	Motor motor;
- 16c:	01 96       	adiw	r24, 0x01	; 1
- 16e:	66 d1       	rcall	.+716    	; 0x43c <_ZN5MotorC1Ev>
- 170:	89 81       	ldd	r24, Y+1	; 0x01
- 172:	9a 81       	ldd	r25, Y+2	; 0x02
+ 182:	01 96       	adiw	r24, 0x01	; 1
+ 184:	c4 d1       	rcall	.+904    	; 0x50e <_ZN5MotorC1Ev>
+ 186:	89 81       	ldd	r24, Y+1	; 0x01
+ 188:	9a 81       	ldd	r25, Y+2	; 0x02
 	motor_ = motor;
- 174:	ab 81       	ldd	r26, Y+3	; 0x03
- 176:	bc 81       	ldd	r27, Y+4	; 0x04
- 178:	f8 01       	movw	r30, r16
- 17a:	83 83       	std	Z+3, r24	; 0x03
- 17c:	94 83       	std	Z+4, r25	; 0x04
- 17e:	a5 83       	std	Z+5, r26	; 0x05
- 180:	b6 83       	std	Z+6, r27	; 0x06
- 182:	27 96       	adiw	r28, 0x07	; 7
- 184:	0f b6       	in	r0, 0x3f	; 63
+ 18a:	ab 81       	ldd	r26, Y+3	; 0x03
+ 18c:	bc 81       	ldd	r27, Y+4	; 0x04
+ 18e:	f8 01       	movw	r30, r16
+ 190:	83 83       	std	Z+3, r24	; 0x03
+ 192:	94 83       	std	Z+4, r25	; 0x04
+ 194:	a5 83       	std	Z+5, r26	; 0x05
+ 196:	b6 83       	std	Z+6, r27	; 0x06
+ 198:	27 96       	adiw	r28, 0x07	; 7
+ 19a:	0f b6       	in	r0, 0x3f	; 63
 } //DriveControl
- 186:	f8 94       	cli
- 188:	de bf       	out	0x3e, r29	; 62
- 18a:	0f be       	out	0x3f, r0	; 63
- 18c:	cd bf       	out	0x3d, r28	; 61
- 18e:	df 91       	pop	r29
- 190:	cf 91       	pop	r28
- 192:	1f 91       	pop	r17
- 194:	0f 91       	pop	r16
- 196:	08 95       	ret
+ 19c:	f8 94       	cli
+ 19e:	de bf       	out	0x3e, r29	; 62
+ 1a0:	0f be       	out	0x3f, r0	; 63
+ 1a2:	cd bf       	out	0x3d, r28	; 61
+ 1a4:	df 91       	pop	r29
+ 1a6:	cf 91       	pop	r28
+ 1a8:	1f 91       	pop	r17
+ 1aa:	0f 91       	pop	r16
+ 1ac:	08 95       	ret
 
-00000198 <_ZN12DriveControl16reflexControllerEi>:
- 198:	cf 93       	push	r28
- 19a:	df 93       	push	r29
+000001ae <_ZN12DriveControl16reflexControllerEi>:
+ 1ae:	0f 93       	push	r16
+ 1b0:	1f 93       	push	r17
 
 void DriveControl::reflexController(int reflexCount)
 {
- 19c:	ec 01       	movw	r28, r24
+ 1b2:	cf 93       	push	r28
+ 1b4:	df 93       	push	r29
+ 1b6:	ec 01       	movw	r28, r24
 	reflexCount_ = reflexCount;
- 19e:	78 87       	std	Y+8, r23	; 0x08
- 1a0:	6f 83       	std	Y+7, r22	; 0x07
+ 1b8:	78 87       	std	Y+8, r23	; 0x08
+ 1ba:	6f 83       	std	Y+7, r22	; 0x07
 	if (reflexCount_ >= 1 && 10 >= reflexCount_) {
- 1a2:	61 50       	subi	r22, 0x01	; 1
- 1a4:	71 09       	sbc	r23, r1
- 1a6:	6a 30       	cpi	r22, 0x0A	; 10
- 1a8:	71 05       	cpc	r23, r1
- 1aa:	18 f4       	brcc	.+6      	; 0x1b2 <_ZN12DriveControl16reflexControllerEi+0x1a>
+ 1bc:	61 50       	subi	r22, 0x01	; 1
+ 1be:	71 09       	sbc	r23, r1
+ 1c0:	6a 30       	cpi	r22, 0x0A	; 10
+ 1c2:	71 05       	cpc	r23, r1
+ 1c4:	18 f4       	brcc	.+6      	; 0x1cc <_ZN12DriveControl16reflexControllerEi+0x1e>
 		sound_.playSound(2);
- 1ac:	62 e0       	ldi	r22, 0x02	; 2
- 1ae:	70 e0       	ldi	r23, 0x00	; 0
- 1b0:	6a d2       	rcall	.+1236   	; 0x686 <_ZN5Sound9playSoundEi>
+ 1c6:	62 e0       	ldi	r22, 0x02	; 2
+ 1c8:	70 e0       	ldi	r23, 0x00	; 0
+ 1ca:	c6 d2       	rcall	.+1420   	; 0x758 <_ZN5Sound9playSoundEi>
 	}
 	
 	if (reflexCount_ == 11) {
- 1b2:	8f 81       	ldd	r24, Y+7	; 0x07
- 1b4:	98 85       	ldd	r25, Y+8	; 0x08
- 1b6:	0b 97       	sbiw	r24, 0x0b	; 11
- 1b8:	21 f4       	brne	.+8      	; 0x1c2 <_ZN12DriveControl16reflexControllerEi+0x2a>
+ 1cc:	8f 81       	ldd	r24, Y+7	; 0x07
+ 1ce:	98 85       	ldd	r25, Y+8	; 0x08
+ 1d0:	0b 97       	sbiw	r24, 0x0b	; 11
+ 1d2:	21 f4       	brne	.+8      	; 0x1dc <_ZN12DriveControl16reflexControllerEi+0x2e>
 		sound_.playSound(3);
- 1ba:	63 e0       	ldi	r22, 0x03	; 3
- 1bc:	70 e0       	ldi	r23, 0x00	; 0
- 1be:	ce 01       	movw	r24, r28
- 1c0:	62 d2       	rcall	.+1220   	; 0x686 <_ZN5Sound9playSoundEi>
+ 1d4:	63 e0       	ldi	r22, 0x03	; 3
+ 1d6:	70 e0       	ldi	r23, 0x00	; 0
+ 1d8:	ce 01       	movw	r24, r28
+ 1da:	be d2       	rcall	.+1404   	; 0x758 <_ZN5Sound9playSoundEi>
 	}
 	
 	switch (reflexCount_)
- 1c2:	8f 81       	ldd	r24, Y+7	; 0x07
- 1c4:	98 85       	ldd	r25, Y+8	; 0x08
- 1c6:	88 30       	cpi	r24, 0x08	; 8
- 1c8:	91 05       	cpc	r25, r1
- 1ca:	89 f0       	breq	.+34     	; 0x1ee <_ZN12DriveControl16reflexControllerEi+0x56>
- 1cc:	8b 30       	cpi	r24, 0x0B	; 11
- 1ce:	91 05       	cpc	r25, r1
- 1d0:	d1 f0       	breq	.+52     	; 0x206 <_ZN12DriveControl16reflexControllerEi+0x6e>
- 1d2:	06 97       	sbiw	r24, 0x06	; 6
- 1d4:	e9 f4       	brne	.+58     	; 0x210 <_ZN12DriveControl16reflexControllerEi+0x78>
-		case 3:
-			break;
-		case 4:
-			break;
-		case 6:
-			motor_.driveStop(8);
- 1d6:	23 96       	adiw	r28, 0x03	; 3
- 1d8:	68 e0       	ldi	r22, 0x08	; 8
- 1da:	70 e0       	ldi	r23, 0x00	; 0
- 1dc:	ce 01       	movw	r24, r28
- 1de:	03 d2       	rcall	.+1030   	; 0x5e6 <_ZN5Motor9driveStopEi>
-			motor_.driveBackwards(80, 10);
- 1e0:	4a e0       	ldi	r20, 0x0A	; 10
- 1e2:	50 e0       	ldi	r21, 0x00	; 0
- 1e4:	60 e5       	ldi	r22, 0x50	; 80
- 1e6:	70 e0       	ldi	r23, 0x00	; 0
- 1e8:	ce 01       	movw	r24, r28
- 1ea:	46 d1       	rcall	.+652    	; 0x478 <_ZN5Motor14driveBackwardsEii>
-			break;
- 1ec:	11 c0       	rjmp	.+34     	; 0x210 <_ZN12DriveControl16reflexControllerEi+0x78>
-		case 8:
-			motor_.driveStop(8);
- 1ee:	23 96       	adiw	r28, 0x03	; 3
- 1f0:	68 e0       	ldi	r22, 0x08	; 8
- 1f2:	70 e0       	ldi	r23, 0x00	; 0
- 1f4:	ce 01       	movw	r24, r28
- 1f6:	f7 d1       	rcall	.+1006   	; 0x5e6 <_ZN5Motor9driveStopEi>
-			motor_.driveForward(100, 20);
- 1f8:	44 e1       	ldi	r20, 0x14	; 20
- 1fa:	50 e0       	ldi	r21, 0x00	; 0
- 1fc:	64 e6       	ldi	r22, 0x64	; 100
- 1fe:	70 e0       	ldi	r23, 0x00	; 0
- 200:	ce 01       	movw	r24, r28
- 202:	95 d1       	rcall	.+810    	; 0x52e <_ZN5Motor12driveForwardEii>
-			break;
- 204:	05 c0       	rjmp	.+10     	; 0x210 <_ZN12DriveControl16reflexControllerEi+0x78>
-		case 11:
-			motor_.driveStop(8);
- 206:	68 e0       	ldi	r22, 0x08	; 8
+ 1dc:	ef 81       	ldd	r30, Y+7	; 0x07
+ 1de:	f8 85       	ldd	r31, Y+8	; 0x08
+ 1e0:	31 97       	sbiw	r30, 0x01	; 1
+ 1e2:	eb 30       	cpi	r30, 0x0B	; 11
+ 1e4:	f1 05       	cpc	r31, r1
+ 1e6:	08 f0       	brcs	.+2      	; 0x1ea <_ZN12DriveControl16reflexControllerEi+0x3c>
+ 1e8:	69 c0       	rjmp	.+210    	; 0x2bc <_ZN12DriveControl16reflexControllerEi+0x10e>
+ 1ea:	88 27       	eor	r24, r24
+ 1ec:	ee 58       	subi	r30, 0x8E	; 142
+ 1ee:	ff 4f       	sbci	r31, 0xFF	; 255
+ 1f0:	8f 4f       	sbci	r24, 0xFF	; 255
+ 1f2:	21 c3       	rjmp	.+1602   	; 0x836 <__tablejump2__>
+	{
+		case 1: // refleks 1
+			motor_.driveForward(50, 10);
+ 1f4:	4a e0       	ldi	r20, 0x0A	; 10
+ 1f6:	50 e0       	ldi	r21, 0x00	; 0
+ 1f8:	62 e3       	ldi	r22, 0x32	; 50
+ 1fa:	70 e0       	ldi	r23, 0x00	; 0
+ 1fc:	ce 01       	movw	r24, r28
+ 1fe:	03 96       	adiw	r24, 0x03	; 3
+ 200:	ff d1       	rcall	.+1022   	; 0x600 <_ZN5Motor12driveForwardEii>
+		case 2: // refleks 2
+			motor_.driveForward(100, 10);
+ 202:	4a e0       	ldi	r20, 0x0A	; 10
+ 204:	50 e0       	ldi	r21, 0x00	; 0
+ 206:	64 e6       	ldi	r22, 0x64	; 100
  208:	70 e0       	ldi	r23, 0x00	; 0
  20a:	ce 01       	movw	r24, r28
  20c:	03 96       	adiw	r24, 0x03	; 3
- 20e:	eb d1       	rcall	.+982    	; 0x5e6 <_ZN5Motor9driveStopEi>
- 210:	df 91       	pop	r29
+ 20e:	f8 d1       	rcall	.+1008   	; 0x600 <_ZN5Motor12driveForwardEii>
+			break;
+ 210:	55 c0       	rjmp	.+170    	; 0x2bc <_ZN12DriveControl16reflexControllerEi+0x10e>
+		case 3: // osv.
+			motor_.driveForward(10, 10);
+ 212:	4a e0       	ldi	r20, 0x0A	; 10
+ 214:	50 e0       	ldi	r21, 0x00	; 0
+ 216:	6a e0       	ldi	r22, 0x0A	; 10
+ 218:	70 e0       	ldi	r23, 0x00	; 0
+ 21a:	ce 01       	movw	r24, r28
+ 21c:	03 96       	adiw	r24, 0x03	; 3
+ 21e:	f0 d1       	rcall	.+992    	; 0x600 <_ZN5Motor12driveForwardEii>
+			break;
+ 220:	4d c0       	rjmp	.+154    	; 0x2bc <_ZN12DriveControl16reflexControllerEi+0x10e>
+		case 4:
+			motor_.driveForward(50, 10);
+ 222:	4a e0       	ldi	r20, 0x0A	; 10
+ 224:	50 e0       	ldi	r21, 0x00	; 0
+ 226:	62 e3       	ldi	r22, 0x32	; 50
+ 228:	70 e0       	ldi	r23, 0x00	; 0
+ 22a:	ce 01       	movw	r24, r28
+ 22c:	03 96       	adiw	r24, 0x03	; 3
+ 22e:	e8 d1       	rcall	.+976    	; 0x600 <_ZN5Motor12driveForwardEii>
+			break;
+		case 5:
+			motor_.driveForward(40, 20);
+ 230:	45 c0       	rjmp	.+138    	; 0x2bc <_ZN12DriveControl16reflexControllerEi+0x10e>
+ 232:	44 e1       	ldi	r20, 0x14	; 20
+ 234:	50 e0       	ldi	r21, 0x00	; 0
+ 236:	68 e2       	ldi	r22, 0x28	; 40
+ 238:	70 e0       	ldi	r23, 0x00	; 0
+ 23a:	ce 01       	movw	r24, r28
+ 23c:	03 96       	adiw	r24, 0x03	; 3
+			break;	
+ 23e:	e0 d1       	rcall	.+960    	; 0x600 <_ZN5Motor12driveForwardEii>
+		case 6:
+			backLight_.backLightBrake();
+ 240:	3d c0       	rjmp	.+122    	; 0x2bc <_ZN12DriveControl16reflexControllerEi+0x10e>
+ 242:	8e 01       	movw	r16, r28
+ 244:	0e 5f       	subi	r16, 0xFE	; 254
+ 246:	1f 4f       	sbci	r17, 0xFF	; 255
+ 248:	c8 01       	movw	r24, r16
+			motor_.driveStop(8);
+ 24a:	6d d0       	rcall	.+218    	; 0x326 <_ZN9BackLight14backLightBrakeEv>
+ 24c:	23 96       	adiw	r28, 0x03	; 3
+ 24e:	68 e0       	ldi	r22, 0x08	; 8
+ 250:	70 e0       	ldi	r23, 0x00	; 0
+			motor_.driveBackwards(50, 10);
+ 252:	ce 01       	movw	r24, r28
+ 254:	31 d2       	rcall	.+1122   	; 0x6b8 <_ZN5Motor9driveStopEi>
+ 256:	4a e0       	ldi	r20, 0x0A	; 10
+ 258:	50 e0       	ldi	r21, 0x00	; 0
+ 25a:	62 e3       	ldi	r22, 0x32	; 50
+ 25c:	70 e0       	ldi	r23, 0x00	; 0
+			backLight_.backLightDrive();
+ 25e:	ce 01       	movw	r24, r28
+ 260:	74 d1       	rcall	.+744    	; 0x54a <_ZN5Motor14driveBackwardsEii>
+			break;
+ 262:	c8 01       	movw	r24, r16
+		case 7:
+			break;
+		case 8:
+			backLight_.backLightBrake();
+ 264:	59 d0       	rcall	.+178    	; 0x318 <_ZN9BackLight14backLightDriveEv>
+ 266:	2a c0       	rjmp	.+84     	; 0x2bc <_ZN12DriveControl16reflexControllerEi+0x10e>
+ 268:	8e 01       	movw	r16, r28
+ 26a:	0e 5f       	subi	r16, 0xFE	; 254
+ 26c:	1f 4f       	sbci	r17, 0xFF	; 255
+			motor_.driveStop(8);
+ 26e:	c8 01       	movw	r24, r16
+ 270:	5a d0       	rcall	.+180    	; 0x326 <_ZN9BackLight14backLightBrakeEv>
+ 272:	23 96       	adiw	r28, 0x03	; 3
+ 274:	68 e0       	ldi	r22, 0x08	; 8
+ 276:	70 e0       	ldi	r23, 0x00	; 0
+ 278:	ce 01       	movw	r24, r28
+			motor_.driveForward(50, 10);
+ 27a:	1e d2       	rcall	.+1084   	; 0x6b8 <_ZN5Motor9driveStopEi>
+ 27c:	4a e0       	ldi	r20, 0x0A	; 10
+ 27e:	50 e0       	ldi	r21, 0x00	; 0
+ 280:	62 e3       	ldi	r22, 0x32	; 50
+ 282:	70 e0       	ldi	r23, 0x00	; 0
+ 284:	ce 01       	movw	r24, r28
+			backLight_.backLightDrive();
+ 286:	bc d1       	rcall	.+888    	; 0x600 <_ZN5Motor12driveForwardEii>
+ 288:	c8 01       	movw	r24, r16
+			break;
+ 28a:	46 d0       	rcall	.+140    	; 0x318 <_ZN9BackLight14backLightDriveEv>
+		case 9:
+			break;
+		case 10:
+			motor_.driveForward(50, 10);
+ 28c:	17 c0       	rjmp	.+46     	; 0x2bc <_ZN12DriveControl16reflexControllerEi+0x10e>
+ 28e:	4a e0       	ldi	r20, 0x0A	; 10
+ 290:	50 e0       	ldi	r21, 0x00	; 0
+ 292:	62 e3       	ldi	r22, 0x32	; 50
+ 294:	70 e0       	ldi	r23, 0x00	; 0
+ 296:	ce 01       	movw	r24, r28
+			break;
+ 298:	03 96       	adiw	r24, 0x03	; 3
+		case 11:
+			backLight_.backLightBrake();
+ 29a:	b2 d1       	rcall	.+868    	; 0x600 <_ZN5Motor12driveForwardEii>
+ 29c:	0f c0       	rjmp	.+30     	; 0x2bc <_ZN12DriveControl16reflexControllerEi+0x10e>
+ 29e:	8e 01       	movw	r16, r28
+ 2a0:	0e 5f       	subi	r16, 0xFE	; 254
+ 2a2:	1f 4f       	sbci	r17, 0xFF	; 255
+ 2a4:	c8 01       	movw	r24, r16
+			motor_.driveStop(8);
+ 2a6:	3f d0       	rcall	.+126    	; 0x326 <_ZN9BackLight14backLightBrakeEv>
+ 2a8:	68 e0       	ldi	r22, 0x08	; 8
+ 2aa:	70 e0       	ldi	r23, 0x00	; 0
+ 2ac:	ce 01       	movw	r24, r28
+ 2ae:	03 96       	adiw	r24, 0x03	; 3
+ 2b0:	03 d2       	rcall	.+1030   	; 0x6b8 <_ZN5Motor9driveStopEi>
+			backLight_.backLightOff();
+ 2b2:	c8 01       	movw	r24, r16
+ 2b4:	3f d0       	rcall	.+126    	; 0x334 <_ZN9BackLight12backLightOffEv>
+ 2b6:	ce 01       	movw	r24, r28
+			frontLight_.frontLightOff();
+ 2b8:	01 96       	adiw	r24, 0x01	; 1
+ 2ba:	52 d0       	rcall	.+164    	; 0x360 <_ZN10FrontLight13frontLightOffEv>
+ 2bc:	df 91       	pop	r29
+ 2be:	cf 91       	pop	r28
+			
 			break;
 	}
-	
 }
- 212:	cf 91       	pop	r28
- 214:	08 95       	ret
+ 2c0:	1f 91       	pop	r17
+ 2c2:	0f 91       	pop	r16
+ 2c4:	08 95       	ret
 
-00000216 <_ZN12DriveControl17startDriveControlEv>:
- 216:	cf 93       	push	r28
+000002c6 <_ZN12DriveControl17startDriveControlEv>:
+ 2c6:	cf 93       	push	r28
+ 2c8:	df 93       	push	r29
 
 void DriveControl::startDriveControl()
 {
- 218:	df 93       	push	r29
- 21a:	ec 01       	movw	r28, r24
+ 2ca:	ec 01       	movw	r28, r24
 	
 	// Afspil startlyd
 	sound_.playSound(1);
- 21c:	61 e0       	ldi	r22, 0x01	; 1
- 21e:	70 e0       	ldi	r23, 0x00	; 0
- 220:	32 d2       	rcall	.+1124   	; 0x686 <_ZN5Sound9playSoundEi>
+ 2cc:	61 e0       	ldi	r22, 0x01	; 1
+ 2ce:	70 e0       	ldi	r23, 0x00	; 0
+ 2d0:	43 d2       	rcall	.+1158   	; 0x758 <_ZN5Sound9playSoundEi>
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
- 222:	2f ef       	ldi	r18, 0xFF	; 255
- 224:	81 e1       	ldi	r24, 0x11	; 17
- 226:	9a e7       	ldi	r25, 0x7A	; 122
- 228:	21 50       	subi	r18, 0x01	; 1
- 22a:	80 40       	sbci	r24, 0x00	; 0
- 22c:	90 40       	sbci	r25, 0x00	; 0
- 22e:	e1 f7       	brne	.-8      	; 0x228 <_ZN12DriveControl17startDriveControlEv+0x12>
- 230:	00 c0       	rjmp	.+0      	; 0x232 <_ZN12DriveControl17startDriveControlEv+0x1c>
- 232:	00 00       	nop
+ 2d2:	2f ef       	ldi	r18, 0xFF	; 255
+ 2d4:	81 e1       	ldi	r24, 0x11	; 17
+ 2d6:	9a e7       	ldi	r25, 0x7A	; 122
+ 2d8:	21 50       	subi	r18, 0x01	; 1
+ 2da:	80 40       	sbci	r24, 0x00	; 0
+ 2dc:	90 40       	sbci	r25, 0x00	; 0
+ 2de:	e1 f7       	brne	.-8      	; 0x2d8 <_ZN12DriveControl17startDriveControlEv+0x12>
+ 2e0:	00 c0       	rjmp	.+0      	; 0x2e2 <_ZN12DriveControl17startDriveControlEv+0x1c>
+ 2e2:	00 00       	nop
 	// Begynd kørsel fremad i kontrolleret tempo
 	_delay_ms(2500);
 	
 	frontLight_.frontLightOn();
- 234:	ce 01       	movw	r24, r28
- 236:	01 96       	adiw	r24, 0x01	; 1
- 238:	28 d0       	rcall	.+80     	; 0x28a <_ZN10FrontLight12frontLightOnEv>
+ 2e4:	ce 01       	movw	r24, r28
+ 2e6:	01 96       	adiw	r24, 0x01	; 1
+ 2e8:	34 d0       	rcall	.+104    	; 0x352 <_ZN10FrontLight12frontLightOnEv>
 	backLight_.backLightDrive();
- 23a:	ce 01       	movw	r24, r28
- 23c:	02 96       	adiw	r24, 0x02	; 2
- 23e:	14 d0       	rcall	.+40     	; 0x268 <_ZN9BackLight14backLightDriveEv>
-	motor_.driveForward(80, 10);
- 240:	4a e0       	ldi	r20, 0x0A	; 10
- 242:	50 e0       	ldi	r21, 0x00	; 0
- 244:	60 e5       	ldi	r22, 0x50	; 80
- 246:	70 e0       	ldi	r23, 0x00	; 0
- 248:	ce 01       	movw	r24, r28
- 24a:	03 96       	adiw	r24, 0x03	; 3
- 24c:	70 d1       	rcall	.+736    	; 0x52e <_ZN5Motor12driveForwardEii>
+ 2ea:	ce 01       	movw	r24, r28
+ 2ec:	02 96       	adiw	r24, 0x02	; 2
+ 2ee:	14 d0       	rcall	.+40     	; 0x318 <_ZN9BackLight14backLightDriveEv>
+	motor_.driveForward(70, 10);
+ 2f0:	4a e0       	ldi	r20, 0x0A	; 10
+ 2f2:	50 e0       	ldi	r21, 0x00	; 0
+ 2f4:	66 e4       	ldi	r22, 0x46	; 70
+ 2f6:	70 e0       	ldi	r23, 0x00	; 0
+ 2f8:	ce 01       	movw	r24, r28
+ 2fa:	03 96       	adiw	r24, 0x03	; 3
+ 2fc:	81 d1       	rcall	.+770    	; 0x600 <_ZN5Motor12driveForwardEii>
 }
- 24e:	df 91       	pop	r29
- 250:	cf 91       	pop	r28
- 252:	08 95       	ret
+ 2fe:	df 91       	pop	r29
+ 300:	cf 91       	pop	r28
+ 302:	08 95       	ret
 
-00000254 <_ZN9BackLightC1Ev>:
+00000304 <_ZN9BackLightC1Ev>:
 {
 	// Mode = 3 (PWM, Phase Correct, 10 bit)
 	// Set OC1A on match down counting / Clear OC1A on match up counting
 	// Set OC1B on match down counting / Clear OCBA on match up counting
 	// Clock prescaler = 1
 	TCCR1A = 0b10100011;
- 254:	83 ea       	ldi	r24, 0xA3	; 163
- 256:	80 93 80 00 	sts	0x0080, r24	; 0x800080 <__TEXT_REGION_LENGTH__+0x7c0080>
+ 304:	83 ea       	ldi	r24, 0xA3	; 163
+ 306:	80 93 80 00 	sts	0x0080, r24	; 0x800080 <__TEXT_REGION_LENGTH__+0x7c0080>
 	TCCR1B = 0b00000001;
- 25a:	81 e0       	ldi	r24, 0x01	; 1
- 25c:	80 93 81 00 	sts	0x0081, r24	; 0x800081 <__TEXT_REGION_LENGTH__+0x7c0081>
+ 30a:	81 e0       	ldi	r24, 0x01	; 1
+ 30c:	80 93 81 00 	sts	0x0081, r24	; 0x800081 <__TEXT_REGION_LENGTH__+0x7c0081>
 		
 	//Configure PORTB as output
 	//Clear PORTB
 	DDRB=0xFF;
- 260:	8f ef       	ldi	r24, 0xFF	; 255
- 262:	84 b9       	out	0x04, r24	; 4
+ 310:	8f ef       	ldi	r24, 0xFF	; 255
+ 312:	84 b9       	out	0x04, r24	; 4
 	PORTB=0x00;
- 264:	15 b8       	out	0x05, r1	; 5
- 266:	08 95       	ret
+ 314:	15 b8       	out	0x05, r1	; 5
+ 316:	08 95       	ret
 
-00000268 <_ZN9BackLight14backLightDriveEv>:
+00000318 <_ZN9BackLight14backLightDriveEv>:
 } //BackLight
 
 void BackLight::backLightDrive()
 {
 	//Giver en middelstrøm på 10mA - beregning kommer senere
-	OCR1B = (1023*8)/100;
- 268:	81 e5       	ldi	r24, 0x51	; 81
- 26a:	90 e0       	ldi	r25, 0x00	; 0
- 26c:	90 93 8b 00 	sts	0x008B, r25	; 0x80008b <__TEXT_REGION_LENGTH__+0x7c008b>
- 270:	80 93 8a 00 	sts	0x008A, r24	; 0x80008a <__TEXT_REGION_LENGTH__+0x7c008a>
- 274:	08 95       	ret
+	OCR1B = 195;
+ 318:	83 ec       	ldi	r24, 0xC3	; 195
+ 31a:	90 e0       	ldi	r25, 0x00	; 0
+ 31c:	90 93 8b 00 	sts	0x008B, r25	; 0x80008b <__TEXT_REGION_LENGTH__+0x7c008b>
+ 320:	80 93 8a 00 	sts	0x008A, r24	; 0x80008a <__TEXT_REGION_LENGTH__+0x7c008a>
+ 324:	08 95       	ret
 
-00000276 <_ZN10FrontLightC1Ev>:
+00000326 <_ZN9BackLight14backLightBrakeEv>:
+}
+
+void BackLight::backLightBrake()
+{
+	//Duty cycle at 50% - beregning kommer senere = middelstrøm på 51mA
+	OCR1B = 875;
+ 326:	8b e6       	ldi	r24, 0x6B	; 107
+ 328:	93 e0       	ldi	r25, 0x03	; 3
+ 32a:	90 93 8b 00 	sts	0x008B, r25	; 0x80008b <__TEXT_REGION_LENGTH__+0x7c008b>
+ 32e:	80 93 8a 00 	sts	0x008A, r24	; 0x80008a <__TEXT_REGION_LENGTH__+0x7c008a>
+ 332:	08 95       	ret
+
+00000334 <_ZN9BackLight12backLightOffEv>:
+}
+
+void BackLight::backLightOff()
+{
+	//Duty cycle at 0% = 0mA = LightsOff
+	OCR1B = 0;
+ 334:	10 92 8b 00 	sts	0x008B, r1	; 0x80008b <__TEXT_REGION_LENGTH__+0x7c008b>
+ 338:	10 92 8a 00 	sts	0x008A, r1	; 0x80008a <__TEXT_REGION_LENGTH__+0x7c008a>
+ 33c:	08 95       	ret
+
+0000033e <_ZN10FrontLightC1Ev>:
 {
 	// Mode = 3 (PWM, Phase Correct, 10 bit)
 	// Set OC1A on match down counting / Clear OC1A on match up counting
 	// Set OC1B on match down counting / Clear OCBA on match up counting
 	// Clock prescaler = 1
 	TCCR1A = 0b10100011;
- 276:	83 ea       	ldi	r24, 0xA3	; 163
- 278:	80 93 80 00 	sts	0x0080, r24	; 0x800080 <__TEXT_REGION_LENGTH__+0x7c0080>
+ 33e:	83 ea       	ldi	r24, 0xA3	; 163
+ 340:	80 93 80 00 	sts	0x0080, r24	; 0x800080 <__TEXT_REGION_LENGTH__+0x7c0080>
 	TCCR1B = 0b00000001;
- 27c:	81 e0       	ldi	r24, 0x01	; 1
- 27e:	80 93 81 00 	sts	0x0081, r24	; 0x800081 <__TEXT_REGION_LENGTH__+0x7c0081>
+ 344:	81 e0       	ldi	r24, 0x01	; 1
+ 346:	80 93 81 00 	sts	0x0081, r24	; 0x800081 <__TEXT_REGION_LENGTH__+0x7c0081>
 	
 	//Configure PORTB as output
 	//Clear PORTB
 	DDRB=0xFF;
- 282:	8f ef       	ldi	r24, 0xFF	; 255
- 284:	84 b9       	out	0x04, r24	; 4
+ 34a:	8f ef       	ldi	r24, 0xFF	; 255
+ 34c:	84 b9       	out	0x04, r24	; 4
 	PORTB=0x00;
- 286:	15 b8       	out	0x05, r1	; 5
- 288:	08 95       	ret
+ 34e:	15 b8       	out	0x05, r1	; 5
+ 350:	08 95       	ret
 
-0000028a <_ZN10FrontLight12frontLightOnEv>:
+00000352 <_ZN10FrontLight12frontLightOnEv>:
 } //FrontLight
 
 void FrontLight::frontLightOn()
 {
 	//Dutycycle omkring 50% - beregning kommer senere = middelstrøm på 50mA
-	OCR1A = 62486;
- 28a:	86 e1       	ldi	r24, 0x16	; 22
- 28c:	94 ef       	ldi	r25, 0xF4	; 244
- 28e:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7c0089>
- 292:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7c0088>
- 296:	08 95       	ret
+	OCR1A = 875;
+ 352:	8b e6       	ldi	r24, 0x6B	; 107
+ 354:	93 e0       	ldi	r25, 0x03	; 3
+ 356:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7c0089>
+ 35a:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7c0088>
+ 35e:	08 95       	ret
 
-00000298 <_Z41__static_initialization_and_destruction_0ii>:
+00000360 <_ZN10FrontLight13frontLightOffEv>:
+}
+
+void FrontLight::frontLightOff()
+{
+	//Duty cycle at 0% = 0mA = LightsOff
+	OCR1A = 0;
+ 360:	10 92 89 00 	sts	0x0089, r1	; 0x800089 <__TEXT_REGION_LENGTH__+0x7c0089>
+ 364:	10 92 88 00 	sts	0x0088, r1	; 0x800088 <__TEXT_REGION_LENGTH__+0x7c0088>
+ 368:	08 95       	ret
+
+0000036a <_Z41__static_initialization_and_destruction_0ii>:
 
 		_delay_ms(20);
 	}
 
 	PORTB = 0;
 }
- 298:	01 97       	sbiw	r24, 0x01	; 1
- 29a:	31 f4       	brne	.+12     	; 0x2a8 <_Z41__static_initialization_and_destruction_0ii+0x10>
- 29c:	6f 3f       	cpi	r22, 0xFF	; 255
- 29e:	7f 4f       	sbci	r23, 0xFF	; 255
- 2a0:	19 f4       	brne	.+6      	; 0x2a8 <_Z41__static_initialization_and_destruction_0ii+0x10>
+ 36a:	01 97       	sbiw	r24, 0x01	; 1
+ 36c:	31 f4       	brne	.+12     	; 0x37a <_Z41__static_initialization_and_destruction_0ii+0x10>
+ 36e:	6f 3f       	cpi	r22, 0xFF	; 255
+ 370:	7f 4f       	sbci	r23, 0xFF	; 255
+ 372:	19 f4       	brne	.+6      	; 0x37a <_Z41__static_initialization_and_destruction_0ii+0x10>
 	reflex();
 }
 
 
 
 DriveControl controller;
- 2a2:	80 e0       	ldi	r24, 0x00	; 0
- 2a4:	92 e0       	ldi	r25, 0x02	; 2
- 2a6:	41 cf       	rjmp	.-382    	; 0x12a <_ZN12DriveControlC1Ev>
- 2a8:	08 95       	ret
+ 374:	80 e0       	ldi	r24, 0x00	; 0
+ 376:	92 e0       	ldi	r25, 0x02	; 2
+ 378:	e3 ce       	rjmp	.-570    	; 0x140 <_ZN12DriveControlC1Ev>
+ 37a:	08 95       	ret
 
-000002aa <_Z18startReflexSensorsv>:
+0000037c <_Z18startReflexSensorsv>:
 	
 	startReflexSensors();
 }
 
 void startReflexSensors() {
 	EIMSK |= REFLEKS_ENABLE_MASK;
- 2aa:	8d b3       	in	r24, 0x1d	; 29
- 2ac:	8c 60       	ori	r24, 0x0C	; 12
- 2ae:	8d bb       	out	0x1d, r24	; 29
+ 37c:	8d b3       	in	r24, 0x1d	; 29
+ 37e:	8c 60       	ori	r24, 0x0C	; 12
+ 380:	8d bb       	out	0x1d, r24	; 29
 	EICRA |= REFLEKS_TRIGGER_MASK;
- 2b0:	e9 e6       	ldi	r30, 0x69	; 105
- 2b2:	f0 e0       	ldi	r31, 0x00	; 0
- 2b4:	80 81       	ld	r24, Z
- 2b6:	80 6f       	ori	r24, 0xF0	; 240
- 2b8:	80 83       	st	Z, r24
- 2ba:	08 95       	ret
+ 382:	e9 e6       	ldi	r30, 0x69	; 105
+ 384:	f0 e0       	ldi	r31, 0x00	; 0
+ 386:	80 81       	ld	r24, Z
+ 388:	80 6f       	ori	r24, 0xF0	; 240
+ 38a:	80 83       	st	Z, r24
+ 38c:	08 95       	ret
 
-000002bc <_Z17stopReflexSensorsv>:
+0000038e <_Z17stopReflexSensorsv>:
 }
 
 void stopReflexSensors() {
 	EIMSK &= ~REFLEKS_ENABLE_MASK;
- 2bc:	8d b3       	in	r24, 0x1d	; 29
- 2be:	83 7f       	andi	r24, 0xF3	; 243
- 2c0:	8d bb       	out	0x1d, r24	; 29
+ 38e:	8d b3       	in	r24, 0x1d	; 29
+ 390:	83 7f       	andi	r24, 0xF3	; 243
+ 392:	8d bb       	out	0x1d, r24	; 29
 	EICRA &= ~REFLEKS_TRIGGER_MASK;
- 2c2:	e9 e6       	ldi	r30, 0x69	; 105
- 2c4:	f0 e0       	ldi	r31, 0x00	; 0
- 2c6:	80 81       	ld	r24, Z
- 2c8:	8f 70       	andi	r24, 0x0F	; 15
- 2ca:	80 83       	st	Z, r24
- 2cc:	08 95       	ret
+ 394:	e9 e6       	ldi	r30, 0x69	; 105
+ 396:	f0 e0       	ldi	r31, 0x00	; 0
+ 398:	80 81       	ld	r24, Z
+ 39a:	8f 70       	andi	r24, 0x0F	; 15
+ 39c:	80 83       	st	Z, r24
+ 39e:	08 95       	ret
 
-000002ce <_Z6reflexv>:
+000003a0 <_Z6reflexv>:
 
 
 // Funktioner
 void reflex() {
 	//Interrupt fra refleks
 	stopReflexSensors();
- 2ce:	f6 df       	rcall	.-20     	; 0x2bc <_Z17stopReflexSensorsv>
+ 3a0:	f6 df       	rcall	.-20     	; 0x38e <_Z17stopReflexSensorsv>
 	
 	reflexCount++;
- 2d0:	80 91 09 02 	lds	r24, 0x0209	; 0x800209 <reflexCount>
- 2d4:	90 91 0a 02 	lds	r25, 0x020A	; 0x80020a <reflexCount+0x1>
- 2d8:	01 96       	adiw	r24, 0x01	; 1
- 2da:	90 93 0a 02 	sts	0x020A, r25	; 0x80020a <reflexCount+0x1>
- 2de:	80 93 09 02 	sts	0x0209, r24	; 0x800209 <reflexCount>
+ 3a2:	80 91 09 02 	lds	r24, 0x0209	; 0x800209 <reflexCount>
+ 3a6:	90 91 0a 02 	lds	r25, 0x020A	; 0x80020a <reflexCount+0x1>
+ 3aa:	01 96       	adiw	r24, 0x01	; 1
+ 3ac:	90 93 0a 02 	sts	0x020A, r25	; 0x80020a <reflexCount+0x1>
+ 3b0:	80 93 09 02 	sts	0x0209, r24	; 0x800209 <reflexCount>
 	controller.reflexController(reflexCount);
- 2e2:	60 91 09 02 	lds	r22, 0x0209	; 0x800209 <reflexCount>
- 2e6:	70 91 0a 02 	lds	r23, 0x020A	; 0x80020a <reflexCount+0x1>
- 2ea:	80 e0       	ldi	r24, 0x00	; 0
- 2ec:	92 e0       	ldi	r25, 0x02	; 2
- 2ee:	54 df       	rcall	.-344    	; 0x198 <_ZN12DriveControl16reflexControllerEi>
+ 3b4:	60 91 09 02 	lds	r22, 0x0209	; 0x800209 <reflexCount>
+ 3b8:	70 91 0a 02 	lds	r23, 0x020A	; 0x80020a <reflexCount+0x1>
+ 3bc:	80 e0       	ldi	r24, 0x00	; 0
+ 3be:	92 e0       	ldi	r25, 0x02	; 2
+ 3c0:	f6 de       	rcall	.-532    	; 0x1ae <_ZN12DriveControl16reflexControllerEi>
 	PORTB = reflexCount;
- 2f0:	80 91 09 02 	lds	r24, 0x0209	; 0x800209 <reflexCount>
- 2f4:	90 91 0a 02 	lds	r25, 0x020A	; 0x80020a <reflexCount+0x1>
- 2f8:	85 b9       	out	0x05, r24	; 5
- 2fa:	2f ef       	ldi	r18, 0xFF	; 255
- 2fc:	87 e8       	ldi	r24, 0x87	; 135
- 2fe:	93 e1       	ldi	r25, 0x13	; 19
- 300:	21 50       	subi	r18, 0x01	; 1
- 302:	80 40       	sbci	r24, 0x00	; 0
- 304:	90 40       	sbci	r25, 0x00	; 0
- 306:	e1 f7       	brne	.-8      	; 0x300 <_Z6reflexv+0x32>
- 308:	00 c0       	rjmp	.+0      	; 0x30a <_Z6reflexv+0x3c>
+ 3c2:	80 91 09 02 	lds	r24, 0x0209	; 0x800209 <reflexCount>
+ 3c6:	90 91 0a 02 	lds	r25, 0x020A	; 0x80020a <reflexCount+0x1>
+ 3ca:	85 b9       	out	0x05, r24	; 5
+ 3cc:	2f ef       	ldi	r18, 0xFF	; 255
+ 3ce:	8f e0       	ldi	r24, 0x0F	; 15
+ 3d0:	97 e2       	ldi	r25, 0x27	; 39
+ 3d2:	21 50       	subi	r18, 0x01	; 1
+ 3d4:	80 40       	sbci	r24, 0x00	; 0
+ 3d6:	90 40       	sbci	r25, 0x00	; 0
+ 3d8:	e1 f7       	brne	.-8      	; 0x3d2 <_Z6reflexv+0x32>
+ 3da:	00 c0       	rjmp	.+0      	; 0x3dc <_Z6reflexv+0x3c>
 	_delay_ms(REFLEKS_TIMEOUT);
 	
 	startReflexSensors();
- 30a:	00 00       	nop
- 30c:	ce cf       	rjmp	.-100    	; 0x2aa <_Z18startReflexSensorsv>
- 30e:	08 95       	ret
+ 3dc:	00 00       	nop
+ 3de:	ce cf       	rjmp	.-100    	; 0x37c <_Z18startReflexSensorsv>
+ 3e0:	08 95       	ret
 
-00000310 <__vector_3>:
+000003e2 <__vector_3>:
 
 // Refleks tæller. Global variabel.
 volatile unsigned int reflexCount = 0;
 
 // Interrupts til reflekssensorerne.
 ISR(REFLEKS1) { // Com pin 21
- 310:	1f 92       	push	r1
- 312:	0f 92       	push	r0
- 314:	0f b6       	in	r0, 0x3f	; 63
- 316:	0f 92       	push	r0
- 318:	11 24       	eor	r1, r1
- 31a:	0b b6       	in	r0, 0x3b	; 59
- 31c:	0f 92       	push	r0
- 31e:	2f 93       	push	r18
- 320:	3f 93       	push	r19
- 322:	4f 93       	push	r20
- 324:	5f 93       	push	r21
- 326:	6f 93       	push	r22
- 328:	7f 93       	push	r23
- 32a:	8f 93       	push	r24
- 32c:	9f 93       	push	r25
- 32e:	af 93       	push	r26
- 330:	bf 93       	push	r27
- 332:	ef 93       	push	r30
- 334:	ff 93       	push	r31
+ 3e2:	1f 92       	push	r1
+ 3e4:	0f 92       	push	r0
+ 3e6:	0f b6       	in	r0, 0x3f	; 63
+ 3e8:	0f 92       	push	r0
+ 3ea:	11 24       	eor	r1, r1
+ 3ec:	0b b6       	in	r0, 0x3b	; 59
+ 3ee:	0f 92       	push	r0
+ 3f0:	2f 93       	push	r18
+ 3f2:	3f 93       	push	r19
+ 3f4:	4f 93       	push	r20
+ 3f6:	5f 93       	push	r21
+ 3f8:	6f 93       	push	r22
+ 3fa:	7f 93       	push	r23
+ 3fc:	8f 93       	push	r24
+ 3fe:	9f 93       	push	r25
+ 400:	af 93       	push	r26
+ 402:	bf 93       	push	r27
+ 404:	ef 93       	push	r30
+ 406:	ff 93       	push	r31
 	// Reflekssensor 1
 	reflex();
- 336:	cb df       	rcall	.-106    	; 0x2ce <_Z6reflexv>
+ 408:	cb df       	rcall	.-106    	; 0x3a0 <_Z6reflexv>
 }
- 338:	ff 91       	pop	r31
- 33a:	ef 91       	pop	r30
- 33c:	bf 91       	pop	r27
- 33e:	af 91       	pop	r26
- 340:	9f 91       	pop	r25
- 342:	8f 91       	pop	r24
- 344:	7f 91       	pop	r23
- 346:	6f 91       	pop	r22
- 348:	5f 91       	pop	r21
- 34a:	4f 91       	pop	r20
- 34c:	3f 91       	pop	r19
- 34e:	2f 91       	pop	r18
- 350:	0f 90       	pop	r0
- 352:	0b be       	out	0x3b, r0	; 59
- 354:	0f 90       	pop	r0
- 356:	0f be       	out	0x3f, r0	; 63
- 358:	0f 90       	pop	r0
- 35a:	1f 90       	pop	r1
- 35c:	18 95       	reti
+ 40a:	ff 91       	pop	r31
+ 40c:	ef 91       	pop	r30
+ 40e:	bf 91       	pop	r27
+ 410:	af 91       	pop	r26
+ 412:	9f 91       	pop	r25
+ 414:	8f 91       	pop	r24
+ 416:	7f 91       	pop	r23
+ 418:	6f 91       	pop	r22
+ 41a:	5f 91       	pop	r21
+ 41c:	4f 91       	pop	r20
+ 41e:	3f 91       	pop	r19
+ 420:	2f 91       	pop	r18
+ 422:	0f 90       	pop	r0
+ 424:	0b be       	out	0x3b, r0	; 59
+ 426:	0f 90       	pop	r0
+ 428:	0f be       	out	0x3f, r0	; 63
+ 42a:	0f 90       	pop	r0
+ 42c:	1f 90       	pop	r1
+ 42e:	18 95       	reti
 
-0000035e <__vector_4>:
+00000430 <__vector_4>:
 
 ISR(REFLEKS2) {
- 35e:	1f 92       	push	r1
- 360:	0f 92       	push	r0
- 362:	0f b6       	in	r0, 0x3f	; 63
- 364:	0f 92       	push	r0
- 366:	11 24       	eor	r1, r1
- 368:	0b b6       	in	r0, 0x3b	; 59
- 36a:	0f 92       	push	r0
- 36c:	2f 93       	push	r18
- 36e:	3f 93       	push	r19
- 370:	4f 93       	push	r20
- 372:	5f 93       	push	r21
- 374:	6f 93       	push	r22
- 376:	7f 93       	push	r23
- 378:	8f 93       	push	r24
- 37a:	9f 93       	push	r25
- 37c:	af 93       	push	r26
- 37e:	bf 93       	push	r27
- 380:	ef 93       	push	r30
- 382:	ff 93       	push	r31
+ 430:	1f 92       	push	r1
+ 432:	0f 92       	push	r0
+ 434:	0f b6       	in	r0, 0x3f	; 63
+ 436:	0f 92       	push	r0
+ 438:	11 24       	eor	r1, r1
+ 43a:	0b b6       	in	r0, 0x3b	; 59
+ 43c:	0f 92       	push	r0
+ 43e:	2f 93       	push	r18
+ 440:	3f 93       	push	r19
+ 442:	4f 93       	push	r20
+ 444:	5f 93       	push	r21
+ 446:	6f 93       	push	r22
+ 448:	7f 93       	push	r23
+ 44a:	8f 93       	push	r24
+ 44c:	9f 93       	push	r25
+ 44e:	af 93       	push	r26
+ 450:	bf 93       	push	r27
+ 452:	ef 93       	push	r30
+ 454:	ff 93       	push	r31
 	// Reflekssensor 2
 	reflex();
- 384:	a4 df       	rcall	.-184    	; 0x2ce <_Z6reflexv>
+ 456:	a4 df       	rcall	.-184    	; 0x3a0 <_Z6reflexv>
 }
- 386:	ff 91       	pop	r31
- 388:	ef 91       	pop	r30
- 38a:	bf 91       	pop	r27
- 38c:	af 91       	pop	r26
- 38e:	9f 91       	pop	r25
- 390:	8f 91       	pop	r24
- 392:	7f 91       	pop	r23
- 394:	6f 91       	pop	r22
- 396:	5f 91       	pop	r21
- 398:	4f 91       	pop	r20
- 39a:	3f 91       	pop	r19
- 39c:	2f 91       	pop	r18
- 39e:	0f 90       	pop	r0
- 3a0:	0b be       	out	0x3b, r0	; 59
- 3a2:	0f 90       	pop	r0
- 3a4:	0f be       	out	0x3f, r0	; 63
- 3a6:	0f 90       	pop	r0
- 3a8:	1f 90       	pop	r1
- 3aa:	18 95       	reti
+ 458:	ff 91       	pop	r31
+ 45a:	ef 91       	pop	r30
+ 45c:	bf 91       	pop	r27
+ 45e:	af 91       	pop	r26
+ 460:	9f 91       	pop	r25
+ 462:	8f 91       	pop	r24
+ 464:	7f 91       	pop	r23
+ 466:	6f 91       	pop	r22
+ 468:	5f 91       	pop	r21
+ 46a:	4f 91       	pop	r20
+ 46c:	3f 91       	pop	r19
+ 46e:	2f 91       	pop	r18
+ 470:	0f 90       	pop	r0
+ 472:	0b be       	out	0x3b, r0	; 59
+ 474:	0f 90       	pop	r0
+ 476:	0f be       	out	0x3f, r0	; 63
+ 478:	0f 90       	pop	r0
+ 47a:	1f 90       	pop	r1
+ 47c:	18 95       	reti
 
-000003ac <_Z6ledfunv>:
+0000047e <_Z6ledfunv>:
 }
 
 void ledfun() {
 	int led = 1;
 
 	for (int i = 1; i < 100; i++)
- 3ac:	21 e0       	ldi	r18, 0x01	; 1
- 3ae:	30 e0       	ldi	r19, 0x00	; 0
+ 47e:	21 e0       	ldi	r18, 0x01	; 1
+ 480:	30 e0       	ldi	r19, 0x00	; 0
 	while((~INIT_BUTTON_PIN & INIT_BUTTON_MASK) == 0) {}
 	ledfun();
 }
 
 void ledfun() {
 	int led = 1;
- 3b0:	81 e0       	ldi	r24, 0x01	; 1
- 3b2:	90 e0       	ldi	r25, 0x00	; 0
+ 482:	81 e0       	ldi	r24, 0x01	; 1
+ 484:	90 e0       	ldi	r25, 0x00	; 0
 
 	for (int i = 1; i < 100; i++)
- 3b4:	24 36       	cpi	r18, 0x64	; 100
- 3b6:	31 05       	cpc	r19, r1
- 3b8:	a4 f4       	brge	.+40     	; 0x3e2 <_Z6ledfunv+0x36>
+ 486:	24 36       	cpi	r18, 0x64	; 100
+ 488:	31 05       	cpc	r19, r1
+ 48a:	a4 f4       	brge	.+40     	; 0x4b4 <_Z6ledfunv+0x36>
 	{
 		PORTB = led;
- 3ba:	85 b9       	out	0x05, r24	; 5
+ 48c:	85 b9       	out	0x05, r24	; 5
 		
 		led = led << 1;
- 3bc:	88 0f       	add	r24, r24
- 3be:	99 1f       	adc	r25, r25
+ 48e:	88 0f       	add	r24, r24
+ 490:	99 1f       	adc	r25, r25
 
 		if (led > 128) {
- 3c0:	81 38       	cpi	r24, 0x81	; 129
- 3c2:	91 05       	cpc	r25, r1
- 3c4:	14 f0       	brlt	.+4      	; 0x3ca <_Z6ledfunv+0x1e>
+ 492:	81 38       	cpi	r24, 0x81	; 129
+ 494:	91 05       	cpc	r25, r1
+ 496:	14 f0       	brlt	.+4      	; 0x49c <_Z6ledfunv+0x1e>
 			led = 1;
- 3c6:	81 e0       	ldi	r24, 0x01	; 1
- 3c8:	90 e0       	ldi	r25, 0x00	; 0
- 3ca:	4f ef       	ldi	r20, 0xFF	; 255
- 3cc:	59 ef       	ldi	r21, 0xF9	; 249
- 3ce:	60 e0       	ldi	r22, 0x00	; 0
- 3d0:	41 50       	subi	r20, 0x01	; 1
- 3d2:	50 40       	sbci	r21, 0x00	; 0
- 3d4:	60 40       	sbci	r22, 0x00	; 0
- 3d6:	e1 f7       	brne	.-8      	; 0x3d0 <_Z6ledfunv+0x24>
- 3d8:	00 c0       	rjmp	.+0      	; 0x3da <_Z6ledfunv+0x2e>
- 3da:	00 00       	nop
+ 498:	81 e0       	ldi	r24, 0x01	; 1
+ 49a:	90 e0       	ldi	r25, 0x00	; 0
+ 49c:	4f ef       	ldi	r20, 0xFF	; 255
+ 49e:	59 ef       	ldi	r21, 0xF9	; 249
+ 4a0:	60 e0       	ldi	r22, 0x00	; 0
+ 4a2:	41 50       	subi	r20, 0x01	; 1
+ 4a4:	50 40       	sbci	r21, 0x00	; 0
+ 4a6:	60 40       	sbci	r22, 0x00	; 0
+ 4a8:	e1 f7       	brne	.-8      	; 0x4a2 <_Z6ledfunv+0x24>
+ 4aa:	00 c0       	rjmp	.+0      	; 0x4ac <_Z6ledfunv+0x2e>
+ 4ac:	00 00       	nop
 }
 
 void ledfun() {
 	int led = 1;
 
 	for (int i = 1; i < 100; i++)
- 3dc:	2f 5f       	subi	r18, 0xFF	; 255
- 3de:	3f 4f       	sbci	r19, 0xFF	; 255
- 3e0:	e9 cf       	rjmp	.-46     	; 0x3b4 <_Z6ledfunv+0x8>
+ 4ae:	2f 5f       	subi	r18, 0xFF	; 255
+ 4b0:	3f 4f       	sbci	r19, 0xFF	; 255
+ 4b2:	e9 cf       	rjmp	.-46     	; 0x486 <_Z6ledfunv+0x8>
 		}
 
 		_delay_ms(20);
 	}
 
 	PORTB = 0;
- 3e2:	15 b8       	out	0x05, r1	; 5
- 3e4:	08 95       	ret
+ 4b4:	15 b8       	out	0x05, r1	; 5
+ 4b6:	08 95       	ret
 
-000003e6 <_Z16awaitStartButtonv>:
+000004b8 <_Z16awaitStartButtonv>:
 }
 
 
 void awaitStartButton()
 {
 	INIT_BUTTON_DDR = 0x00;
- 3e6:	11 b8       	out	0x01, r1	; 1
+ 4b8:	11 b8       	out	0x01, r1	; 1
 	while((~INIT_BUTTON_PIN & INIT_BUTTON_MASK) == 0) {}
- 3e8:	07 99       	sbic	0x00, 7	; 0
- 3ea:	fe cf       	rjmp	.-4      	; 0x3e8 <_Z16awaitStartButtonv+0x2>
+ 4ba:	07 99       	sbic	0x00, 7	; 0
+ 4bc:	fe cf       	rjmp	.-4      	; 0x4ba <_Z16awaitStartButtonv+0x2>
 	ledfun();
- 3ec:	df cf       	rjmp	.-66     	; 0x3ac <_Z6ledfunv>
- 3ee:	08 95       	ret
+ 4be:	df cf       	rjmp	.-66     	; 0x47e <_Z6ledfunv>
+ 4c0:	08 95       	ret
 
-000003f0 <main>:
+000004c2 <main>:
 
 DriveControl controller;
 
 int main(void)
 {	
 	DDRB = 0xFF;
- 3f0:	8f ef       	ldi	r24, 0xFF	; 255
- 3f2:	84 b9       	out	0x04, r24	; 4
+ 4c2:	8f ef       	ldi	r24, 0xFF	; 255
+ 4c4:	84 b9       	out	0x04, r24	; 4
 	PORTB = 0;
- 3f4:	15 b8       	out	0x05, r1	; 5
+ 4c6:	15 b8       	out	0x05, r1	; 5
 	
 	awaitStartButton();
- 3f6:	f7 df       	rcall	.-18     	; 0x3e6 <_Z16awaitStartButtonv>
+ 4c8:	f7 df       	rcall	.-18     	; 0x4b8 <_Z16awaitStartButtonv>
 	
 	EIMSK = EIMSK | 0b00000100;
- 3f8:	8d b3       	in	r24, 0x1d	; 29
- 3fa:	84 60       	ori	r24, 0x04	; 4
- 3fc:	8d bb       	out	0x1d, r24	; 29
+ 4ca:	8d b3       	in	r24, 0x1d	; 29
+ 4cc:	84 60       	ori	r24, 0x04	; 4
+ 4ce:	8d bb       	out	0x1d, r24	; 29
 	EICRA |= 0b00110000;
- 3fe:	e9 e6       	ldi	r30, 0x69	; 105
- 400:	f0 e0       	ldi	r31, 0x00	; 0
- 402:	80 81       	ld	r24, Z
- 404:	80 63       	ori	r24, 0x30	; 48
- 406:	80 83       	st	Z, r24
+ 4d0:	e9 e6       	ldi	r30, 0x69	; 105
+ 4d2:	f0 e0       	ldi	r31, 0x00	; 0
+ 4d4:	80 81       	ld	r24, Z
+ 4d6:	80 63       	ori	r24, 0x30	; 48
+ 4d8:	80 83       	st	Z, r24
 	sei();
- 408:	78 94       	sei
+ 4da:	78 94       	sei
 	
 	controller.startDriveControl();
- 40a:	80 e0       	ldi	r24, 0x00	; 0
- 40c:	92 e0       	ldi	r25, 0x02	; 2
- 40e:	03 df       	rcall	.-506    	; 0x216 <_ZN12DriveControl17startDriveControlEv>
- 410:	ff cf       	rjmp	.-2      	; 0x410 <__LOCK_REGION_LENGTH__+0x10>
+ 4dc:	80 e0       	ldi	r24, 0x00	; 0
+ 4de:	92 e0       	ldi	r25, 0x02	; 2
+ 4e0:	f2 de       	rcall	.-540    	; 0x2c6 <_ZN12DriveControl17startDriveControlEv>
+ 4e2:	ff cf       	rjmp	.-2      	; 0x4e2 <main+0x20>
 
-00000412 <_GLOBAL__sub_I_reflexCount>:
+000004e4 <_GLOBAL__sub_I_reflexCount>:
 
 		_delay_ms(20);
 	}
 
 	PORTB = 0;
 }
- 412:	6f ef       	ldi	r22, 0xFF	; 255
- 414:	7f ef       	ldi	r23, 0xFF	; 255
- 416:	81 e0       	ldi	r24, 0x01	; 1
- 418:	90 e0       	ldi	r25, 0x00	; 0
- 41a:	3e cf       	rjmp	.-388    	; 0x298 <_Z41__static_initialization_and_destruction_0ii>
- 41c:	08 95       	ret
+ 4e4:	6f ef       	ldi	r22, 0xFF	; 255
+ 4e6:	7f ef       	ldi	r23, 0xFF	; 255
+ 4e8:	81 e0       	ldi	r24, 0x01	; 1
+ 4ea:	90 e0       	ldi	r25, 0x00	; 0
+ 4ec:	3e cf       	rjmp	.-388    	; 0x36a <_Z41__static_initialization_and_destruction_0ii>
+ 4ee:	08 95       	ret
 
-0000041e <_Z8delay_msi>:
-#define MOTOR_DIRECTION OCR0B
+000004f0 <_Z8delay_msi>:
 #define MOTOR_TIMER_A TCCR0A
 #define MOTOT_TIMER_B TCCR0B
 
+// _delay_ms() kan ikke tage en variabel som delay. Derfor en for loop hvor den venter 1ms for hver iteration.
 void delay_ms(int duration_ms) {
 	for (int i = 0; i < duration_ms; i++) {
- 41e:	20 e0       	ldi	r18, 0x00	; 0
- 420:	30 e0       	ldi	r19, 0x00	; 0
- 422:	28 17       	cp	r18, r24
- 424:	39 07       	cpc	r19, r25
- 426:	4c f4       	brge	.+18     	; 0x43a <_Z8delay_msi+0x1c>
- 428:	ef e9       	ldi	r30, 0x9F	; 159
- 42a:	ff e0       	ldi	r31, 0x0F	; 15
- 42c:	31 97       	sbiw	r30, 0x01	; 1
- 42e:	f1 f7       	brne	.-4      	; 0x42c <_Z8delay_msi+0xe>
- 430:	00 c0       	rjmp	.+0      	; 0x432 <_Z8delay_msi+0x14>
- 432:	00 00       	nop
- 434:	2f 5f       	subi	r18, 0xFF	; 255
- 436:	3f 4f       	sbci	r19, 0xFF	; 255
- 438:	f4 cf       	rjmp	.-24     	; 0x422 <_Z8delay_msi+0x4>
- 43a:	08 95       	ret
+ 4f0:	20 e0       	ldi	r18, 0x00	; 0
+ 4f2:	30 e0       	ldi	r19, 0x00	; 0
+ 4f4:	28 17       	cp	r18, r24
+ 4f6:	39 07       	cpc	r19, r25
+ 4f8:	4c f4       	brge	.+18     	; 0x50c <_Z8delay_msi+0x1c>
+ 4fa:	ef e9       	ldi	r30, 0x9F	; 159
+ 4fc:	ff e0       	ldi	r31, 0x0F	; 15
+ 4fe:	31 97       	sbiw	r30, 0x01	; 1
+ 500:	f1 f7       	brne	.-4      	; 0x4fe <_Z8delay_msi+0xe>
+ 502:	00 c0       	rjmp	.+0      	; 0x504 <_Z8delay_msi+0x14>
+ 504:	00 00       	nop
+ 506:	2f 5f       	subi	r18, 0xFF	; 255
+ 508:	3f 4f       	sbci	r19, 0xFF	; 255
+ 50a:	f4 cf       	rjmp	.-24     	; 0x4f4 <_Z8delay_msi+0x4>
+ 50c:	08 95       	ret
 
-0000043c <_ZN5MotorC1Ev>:
+0000050e <_ZN5MotorC1Ev>:
 		_delay_ms(1);
 	}
 }
 
 // default constructor
 Motor::Motor()
- 43c:	dc 01       	movw	r26, r24
+ 50e:	dc 01       	movw	r26, r24
 	// mode 3
 	// 120 Hz (cirka)
 	// 10 bit
 	// 65 -> 64 prescaler (beregnet i cheatsheet)
 	// på port b
 	TCCR4A = 0b00100011; // tabel 17-4, clear OCnA on compare match.
- 43e:	83 e2       	ldi	r24, 0x23	; 35
- 440:	80 93 a0 00 	sts	0x00A0, r24	; 0x8000a0 <__TEXT_REGION_LENGTH__+0x7c00a0>
+ 510:	83 e2       	ldi	r24, 0x23	; 35
+ 512:	80 93 a0 00 	sts	0x00A0, r24	; 0x8000a0 <__TEXT_REGION_LENGTH__+0x7c00a0>
 	TCCR4B = 0b00000011; // 64 prescaling
- 444:	83 e0       	ldi	r24, 0x03	; 3
- 446:	80 93 a1 00 	sts	0x00A1, r24	; 0x8000a1 <__TEXT_REGION_LENGTH__+0x7c00a1>
+ 516:	83 e0       	ldi	r24, 0x03	; 3
+ 518:	80 93 a1 00 	sts	0x00A1, r24	; 0x8000a1 <__TEXT_REGION_LENGTH__+0x7c00a1>
 	
 	// PWM på PH4
 	DDRH |= (1 << PH4);
- 44a:	e1 e0       	ldi	r30, 0x01	; 1
- 44c:	f1 e0       	ldi	r31, 0x01	; 1
- 44e:	90 81       	ld	r25, Z
- 450:	90 61       	ori	r25, 0x10	; 16
- 452:	90 83       	st	Z, r25
+ 51c:	e1 e0       	ldi	r30, 0x01	; 1
+ 51e:	f1 e0       	ldi	r31, 0x01	; 1
+ 520:	90 81       	ld	r25, Z
+ 522:	90 61       	ori	r25, 0x10	; 16
+ 524:	90 83       	st	Z, r25
 	
 	// Direction på PH3
 	DDRH |= (1 << PH3);
- 454:	90 81       	ld	r25, Z
- 456:	98 60       	ori	r25, 0x08	; 8
- 458:	90 83       	st	Z, r25
+ 526:	90 81       	ld	r25, Z
+ 528:	98 60       	ori	r25, 0x08	; 8
+ 52a:	90 83       	st	Z, r25
 	PORTH |= (1 << PH3);
- 45a:	e2 e0       	ldi	r30, 0x02	; 2
- 45c:	f1 e0       	ldi	r31, 0x01	; 1
- 45e:	90 81       	ld	r25, Z
- 460:	98 60       	ori	r25, 0x08	; 8
- 462:	90 83       	st	Z, r25
+ 52c:	e2 e0       	ldi	r30, 0x02	; 2
+ 52e:	f1 e0       	ldi	r31, 0x01	; 1
+ 530:	90 81       	ld	r25, Z
+ 532:	98 60       	ori	r25, 0x08	; 8
+ 534:	90 83       	st	Z, r25
 	currentDirection_ = 1;
- 464:	81 e0       	ldi	r24, 0x01	; 1
- 466:	90 e0       	ldi	r25, 0x00	; 0
- 468:	11 96       	adiw	r26, 0x01	; 1
- 46a:	9c 93       	st	X, r25
- 46c:	8e 93       	st	-X, r24
+ 536:	81 e0       	ldi	r24, 0x01	; 1
+ 538:	90 e0       	ldi	r25, 0x00	; 0
+ 53a:	11 96       	adiw	r26, 0x01	; 1
+ 53c:	9c 93       	st	X, r25
+ 53e:	8e 93       	st	-X, r24
 	currentSpeed_ = 0;
- 46e:	13 96       	adiw	r26, 0x03	; 3
- 470:	1c 92       	st	X, r1
- 472:	1e 92       	st	-X, r1
- 474:	12 97       	sbiw	r26, 0x02	; 2
- 476:	08 95       	ret
+ 540:	13 96       	adiw	r26, 0x03	; 3
+ 542:	1c 92       	st	X, r1
+ 544:	1e 92       	st	-X, r1
+ 546:	12 97       	sbiw	r26, 0x02	; 2
+ 548:	08 95       	ret
 
-00000478 <_ZN5Motor14driveBackwardsEii>:
+0000054a <_ZN5Motor14driveBackwardsEii>:
 	
 	currentSpeed_ = speed;
 }
 
 void Motor::driveBackwards(int speed, int delay)
 {
- 478:	cf 92       	push	r12
- 47a:	df 92       	push	r13
- 47c:	ef 92       	push	r14
- 47e:	ff 92       	push	r15
- 480:	0f 93       	push	r16
- 482:	1f 93       	push	r17
- 484:	cf 93       	push	r28
- 486:	df 93       	push	r29
- 488:	6c 01       	movw	r12, r24
- 48a:	8b 01       	movw	r16, r22
- 48c:	7a 01       	movw	r14, r20
+ 54a:	cf 92       	push	r12
+ 54c:	df 92       	push	r13
+ 54e:	ef 92       	push	r14
+ 550:	ff 92       	push	r15
+ 552:	0f 93       	push	r16
+ 554:	1f 93       	push	r17
+ 556:	cf 93       	push	r28
+ 558:	df 93       	push	r29
+ 55a:	6c 01       	movw	r12, r24
+ 55c:	8b 01       	movw	r16, r22
+ 55e:	7a 01       	movw	r14, r20
 	if (currentDirection_ == 1) {
- 48e:	fc 01       	movw	r30, r24
- 490:	80 81       	ld	r24, Z
- 492:	91 81       	ldd	r25, Z+1	; 0x01
- 494:	01 97       	sbiw	r24, 0x01	; 1
- 496:	21 f4       	brne	.+8      	; 0x4a0 <_ZN5Motor14driveBackwardsEii+0x28>
+ 560:	fc 01       	movw	r30, r24
+ 562:	80 81       	ld	r24, Z
+ 564:	91 81       	ldd	r25, Z+1	; 0x01
+ 566:	01 97       	sbiw	r24, 0x01	; 1
+ 568:	21 f4       	brne	.+8      	; 0x572 <_ZN5Motor14driveBackwardsEii+0x28>
 		driveForward(0, delay);
- 498:	60 e0       	ldi	r22, 0x00	; 0
- 49a:	70 e0       	ldi	r23, 0x00	; 0
- 49c:	c6 01       	movw	r24, r12
- 49e:	47 d0       	rcall	.+142    	; 0x52e <_ZN5Motor12driveForwardEii>
+ 56a:	60 e0       	ldi	r22, 0x00	; 0
+ 56c:	70 e0       	ldi	r23, 0x00	; 0
+ 56e:	c6 01       	movw	r24, r12
+ 570:	47 d0       	rcall	.+142    	; 0x600 <_ZN5Motor12driveForwardEii>
 	}
 	
 	PORTH |= (1 << PH3);
- 4a0:	e2 e0       	ldi	r30, 0x02	; 2
- 4a2:	f1 e0       	ldi	r31, 0x01	; 1
- 4a4:	80 81       	ld	r24, Z
- 4a6:	88 60       	ori	r24, 0x08	; 8
- 4a8:	80 83       	st	Z, r24
+ 572:	e2 e0       	ldi	r30, 0x02	; 2
+ 574:	f1 e0       	ldi	r31, 0x01	; 1
+ 576:	80 81       	ld	r24, Z
+ 578:	88 60       	ori	r24, 0x08	; 8
+ 57a:	80 83       	st	Z, r24
 	currentDirection_ = 0;
- 4aa:	f6 01       	movw	r30, r12
- 4ac:	11 82       	std	Z+1, r1	; 0x01
- 4ae:	10 82       	st	Z, r1
+ 57c:	f6 01       	movw	r30, r12
+ 57e:	11 82       	std	Z+1, r1	; 0x01
+ 580:	10 82       	st	Z, r1
 	
 	if (currentSpeed_ < speed) {
- 4b0:	c2 81       	ldd	r28, Z+2	; 0x02
- 4b2:	d3 81       	ldd	r29, Z+3	; 0x03
- 4b4:	c0 17       	cp	r28, r16
- 4b6:	d1 07       	cpc	r29, r17
- 4b8:	bc f4       	brge	.+46     	; 0x4e8 <_ZN5Motor14driveBackwardsEii+0x70>
+ 582:	c2 81       	ldd	r28, Z+2	; 0x02
+ 584:	d3 81       	ldd	r29, Z+3	; 0x03
+ 586:	c0 17       	cp	r28, r16
+ 588:	d1 07       	cpc	r29, r17
+ 58a:	bc f4       	brge	.+46     	; 0x5ba <_ZN5Motor14driveBackwardsEii+0x70>
 		for (int i = currentSpeed_; i < speed; i++)
- 4ba:	c0 17       	cp	r28, r16
- 4bc:	d1 07       	cpc	r29, r17
- 4be:	5c f5       	brge	.+86     	; 0x516 <_ZN5Motor14driveBackwardsEii+0x9e>
+ 58c:	c0 17       	cp	r28, r16
+ 58e:	d1 07       	cpc	r29, r17
+ 590:	5c f5       	brge	.+86     	; 0x5e8 <_ZN5Motor14driveBackwardsEii+0x9e>
 		{
 			OCR4B = i * 10;
- 4c0:	9e 01       	movw	r18, r28
- 4c2:	22 0f       	add	r18, r18
- 4c4:	33 1f       	adc	r19, r19
- 4c6:	ce 01       	movw	r24, r28
- 4c8:	88 0f       	add	r24, r24
- 4ca:	99 1f       	adc	r25, r25
- 4cc:	88 0f       	add	r24, r24
- 4ce:	99 1f       	adc	r25, r25
- 4d0:	88 0f       	add	r24, r24
- 4d2:	99 1f       	adc	r25, r25
- 4d4:	82 0f       	add	r24, r18
- 4d6:	93 1f       	adc	r25, r19
- 4d8:	90 93 ab 00 	sts	0x00AB, r25	; 0x8000ab <__TEXT_REGION_LENGTH__+0x7c00ab>
- 4dc:	80 93 aa 00 	sts	0x00AA, r24	; 0x8000aa <__TEXT_REGION_LENGTH__+0x7c00aa>
+ 592:	9e 01       	movw	r18, r28
+ 594:	22 0f       	add	r18, r18
+ 596:	33 1f       	adc	r19, r19
+ 598:	ce 01       	movw	r24, r28
+ 59a:	88 0f       	add	r24, r24
+ 59c:	99 1f       	adc	r25, r25
+ 59e:	88 0f       	add	r24, r24
+ 5a0:	99 1f       	adc	r25, r25
+ 5a2:	88 0f       	add	r24, r24
+ 5a4:	99 1f       	adc	r25, r25
+ 5a6:	82 0f       	add	r24, r18
+ 5a8:	93 1f       	adc	r25, r19
+ 5aa:	90 93 ab 00 	sts	0x00AB, r25	; 0x8000ab <__TEXT_REGION_LENGTH__+0x7c00ab>
+ 5ae:	80 93 aa 00 	sts	0x00AA, r24	; 0x8000aa <__TEXT_REGION_LENGTH__+0x7c00aa>
 			delay_ms(delay);
- 4e0:	c7 01       	movw	r24, r14
- 4e2:	9d df       	rcall	.-198    	; 0x41e <_Z8delay_msi>
+ 5b2:	c7 01       	movw	r24, r14
+ 5b4:	9d df       	rcall	.-198    	; 0x4f0 <_Z8delay_msi>
 	
 	PORTH |= (1 << PH3);
 	currentDirection_ = 0;
 	
 	if (currentSpeed_ < speed) {
 		for (int i = currentSpeed_; i < speed; i++)
- 4e4:	21 96       	adiw	r28, 0x01	; 1
- 4e6:	e9 cf       	rjmp	.-46     	; 0x4ba <_ZN5Motor14driveBackwardsEii+0x42>
+ 5b6:	21 96       	adiw	r28, 0x01	; 1
+ 5b8:	e9 cf       	rjmp	.-46     	; 0x58c <_ZN5Motor14driveBackwardsEii+0x42>
 		{
 			OCR4B = i * 10;
 			delay_ms(delay);
 		}
 		} else {
 		for (int i = currentSpeed_; i > speed; i--)
- 4e8:	0c 17       	cp	r16, r28
- 4ea:	1d 07       	cpc	r17, r29
- 4ec:	a4 f4       	brge	.+40     	; 0x516 <_ZN5Motor14driveBackwardsEii+0x9e>
+ 5ba:	0c 17       	cp	r16, r28
+ 5bc:	1d 07       	cpc	r17, r29
+ 5be:	a4 f4       	brge	.+40     	; 0x5e8 <_ZN5Motor14driveBackwardsEii+0x9e>
 		{
 			OCR4B = i * 10;
- 4ee:	9e 01       	movw	r18, r28
- 4f0:	22 0f       	add	r18, r18
- 4f2:	33 1f       	adc	r19, r19
- 4f4:	ce 01       	movw	r24, r28
- 4f6:	88 0f       	add	r24, r24
- 4f8:	99 1f       	adc	r25, r25
- 4fa:	88 0f       	add	r24, r24
- 4fc:	99 1f       	adc	r25, r25
- 4fe:	88 0f       	add	r24, r24
- 500:	99 1f       	adc	r25, r25
- 502:	82 0f       	add	r24, r18
- 504:	93 1f       	adc	r25, r19
- 506:	90 93 ab 00 	sts	0x00AB, r25	; 0x8000ab <__TEXT_REGION_LENGTH__+0x7c00ab>
- 50a:	80 93 aa 00 	sts	0x00AA, r24	; 0x8000aa <__TEXT_REGION_LENGTH__+0x7c00aa>
+ 5c0:	9e 01       	movw	r18, r28
+ 5c2:	22 0f       	add	r18, r18
+ 5c4:	33 1f       	adc	r19, r19
+ 5c6:	ce 01       	movw	r24, r28
+ 5c8:	88 0f       	add	r24, r24
+ 5ca:	99 1f       	adc	r25, r25
+ 5cc:	88 0f       	add	r24, r24
+ 5ce:	99 1f       	adc	r25, r25
+ 5d0:	88 0f       	add	r24, r24
+ 5d2:	99 1f       	adc	r25, r25
+ 5d4:	82 0f       	add	r24, r18
+ 5d6:	93 1f       	adc	r25, r19
+ 5d8:	90 93 ab 00 	sts	0x00AB, r25	; 0x8000ab <__TEXT_REGION_LENGTH__+0x7c00ab>
+ 5dc:	80 93 aa 00 	sts	0x00AA, r24	; 0x8000aa <__TEXT_REGION_LENGTH__+0x7c00aa>
 			delay_ms(delay);
- 50e:	c7 01       	movw	r24, r14
- 510:	86 df       	rcall	.-244    	; 0x41e <_Z8delay_msi>
+ 5e0:	c7 01       	movw	r24, r14
+ 5e2:	86 df       	rcall	.-244    	; 0x4f0 <_Z8delay_msi>
 		{
 			OCR4B = i * 10;
 			delay_ms(delay);
 		}
 		} else {
 		for (int i = currentSpeed_; i > speed; i--)
- 512:	21 97       	sbiw	r28, 0x01	; 1
- 514:	e9 cf       	rjmp	.-46     	; 0x4e8 <_ZN5Motor14driveBackwardsEii+0x70>
+ 5e4:	21 97       	sbiw	r28, 0x01	; 1
+ 5e6:	e9 cf       	rjmp	.-46     	; 0x5ba <_ZN5Motor14driveBackwardsEii+0x70>
 			OCR4B = i * 10;
 			delay_ms(delay);
 		}
 	}
 	
 	currentSpeed_ = speed;
- 516:	f6 01       	movw	r30, r12
- 518:	13 83       	std	Z+3, r17	; 0x03
- 51a:	02 83       	std	Z+2, r16	; 0x02
+ 5e8:	f6 01       	movw	r30, r12
+ 5ea:	13 83       	std	Z+3, r17	; 0x03
+ 5ec:	02 83       	std	Z+2, r16	; 0x02
 }
- 51c:	df 91       	pop	r29
- 51e:	cf 91       	pop	r28
- 520:	1f 91       	pop	r17
- 522:	0f 91       	pop	r16
- 524:	ff 90       	pop	r15
- 526:	ef 90       	pop	r14
- 528:	df 90       	pop	r13
- 52a:	cf 90       	pop	r12
- 52c:	08 95       	ret
+ 5ee:	df 91       	pop	r29
+ 5f0:	cf 91       	pop	r28
+ 5f2:	1f 91       	pop	r17
+ 5f4:	0f 91       	pop	r16
+ 5f6:	ff 90       	pop	r15
+ 5f8:	ef 90       	pop	r14
+ 5fa:	df 90       	pop	r13
+ 5fc:	cf 90       	pop	r12
+ 5fe:	08 95       	ret
 
-0000052e <_ZN5Motor12driveForwardEii>:
+00000600 <_ZN5Motor12driveForwardEii>:
 	currentDirection_ = 1;
 	currentSpeed_ = 0;
 } //Motor
 
 void Motor::driveForward(int speed, int delay)
 {
- 52e:	cf 92       	push	r12
- 530:	df 92       	push	r13
- 532:	ef 92       	push	r14
- 534:	ff 92       	push	r15
- 536:	0f 93       	push	r16
- 538:	1f 93       	push	r17
- 53a:	cf 93       	push	r28
- 53c:	df 93       	push	r29
- 53e:	6c 01       	movw	r12, r24
- 540:	8b 01       	movw	r16, r22
- 542:	7a 01       	movw	r14, r20
+ 600:	cf 92       	push	r12
+ 602:	df 92       	push	r13
+ 604:	ef 92       	push	r14
+ 606:	ff 92       	push	r15
+ 608:	0f 93       	push	r16
+ 60a:	1f 93       	push	r17
+ 60c:	cf 93       	push	r28
+ 60e:	df 93       	push	r29
+ 610:	6c 01       	movw	r12, r24
+ 612:	8b 01       	movw	r16, r22
+ 614:	7a 01       	movw	r14, r20
 	if (currentDirection_ == 0) {
- 544:	fc 01       	movw	r30, r24
- 546:	80 81       	ld	r24, Z
- 548:	91 81       	ldd	r25, Z+1	; 0x01
- 54a:	89 2b       	or	r24, r25
- 54c:	21 f4       	brne	.+8      	; 0x556 <_ZN5Motor12driveForwardEii+0x28>
+ 616:	fc 01       	movw	r30, r24
+ 618:	80 81       	ld	r24, Z
+ 61a:	91 81       	ldd	r25, Z+1	; 0x01
+ 61c:	89 2b       	or	r24, r25
+ 61e:	21 f4       	brne	.+8      	; 0x628 <_ZN5Motor12driveForwardEii+0x28>
 		driveBackwards(0, delay);
- 54e:	60 e0       	ldi	r22, 0x00	; 0
- 550:	70 e0       	ldi	r23, 0x00	; 0
- 552:	c6 01       	movw	r24, r12
- 554:	91 df       	rcall	.-222    	; 0x478 <_ZN5Motor14driveBackwardsEii>
+ 620:	60 e0       	ldi	r22, 0x00	; 0
+ 622:	70 e0       	ldi	r23, 0x00	; 0
+ 624:	c6 01       	movw	r24, r12
+ 626:	91 df       	rcall	.-222    	; 0x54a <_ZN5Motor14driveBackwardsEii>
 	}
 	
 	PORTH &= (0 << PH3);
- 556:	e2 e0       	ldi	r30, 0x02	; 2
- 558:	f1 e0       	ldi	r31, 0x01	; 1
- 55a:	80 81       	ld	r24, Z
- 55c:	10 82       	st	Z, r1
+ 628:	e2 e0       	ldi	r30, 0x02	; 2
+ 62a:	f1 e0       	ldi	r31, 0x01	; 1
+ 62c:	80 81       	ld	r24, Z
+ 62e:	10 82       	st	Z, r1
 	currentDirection_ = 1;
- 55e:	81 e0       	ldi	r24, 0x01	; 1
- 560:	90 e0       	ldi	r25, 0x00	; 0
- 562:	f6 01       	movw	r30, r12
- 564:	91 83       	std	Z+1, r25	; 0x01
- 566:	80 83       	st	Z, r24
+ 630:	81 e0       	ldi	r24, 0x01	; 1
+ 632:	90 e0       	ldi	r25, 0x00	; 0
+ 634:	f6 01       	movw	r30, r12
+ 636:	91 83       	std	Z+1, r25	; 0x01
+ 638:	80 83       	st	Z, r24
 	
 	if (currentSpeed_ < speed) {
- 568:	c2 81       	ldd	r28, Z+2	; 0x02
- 56a:	d3 81       	ldd	r29, Z+3	; 0x03
- 56c:	c0 17       	cp	r28, r16
- 56e:	d1 07       	cpc	r29, r17
- 570:	bc f4       	brge	.+46     	; 0x5a0 <_ZN5Motor12driveForwardEii+0x72>
+ 63a:	c2 81       	ldd	r28, Z+2	; 0x02
+ 63c:	d3 81       	ldd	r29, Z+3	; 0x03
+ 63e:	c0 17       	cp	r28, r16
+ 640:	d1 07       	cpc	r29, r17
+ 642:	bc f4       	brge	.+46     	; 0x672 <_ZN5Motor12driveForwardEii+0x72>
 		for (int i = currentSpeed_; i < speed; i++)
- 572:	c0 17       	cp	r28, r16
- 574:	d1 07       	cpc	r29, r17
- 576:	5c f5       	brge	.+86     	; 0x5ce <_ZN5Motor12driveForwardEii+0xa0>
+ 644:	c0 17       	cp	r28, r16
+ 646:	d1 07       	cpc	r29, r17
+ 648:	5c f5       	brge	.+86     	; 0x6a0 <_ZN5Motor12driveForwardEii+0xa0>
 		{
 			OCR4B = i * 10;
- 578:	9e 01       	movw	r18, r28
- 57a:	22 0f       	add	r18, r18
- 57c:	33 1f       	adc	r19, r19
- 57e:	ce 01       	movw	r24, r28
- 580:	88 0f       	add	r24, r24
- 582:	99 1f       	adc	r25, r25
- 584:	88 0f       	add	r24, r24
- 586:	99 1f       	adc	r25, r25
- 588:	88 0f       	add	r24, r24
- 58a:	99 1f       	adc	r25, r25
- 58c:	82 0f       	add	r24, r18
- 58e:	93 1f       	adc	r25, r19
- 590:	90 93 ab 00 	sts	0x00AB, r25	; 0x8000ab <__TEXT_REGION_LENGTH__+0x7c00ab>
- 594:	80 93 aa 00 	sts	0x00AA, r24	; 0x8000aa <__TEXT_REGION_LENGTH__+0x7c00aa>
+ 64a:	9e 01       	movw	r18, r28
+ 64c:	22 0f       	add	r18, r18
+ 64e:	33 1f       	adc	r19, r19
+ 650:	ce 01       	movw	r24, r28
+ 652:	88 0f       	add	r24, r24
+ 654:	99 1f       	adc	r25, r25
+ 656:	88 0f       	add	r24, r24
+ 658:	99 1f       	adc	r25, r25
+ 65a:	88 0f       	add	r24, r24
+ 65c:	99 1f       	adc	r25, r25
+ 65e:	82 0f       	add	r24, r18
+ 660:	93 1f       	adc	r25, r19
+ 662:	90 93 ab 00 	sts	0x00AB, r25	; 0x8000ab <__TEXT_REGION_LENGTH__+0x7c00ab>
+ 666:	80 93 aa 00 	sts	0x00AA, r24	; 0x8000aa <__TEXT_REGION_LENGTH__+0x7c00aa>
 			delay_ms(delay);
- 598:	c7 01       	movw	r24, r14
- 59a:	41 df       	rcall	.-382    	; 0x41e <_Z8delay_msi>
+ 66a:	c7 01       	movw	r24, r14
+ 66c:	41 df       	rcall	.-382    	; 0x4f0 <_Z8delay_msi>
 	
 	PORTH &= (0 << PH3);
 	currentDirection_ = 1;
 	
 	if (currentSpeed_ < speed) {
 		for (int i = currentSpeed_; i < speed; i++)
- 59c:	21 96       	adiw	r28, 0x01	; 1
- 59e:	e9 cf       	rjmp	.-46     	; 0x572 <_ZN5Motor12driveForwardEii+0x44>
+ 66e:	21 96       	adiw	r28, 0x01	; 1
+ 670:	e9 cf       	rjmp	.-46     	; 0x644 <_ZN5Motor12driveForwardEii+0x44>
 		{
 			OCR4B = i * 10;
 			delay_ms(delay);
 		}	
 	} else {
 		for (int i = currentSpeed_; i > speed; i--)
- 5a0:	0c 17       	cp	r16, r28
- 5a2:	1d 07       	cpc	r17, r29
- 5a4:	a4 f4       	brge	.+40     	; 0x5ce <_ZN5Motor12driveForwardEii+0xa0>
+ 672:	0c 17       	cp	r16, r28
+ 674:	1d 07       	cpc	r17, r29
+ 676:	a4 f4       	brge	.+40     	; 0x6a0 <_ZN5Motor12driveForwardEii+0xa0>
 		{
 			OCR4B = i * 10;
- 5a6:	9e 01       	movw	r18, r28
- 5a8:	22 0f       	add	r18, r18
- 5aa:	33 1f       	adc	r19, r19
- 5ac:	ce 01       	movw	r24, r28
- 5ae:	88 0f       	add	r24, r24
- 5b0:	99 1f       	adc	r25, r25
- 5b2:	88 0f       	add	r24, r24
- 5b4:	99 1f       	adc	r25, r25
- 5b6:	88 0f       	add	r24, r24
- 5b8:	99 1f       	adc	r25, r25
- 5ba:	82 0f       	add	r24, r18
- 5bc:	93 1f       	adc	r25, r19
- 5be:	90 93 ab 00 	sts	0x00AB, r25	; 0x8000ab <__TEXT_REGION_LENGTH__+0x7c00ab>
- 5c2:	80 93 aa 00 	sts	0x00AA, r24	; 0x8000aa <__TEXT_REGION_LENGTH__+0x7c00aa>
+ 678:	9e 01       	movw	r18, r28
+ 67a:	22 0f       	add	r18, r18
+ 67c:	33 1f       	adc	r19, r19
+ 67e:	ce 01       	movw	r24, r28
+ 680:	88 0f       	add	r24, r24
+ 682:	99 1f       	adc	r25, r25
+ 684:	88 0f       	add	r24, r24
+ 686:	99 1f       	adc	r25, r25
+ 688:	88 0f       	add	r24, r24
+ 68a:	99 1f       	adc	r25, r25
+ 68c:	82 0f       	add	r24, r18
+ 68e:	93 1f       	adc	r25, r19
+ 690:	90 93 ab 00 	sts	0x00AB, r25	; 0x8000ab <__TEXT_REGION_LENGTH__+0x7c00ab>
+ 694:	80 93 aa 00 	sts	0x00AA, r24	; 0x8000aa <__TEXT_REGION_LENGTH__+0x7c00aa>
 			delay_ms(delay);
- 5c6:	c7 01       	movw	r24, r14
- 5c8:	2a df       	rcall	.-428    	; 0x41e <_Z8delay_msi>
+ 698:	c7 01       	movw	r24, r14
+ 69a:	2a df       	rcall	.-428    	; 0x4f0 <_Z8delay_msi>
 		{
 			OCR4B = i * 10;
 			delay_ms(delay);
 		}	
 	} else {
 		for (int i = currentSpeed_; i > speed; i--)
- 5ca:	21 97       	sbiw	r28, 0x01	; 1
- 5cc:	e9 cf       	rjmp	.-46     	; 0x5a0 <_ZN5Motor12driveForwardEii+0x72>
+ 69c:	21 97       	sbiw	r28, 0x01	; 1
+ 69e:	e9 cf       	rjmp	.-46     	; 0x672 <_ZN5Motor12driveForwardEii+0x72>
 			OCR4B = i * 10;
 			delay_ms(delay);
 		}
 	}
 	
 	currentSpeed_ = speed;
- 5ce:	f6 01       	movw	r30, r12
- 5d0:	13 83       	std	Z+3, r17	; 0x03
- 5d2:	02 83       	std	Z+2, r16	; 0x02
+ 6a0:	f6 01       	movw	r30, r12
+ 6a2:	13 83       	std	Z+3, r17	; 0x03
+ 6a4:	02 83       	std	Z+2, r16	; 0x02
 }
- 5d4:	df 91       	pop	r29
- 5d6:	cf 91       	pop	r28
- 5d8:	1f 91       	pop	r17
- 5da:	0f 91       	pop	r16
- 5dc:	ff 90       	pop	r15
- 5de:	ef 90       	pop	r14
- 5e0:	df 90       	pop	r13
- 5e2:	cf 90       	pop	r12
- 5e4:	08 95       	ret
+ 6a6:	df 91       	pop	r29
+ 6a8:	cf 91       	pop	r28
+ 6aa:	1f 91       	pop	r17
+ 6ac:	0f 91       	pop	r16
+ 6ae:	ff 90       	pop	r15
+ 6b0:	ef 90       	pop	r14
+ 6b2:	df 90       	pop	r13
+ 6b4:	cf 90       	pop	r12
+ 6b6:	08 95       	ret
 
-000005e6 <_ZN5Motor9driveStopEi>:
+000006b8 <_ZN5Motor9driveStopEi>:
 	
 	currentSpeed_ = speed;
 }
 
 void Motor::driveStop(int delay)
 {
- 5e6:	ab 01       	movw	r20, r22
+ 6b8:	ab 01       	movw	r20, r22
 	if (currentDirection_ == 0) {
- 5e8:	fc 01       	movw	r30, r24
- 5ea:	20 81       	ld	r18, Z
- 5ec:	31 81       	ldd	r19, Z+1	; 0x01
- 5ee:	23 2b       	or	r18, r19
- 5f0:	21 f4       	brne	.+8      	; 0x5fa <_ZN5Motor9driveStopEi+0x14>
+ 6ba:	fc 01       	movw	r30, r24
+ 6bc:	20 81       	ld	r18, Z
+ 6be:	31 81       	ldd	r19, Z+1	; 0x01
+ 6c0:	23 2b       	or	r18, r19
+ 6c2:	21 f4       	brne	.+8      	; 0x6cc <_ZN5Motor9driveStopEi+0x14>
 		driveBackwards(0, delay);
- 5f2:	60 e0       	ldi	r22, 0x00	; 0
- 5f4:	70 e0       	ldi	r23, 0x00	; 0
- 5f6:	40 cf       	rjmp	.-384    	; 0x478 <_ZN5Motor14driveBackwardsEii>
- 5f8:	08 95       	ret
+ 6c4:	60 e0       	ldi	r22, 0x00	; 0
+ 6c6:	70 e0       	ldi	r23, 0x00	; 0
+ 6c8:	40 cf       	rjmp	.-384    	; 0x54a <_ZN5Motor14driveBackwardsEii>
+ 6ca:	08 95       	ret
 	} else {
 		driveForward(0, delay);
- 5fa:	60 e0       	ldi	r22, 0x00	; 0
- 5fc:	70 e0       	ldi	r23, 0x00	; 0
- 5fe:	97 cf       	rjmp	.-210    	; 0x52e <_ZN5Motor12driveForwardEii>
- 600:	08 95       	ret
+ 6cc:	60 e0       	ldi	r22, 0x00	; 0
+ 6ce:	70 e0       	ldi	r23, 0x00	; 0
+ 6d0:	97 cf       	rjmp	.-210    	; 0x600 <_ZN5Motor12driveForwardEii>
+ 6d2:	08 95       	ret
 
-00000602 <_ZN5SoundC1Ev>:
+000006d4 <_ZN5SoundC1Ev>:
 */
 #include "Sound.h"
 #include "UART.h"
 
 // default constructor
 Sound::Sound()
- 602:	0f 93       	push	r16
- 604:	1f 93       	push	r17
- 606:	cf 93       	push	r28
- 608:	df 93       	push	r29
- 60a:	1f 92       	push	r1
- 60c:	cd b7       	in	r28, 0x3d	; 61
- 60e:	de b7       	in	r29, 0x3e	; 62
- 610:	8c 01       	movw	r16, r24
- 612:	94 d0       	rcall	.+296    	; 0x73c <_ZN4UARTC1Ev>
+ 6d4:	0f 93       	push	r16
+ 6d6:	1f 93       	push	r17
+ 6d8:	cf 93       	push	r28
+ 6da:	df 93       	push	r29
+ 6dc:	1f 92       	push	r1
+ 6de:	cd b7       	in	r28, 0x3d	; 61
+ 6e0:	de b7       	in	r29, 0x3e	; 62
+ 6e2:	8c 01       	movw	r16, r24
+ 6e4:	94 d0       	rcall	.+296    	; 0x80e <_ZN4UARTC1Ev>
 {
 	UART uart;
- 614:	ce 01       	movw	r24, r28
- 616:	01 96       	adiw	r24, 0x01	; 1
- 618:	91 d0       	rcall	.+290    	; 0x73c <_ZN4UARTC1Ev>
+ 6e6:	ce 01       	movw	r24, r28
+ 6e8:	01 96       	adiw	r24, 0x01	; 1
+ 6ea:	91 d0       	rcall	.+290    	; 0x80e <_ZN4UARTC1Ev>
 	uartDriver_ = uart;
 	//Set SD Card as source
 	uartDriver_.SendChar(0x7E);
- 61a:	6e e7       	ldi	r22, 0x7E	; 126
- 61c:	c8 01       	movw	r24, r16
- 61e:	9b d0       	rcall	.+310    	; 0x756 <_ZN4UART8SendCharEc>
+ 6ec:	6e e7       	ldi	r22, 0x7E	; 126
+ 6ee:	c8 01       	movw	r24, r16
+ 6f0:	9b d0       	rcall	.+310    	; 0x828 <_ZN4UART8SendCharEc>
 	uartDriver_.SendChar(0x09);
- 620:	69 e0       	ldi	r22, 0x09	; 9
- 622:	c8 01       	movw	r24, r16
- 624:	98 d0       	rcall	.+304    	; 0x756 <_ZN4UART8SendCharEc>
+ 6f2:	69 e0       	ldi	r22, 0x09	; 9
+ 6f4:	c8 01       	movw	r24, r16
+ 6f6:	98 d0       	rcall	.+304    	; 0x828 <_ZN4UART8SendCharEc>
 	uartDriver_.SendChar(0x00);
- 626:	60 e0       	ldi	r22, 0x00	; 0
- 628:	c8 01       	movw	r24, r16
- 62a:	95 d0       	rcall	.+298    	; 0x756 <_ZN4UART8SendCharEc>
+ 6f8:	60 e0       	ldi	r22, 0x00	; 0
+ 6fa:	c8 01       	movw	r24, r16
+ 6fc:	95 d0       	rcall	.+298    	; 0x828 <_ZN4UART8SendCharEc>
 	uartDriver_.SendChar(0x00);
- 62c:	60 e0       	ldi	r22, 0x00	; 0
- 62e:	c8 01       	movw	r24, r16
- 630:	92 d0       	rcall	.+292    	; 0x756 <_ZN4UART8SendCharEc>
+ 6fe:	60 e0       	ldi	r22, 0x00	; 0
+ 700:	c8 01       	movw	r24, r16
+ 702:	92 d0       	rcall	.+292    	; 0x828 <_ZN4UART8SendCharEc>
 	uartDriver_.SendChar(0x02);
- 632:	62 e0       	ldi	r22, 0x02	; 2
- 634:	c8 01       	movw	r24, r16
- 636:	8f d0       	rcall	.+286    	; 0x756 <_ZN4UART8SendCharEc>
+ 704:	62 e0       	ldi	r22, 0x02	; 2
+ 706:	c8 01       	movw	r24, r16
+ 708:	8f d0       	rcall	.+286    	; 0x828 <_ZN4UART8SendCharEc>
 	uartDriver_.SendChar(0xFF);
- 638:	6f ef       	ldi	r22, 0xFF	; 255
- 63a:	c8 01       	movw	r24, r16
- 63c:	8c d0       	rcall	.+280    	; 0x756 <_ZN4UART8SendCharEc>
+ 70a:	6f ef       	ldi	r22, 0xFF	; 255
+ 70c:	c8 01       	movw	r24, r16
+ 70e:	8c d0       	rcall	.+280    	; 0x828 <_ZN4UART8SendCharEc>
 	uartDriver_.SendChar(0xF5);
- 63e:	65 ef       	ldi	r22, 0xF5	; 245
- 640:	c8 01       	movw	r24, r16
- 642:	89 d0       	rcall	.+274    	; 0x756 <_ZN4UART8SendCharEc>
+ 710:	65 ef       	ldi	r22, 0xF5	; 245
+ 712:	c8 01       	movw	r24, r16
+ 714:	89 d0       	rcall	.+274    	; 0x828 <_ZN4UART8SendCharEc>
 	uartDriver_.SendChar(0xEF);
- 644:	6f ee       	ldi	r22, 0xEF	; 239
- 646:	c8 01       	movw	r24, r16
- 648:	86 d0       	rcall	.+268    	; 0x756 <_ZN4UART8SendCharEc>
+ 716:	6f ee       	ldi	r22, 0xEF	; 239
+ 718:	c8 01       	movw	r24, r16
+ 71a:	86 d0       	rcall	.+268    	; 0x828 <_ZN4UART8SendCharEc>
 	
 	//SET VOLUME 30
 	uartDriver_.SendChar(0x7E);
- 64a:	6e e7       	ldi	r22, 0x7E	; 126
- 64c:	c8 01       	movw	r24, r16
- 64e:	83 d0       	rcall	.+262    	; 0x756 <_ZN4UART8SendCharEc>
+ 71c:	6e e7       	ldi	r22, 0x7E	; 126
+ 71e:	c8 01       	movw	r24, r16
+ 720:	83 d0       	rcall	.+262    	; 0x828 <_ZN4UART8SendCharEc>
 	uartDriver_.SendChar(0x06);
- 650:	66 e0       	ldi	r22, 0x06	; 6
- 652:	c8 01       	movw	r24, r16
- 654:	80 d0       	rcall	.+256    	; 0x756 <_ZN4UART8SendCharEc>
+ 722:	66 e0       	ldi	r22, 0x06	; 6
+ 724:	c8 01       	movw	r24, r16
+ 726:	80 d0       	rcall	.+256    	; 0x828 <_ZN4UART8SendCharEc>
 	uartDriver_.SendChar(0x00);
- 656:	60 e0       	ldi	r22, 0x00	; 0
- 658:	c8 01       	movw	r24, r16
- 65a:	7d d0       	rcall	.+250    	; 0x756 <_ZN4UART8SendCharEc>
+ 728:	60 e0       	ldi	r22, 0x00	; 0
+ 72a:	c8 01       	movw	r24, r16
+ 72c:	7d d0       	rcall	.+250    	; 0x828 <_ZN4UART8SendCharEc>
 	uartDriver_.SendChar(0x00);
- 65c:	60 e0       	ldi	r22, 0x00	; 0
- 65e:	c8 01       	movw	r24, r16
- 660:	7a d0       	rcall	.+244    	; 0x756 <_ZN4UART8SendCharEc>
+ 72e:	60 e0       	ldi	r22, 0x00	; 0
+ 730:	c8 01       	movw	r24, r16
+ 732:	7a d0       	rcall	.+244    	; 0x828 <_ZN4UART8SendCharEc>
 	uartDriver_.SendChar(0x1E);
- 662:	6e e1       	ldi	r22, 0x1E	; 30
- 664:	c8 01       	movw	r24, r16
- 666:	77 d0       	rcall	.+238    	; 0x756 <_ZN4UART8SendCharEc>
- 668:	6f ef       	ldi	r22, 0xFF	; 255
+ 734:	6e e1       	ldi	r22, 0x1E	; 30
+ 736:	c8 01       	movw	r24, r16
+ 738:	77 d0       	rcall	.+238    	; 0x828 <_ZN4UART8SendCharEc>
+ 73a:	6f ef       	ldi	r22, 0xFF	; 255
 	uartDriver_.SendChar(0xFF);
- 66a:	c8 01       	movw	r24, r16
- 66c:	74 d0       	rcall	.+232    	; 0x756 <_ZN4UART8SendCharEc>
- 66e:	6c ed       	ldi	r22, 0xDC	; 220
- 670:	c8 01       	movw	r24, r16
+ 73c:	c8 01       	movw	r24, r16
+ 73e:	74 d0       	rcall	.+232    	; 0x828 <_ZN4UART8SendCharEc>
+ 740:	6c ed       	ldi	r22, 0xDC	; 220
+ 742:	c8 01       	movw	r24, r16
 	uartDriver_.SendChar(0xDC);
- 672:	71 d0       	rcall	.+226    	; 0x756 <_ZN4UART8SendCharEc>
- 674:	6f ee       	ldi	r22, 0xEF	; 239
- 676:	c8 01       	movw	r24, r16
- 678:	6e d0       	rcall	.+220    	; 0x756 <_ZN4UART8SendCharEc>
+ 744:	71 d0       	rcall	.+226    	; 0x828 <_ZN4UART8SendCharEc>
+ 746:	6f ee       	ldi	r22, 0xEF	; 239
+ 748:	c8 01       	movw	r24, r16
+ 74a:	6e d0       	rcall	.+220    	; 0x828 <_ZN4UART8SendCharEc>
 	uartDriver_.SendChar(0xEF);
- 67a:	0f 90       	pop	r0
- 67c:	df 91       	pop	r29
- 67e:	cf 91       	pop	r28
- 680:	1f 91       	pop	r17
+ 74c:	0f 90       	pop	r0
+ 74e:	df 91       	pop	r29
+ 750:	cf 91       	pop	r28
+ 752:	1f 91       	pop	r17
 } //Sound
- 682:	0f 91       	pop	r16
- 684:	08 95       	ret
+ 754:	0f 91       	pop	r16
+ 756:	08 95       	ret
 
-00000686 <_ZN5Sound9playSoundEi>:
- 686:	0f 93       	push	r16
- 688:	1f 93       	push	r17
- 68a:	cf 93       	push	r28
- 68c:	df 93       	push	r29
+00000758 <_ZN5Sound9playSoundEi>:
+ 758:	0f 93       	push	r16
+ 75a:	1f 93       	push	r17
+ 75c:	cf 93       	push	r28
+ 75e:	df 93       	push	r29
 
 void Sound::playSound(int sound)
 {
- 68e:	ec 01       	movw	r28, r24
- 690:	8b 01       	movw	r16, r22
+ 760:	ec 01       	movw	r28, r24
+ 762:	8b 01       	movw	r16, r22
 	if (sound == 1) {
- 692:	61 30       	cpi	r22, 0x01	; 1
- 694:	71 05       	cpc	r23, r1
- 696:	b9 f4       	brne	.+46     	; 0x6c6 <_ZN5Sound9playSoundEi+0x40>
+ 764:	61 30       	cpi	r22, 0x01	; 1
+ 766:	71 05       	cpc	r23, r1
+ 768:	b9 f4       	brne	.+46     	; 0x798 <_ZN5Sound9playSoundEi+0x40>
 		//PLAY START SOUND
 		uartDriver_.SendChar(0x7E);
- 698:	6e e7       	ldi	r22, 0x7E	; 126
- 69a:	5d d0       	rcall	.+186    	; 0x756 <_ZN4UART8SendCharEc>
+ 76a:	6e e7       	ldi	r22, 0x7E	; 126
+ 76c:	5d d0       	rcall	.+186    	; 0x828 <_ZN4UART8SendCharEc>
 		uartDriver_.SendChar(0x0F);
- 69c:	6f e0       	ldi	r22, 0x0F	; 15
- 69e:	ce 01       	movw	r24, r28
- 6a0:	5a d0       	rcall	.+180    	; 0x756 <_ZN4UART8SendCharEc>
+ 76e:	6f e0       	ldi	r22, 0x0F	; 15
+ 770:	ce 01       	movw	r24, r28
+ 772:	5a d0       	rcall	.+180    	; 0x828 <_ZN4UART8SendCharEc>
 		uartDriver_.SendChar(0x00);
- 6a2:	60 e0       	ldi	r22, 0x00	; 0
- 6a4:	ce 01       	movw	r24, r28
- 6a6:	57 d0       	rcall	.+174    	; 0x756 <_ZN4UART8SendCharEc>
+ 774:	60 e0       	ldi	r22, 0x00	; 0
+ 776:	ce 01       	movw	r24, r28
+ 778:	57 d0       	rcall	.+174    	; 0x828 <_ZN4UART8SendCharEc>
 		uartDriver_.SendChar(0x01);
- 6a8:	61 e0       	ldi	r22, 0x01	; 1
- 6aa:	ce 01       	movw	r24, r28
- 6ac:	54 d0       	rcall	.+168    	; 0x756 <_ZN4UART8SendCharEc>
+ 77a:	61 e0       	ldi	r22, 0x01	; 1
+ 77c:	ce 01       	movw	r24, r28
+ 77e:	54 d0       	rcall	.+168    	; 0x828 <_ZN4UART8SendCharEc>
 		uartDriver_.SendChar(0x01);
- 6ae:	61 e0       	ldi	r22, 0x01	; 1
- 6b0:	ce 01       	movw	r24, r28
- 6b2:	51 d0       	rcall	.+162    	; 0x756 <_ZN4UART8SendCharEc>
+ 780:	61 e0       	ldi	r22, 0x01	; 1
+ 782:	ce 01       	movw	r24, r28
+ 784:	51 d0       	rcall	.+162    	; 0x828 <_ZN4UART8SendCharEc>
 		uartDriver_.SendChar(0xFF);
- 6b4:	6f ef       	ldi	r22, 0xFF	; 255
- 6b6:	ce 01       	movw	r24, r28
- 6b8:	4e d0       	rcall	.+156    	; 0x756 <_ZN4UART8SendCharEc>
+ 786:	6f ef       	ldi	r22, 0xFF	; 255
+ 788:	ce 01       	movw	r24, r28
+ 78a:	4e d0       	rcall	.+156    	; 0x828 <_ZN4UART8SendCharEc>
 		uartDriver_.SendChar(0xEF);
- 6ba:	6f ee       	ldi	r22, 0xEF	; 239
- 6bc:	ce 01       	movw	r24, r28
- 6be:	4b d0       	rcall	.+150    	; 0x756 <_ZN4UART8SendCharEc>
- 6c0:	6f ee       	ldi	r22, 0xEF	; 239
+ 78c:	6f ee       	ldi	r22, 0xEF	; 239
+ 78e:	ce 01       	movw	r24, r28
+ 790:	4b d0       	rcall	.+150    	; 0x828 <_ZN4UART8SendCharEc>
+ 792:	6f ee       	ldi	r22, 0xEF	; 239
 		uartDriver_.SendChar(0xEF);
- 6c2:	ce 01       	movw	r24, r28
- 6c4:	48 d0       	rcall	.+144    	; 0x756 <_ZN4UART8SendCharEc>
- 6c6:	02 30       	cpi	r16, 0x02	; 2
+ 794:	ce 01       	movw	r24, r28
+ 796:	48 d0       	rcall	.+144    	; 0x828 <_ZN4UART8SendCharEc>
+ 798:	02 30       	cpi	r16, 0x02	; 2
 	}
 	if (sound == 2) {
- 6c8:	11 05       	cpc	r17, r1
- 6ca:	c1 f4       	brne	.+48     	; 0x6fc <_ZN5Sound9playSoundEi+0x76>
+ 79a:	11 05       	cpc	r17, r1
+ 79c:	c1 f4       	brne	.+48     	; 0x7ce <_ZN5Sound9playSoundEi+0x76>
 		//PLAY REFLEKSBRIK SOUND
 		uartDriver_.SendChar(0x7E);
- 6cc:	6e e7       	ldi	r22, 0x7E	; 126
- 6ce:	ce 01       	movw	r24, r28
- 6d0:	42 d0       	rcall	.+132    	; 0x756 <_ZN4UART8SendCharEc>
+ 79e:	6e e7       	ldi	r22, 0x7E	; 126
+ 7a0:	ce 01       	movw	r24, r28
+ 7a2:	42 d0       	rcall	.+132    	; 0x828 <_ZN4UART8SendCharEc>
 		uartDriver_.SendChar(0x0F);
- 6d2:	6f e0       	ldi	r22, 0x0F	; 15
- 6d4:	ce 01       	movw	r24, r28
- 6d6:	3f d0       	rcall	.+126    	; 0x756 <_ZN4UART8SendCharEc>
+ 7a4:	6f e0       	ldi	r22, 0x0F	; 15
+ 7a6:	ce 01       	movw	r24, r28
+ 7a8:	3f d0       	rcall	.+126    	; 0x828 <_ZN4UART8SendCharEc>
 		uartDriver_.SendChar(0x00);
- 6d8:	60 e0       	ldi	r22, 0x00	; 0
- 6da:	ce 01       	movw	r24, r28
- 6dc:	3c d0       	rcall	.+120    	; 0x756 <_ZN4UART8SendCharEc>
+ 7aa:	60 e0       	ldi	r22, 0x00	; 0
+ 7ac:	ce 01       	movw	r24, r28
+ 7ae:	3c d0       	rcall	.+120    	; 0x828 <_ZN4UART8SendCharEc>
 		uartDriver_.SendChar(0x01);
- 6de:	61 e0       	ldi	r22, 0x01	; 1
- 6e0:	ce 01       	movw	r24, r28
- 6e2:	39 d0       	rcall	.+114    	; 0x756 <_ZN4UART8SendCharEc>
+ 7b0:	61 e0       	ldi	r22, 0x01	; 1
+ 7b2:	ce 01       	movw	r24, r28
+ 7b4:	39 d0       	rcall	.+114    	; 0x828 <_ZN4UART8SendCharEc>
 		uartDriver_.SendChar(0x02);
- 6e4:	62 e0       	ldi	r22, 0x02	; 2
- 6e6:	ce 01       	movw	r24, r28
- 6e8:	36 d0       	rcall	.+108    	; 0x756 <_ZN4UART8SendCharEc>
- 6ea:	6f ef       	ldi	r22, 0xFF	; 255
+ 7b6:	62 e0       	ldi	r22, 0x02	; 2
+ 7b8:	ce 01       	movw	r24, r28
+ 7ba:	36 d0       	rcall	.+108    	; 0x828 <_ZN4UART8SendCharEc>
+ 7bc:	6f ef       	ldi	r22, 0xFF	; 255
 		uartDriver_.SendChar(0xFF);
- 6ec:	ce 01       	movw	r24, r28
- 6ee:	33 d0       	rcall	.+102    	; 0x756 <_ZN4UART8SendCharEc>
- 6f0:	6e ee       	ldi	r22, 0xEE	; 238
+ 7be:	ce 01       	movw	r24, r28
+ 7c0:	33 d0       	rcall	.+102    	; 0x828 <_ZN4UART8SendCharEc>
+ 7c2:	6e ee       	ldi	r22, 0xEE	; 238
 		uartDriver_.SendChar(0xEE);
- 6f2:	ce 01       	movw	r24, r28
- 6f4:	30 d0       	rcall	.+96     	; 0x756 <_ZN4UART8SendCharEc>
- 6f6:	6f ee       	ldi	r22, 0xEF	; 239
+ 7c4:	ce 01       	movw	r24, r28
+ 7c6:	30 d0       	rcall	.+96     	; 0x828 <_ZN4UART8SendCharEc>
+ 7c8:	6f ee       	ldi	r22, 0xEF	; 239
 		uartDriver_.SendChar(0xEF);
- 6f8:	ce 01       	movw	r24, r28
- 6fa:	2d d0       	rcall	.+90     	; 0x756 <_ZN4UART8SendCharEc>
- 6fc:	03 30       	cpi	r16, 0x03	; 3
+ 7ca:	ce 01       	movw	r24, r28
+ 7cc:	2d d0       	rcall	.+90     	; 0x828 <_ZN4UART8SendCharEc>
+ 7ce:	03 30       	cpi	r16, 0x03	; 3
 	}
 	if (sound == 3) {
- 6fe:	11 05       	cpc	r17, r1
- 700:	c1 f4       	brne	.+48     	; 0x732 <_ZN5Sound9playSoundEi+0xac>
+ 7d0:	11 05       	cpc	r17, r1
+ 7d2:	c1 f4       	brne	.+48     	; 0x804 <_ZN5Sound9playSoundEi+0xac>
 		//PLAY STOP SOUND
 		uartDriver_.SendChar(0x7E);
- 702:	6e e7       	ldi	r22, 0x7E	; 126
- 704:	ce 01       	movw	r24, r28
- 706:	27 d0       	rcall	.+78     	; 0x756 <_ZN4UART8SendCharEc>
+ 7d4:	6e e7       	ldi	r22, 0x7E	; 126
+ 7d6:	ce 01       	movw	r24, r28
+ 7d8:	27 d0       	rcall	.+78     	; 0x828 <_ZN4UART8SendCharEc>
 		uartDriver_.SendChar(0x0F);
- 708:	6f e0       	ldi	r22, 0x0F	; 15
- 70a:	ce 01       	movw	r24, r28
- 70c:	24 d0       	rcall	.+72     	; 0x756 <_ZN4UART8SendCharEc>
+ 7da:	6f e0       	ldi	r22, 0x0F	; 15
+ 7dc:	ce 01       	movw	r24, r28
+ 7de:	24 d0       	rcall	.+72     	; 0x828 <_ZN4UART8SendCharEc>
 		uartDriver_.SendChar(0x00);
- 70e:	60 e0       	ldi	r22, 0x00	; 0
- 710:	ce 01       	movw	r24, r28
- 712:	21 d0       	rcall	.+66     	; 0x756 <_ZN4UART8SendCharEc>
- 714:	61 e0       	ldi	r22, 0x01	; 1
+ 7e0:	60 e0       	ldi	r22, 0x00	; 0
+ 7e2:	ce 01       	movw	r24, r28
+ 7e4:	21 d0       	rcall	.+66     	; 0x828 <_ZN4UART8SendCharEc>
+ 7e6:	61 e0       	ldi	r22, 0x01	; 1
 		uartDriver_.SendChar(0x01);
- 716:	ce 01       	movw	r24, r28
- 718:	1e d0       	rcall	.+60     	; 0x756 <_ZN4UART8SendCharEc>
- 71a:	63 e0       	ldi	r22, 0x03	; 3
- 71c:	ce 01       	movw	r24, r28
+ 7e8:	ce 01       	movw	r24, r28
+ 7ea:	1e d0       	rcall	.+60     	; 0x828 <_ZN4UART8SendCharEc>
+ 7ec:	63 e0       	ldi	r22, 0x03	; 3
+ 7ee:	ce 01       	movw	r24, r28
 		uartDriver_.SendChar(0x03);
- 71e:	1b d0       	rcall	.+54     	; 0x756 <_ZN4UART8SendCharEc>
- 720:	6f ef       	ldi	r22, 0xFF	; 255
- 722:	ce 01       	movw	r24, r28
- 724:	18 d0       	rcall	.+48     	; 0x756 <_ZN4UART8SendCharEc>
+ 7f0:	1b d0       	rcall	.+54     	; 0x828 <_ZN4UART8SendCharEc>
+ 7f2:	6f ef       	ldi	r22, 0xFF	; 255
+ 7f4:	ce 01       	movw	r24, r28
+ 7f6:	18 d0       	rcall	.+48     	; 0x828 <_ZN4UART8SendCharEc>
 		uartDriver_.SendChar(0xFF);
- 726:	6d ee       	ldi	r22, 0xED	; 237
- 728:	ce 01       	movw	r24, r28
- 72a:	15 d0       	rcall	.+42     	; 0x756 <_ZN4UART8SendCharEc>
- 72c:	6f ee       	ldi	r22, 0xEF	; 239
+ 7f8:	6d ee       	ldi	r22, 0xED	; 237
+ 7fa:	ce 01       	movw	r24, r28
+ 7fc:	15 d0       	rcall	.+42     	; 0x828 <_ZN4UART8SendCharEc>
+ 7fe:	6f ee       	ldi	r22, 0xEF	; 239
 		uartDriver_.SendChar(0xED);
- 72e:	ce 01       	movw	r24, r28
- 730:	12 d0       	rcall	.+36     	; 0x756 <_ZN4UART8SendCharEc>
- 732:	df 91       	pop	r29
- 734:	cf 91       	pop	r28
+ 800:	ce 01       	movw	r24, r28
+ 802:	12 d0       	rcall	.+36     	; 0x828 <_ZN4UART8SendCharEc>
+ 804:	df 91       	pop	r29
+ 806:	cf 91       	pop	r28
 		uartDriver_.SendChar(0xEF);
- 736:	1f 91       	pop	r17
- 738:	0f 91       	pop	r16
- 73a:	08 95       	ret
+ 808:	1f 91       	pop	r17
+ 80a:	0f 91       	pop	r16
+ 80c:	08 95       	ret
 
-0000073c <_ZN4UARTC1Ev>:
- 73c:	88 e6       	ldi	r24, 0x68	; 104
+0000080e <_ZN4UARTC1Ev>:
+ 80e:	88 e6       	ldi	r24, 0x68	; 104
 	}
 }
- 73e:	90 e0       	ldi	r25, 0x00	; 0
- 740:	90 93 d5 00 	sts	0x00D5, r25	; 0x8000d5 <__TEXT_REGION_LENGTH__+0x7c00d5>
- 744:	80 93 d4 00 	sts	0x00D4, r24	; 0x8000d4 <__TEXT_REGION_LENGTH__+0x7c00d4>
+ 810:	90 e0       	ldi	r25, 0x00	; 0
+ 812:	90 93 d5 00 	sts	0x00D5, r25	; 0x8000d5 <__TEXT_REGION_LENGTH__+0x7c00d5>
+ 816:	80 93 d4 00 	sts	0x00D4, r24	; 0x8000d4 <__TEXT_REGION_LENGTH__+0x7c00d4>
 {
 	while (!CharReady()) {}
 	char Text = UDR2;
 	return Text;
 
 }
- 748:	88 e1       	ldi	r24, 0x18	; 24
- 74a:	80 93 d1 00 	sts	0x00D1, r24	; 0x8000d1 <__TEXT_REGION_LENGTH__+0x7c00d1>
- 74e:	86 e0       	ldi	r24, 0x06	; 6
- 750:	80 93 d2 00 	sts	0x00D2, r24	; 0x8000d2 <__TEXT_REGION_LENGTH__+0x7c00d2>
- 754:	08 95       	ret
+ 81a:	88 e1       	ldi	r24, 0x18	; 24
+ 81c:	80 93 d1 00 	sts	0x00D1, r24	; 0x8000d1 <__TEXT_REGION_LENGTH__+0x7c00d1>
+ 820:	86 e0       	ldi	r24, 0x06	; 6
+ 822:	80 93 d2 00 	sts	0x00D2, r24	; 0x8000d2 <__TEXT_REGION_LENGTH__+0x7c00d2>
+ 826:	08 95       	ret
 
-00000756 <_ZN4UART8SendCharEc>:
+00000828 <_ZN4UART8SendCharEc>:
 Parameter :
 Tegn : Character for sending.
 *************************************************************************/
 void UART::SendChar(char Tegn)
 {
 	while ((UCSR2A & 0b00100000) == 0) {}
- 756:	80 91 d0 00 	lds	r24, 0x00D0	; 0x8000d0 <__TEXT_REGION_LENGTH__+0x7c00d0>
- 75a:	85 ff       	sbrs	r24, 5
- 75c:	fc cf       	rjmp	.-8      	; 0x756 <_ZN4UART8SendCharEc>
+ 828:	80 91 d0 00 	lds	r24, 0x00D0	; 0x8000d0 <__TEXT_REGION_LENGTH__+0x7c00d0>
+ 82c:	85 ff       	sbrs	r24, 5
+ 82e:	fc cf       	rjmp	.-8      	; 0x828 <_ZN4UART8SendCharEc>
 	UDR2 = Tegn;
- 75e:	60 93 d6 00 	sts	0x00D6, r22	; 0x8000d6 <__TEXT_REGION_LENGTH__+0x7c00d6>
- 762:	08 95       	ret
+ 830:	60 93 d6 00 	sts	0x00D6, r22	; 0x8000d6 <__TEXT_REGION_LENGTH__+0x7c00d6>
+ 834:	08 95       	ret
 
-00000764 <__tablejump2__>:
- 764:	ee 0f       	add	r30, r30
- 766:	ff 1f       	adc	r31, r31
- 768:	88 1f       	adc	r24, r24
- 76a:	8b bf       	out	0x3b, r24	; 59
- 76c:	07 90       	elpm	r0, Z+
- 76e:	f6 91       	elpm	r31, Z
- 770:	e0 2d       	mov	r30, r0
- 772:	19 94       	eijmp
+00000836 <__tablejump2__>:
+ 836:	ee 0f       	add	r30, r30
+ 838:	ff 1f       	adc	r31, r31
+ 83a:	88 1f       	adc	r24, r24
+ 83c:	8b bf       	out	0x3b, r24	; 59
+ 83e:	07 90       	elpm	r0, Z+
+ 840:	f6 91       	elpm	r31, Z
+ 842:	e0 2d       	mov	r30, r0
+ 844:	19 94       	eijmp
 
-00000774 <_exit>:
- 774:	f8 94       	cli
+00000846 <_exit>:
+ 846:	f8 94       	cli
 
-00000776 <__stop_program>:
- 776:	ff cf       	rjmp	.-2      	; 0x776 <__stop_program>
+00000848 <__stop_program>:
+ 848:	ff cf       	rjmp	.-2      	; 0x848 <__stop_program>

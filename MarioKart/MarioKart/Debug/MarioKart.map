@@ -2,12 +2,12 @@ Archive member included to satisfy reference by file (symbol)
 
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
                               C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o (exit)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
+                              DriveController/DriveControl.o (__tablejump2__)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
                               main.o (__do_clear_bss)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_ctors.o)
                               main.o (__do_global_ctors)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
-                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_ctors.o) (__tablejump2__)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(itoa_ncheck.o)
                               SoundDriver/UART.o (__itoa_ncheck)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(utoa_ncheck.o)
@@ -25,15 +25,9 @@ Discarded input sections
  .text          0x00000000        0x0 LightDriver/BackLight.o
  .data          0x00000000        0x0 LightDriver/BackLight.o
  .bss           0x00000000        0x0 LightDriver/BackLight.o
- .text._ZN9BackLight14backLightBrakeEv
-                0x00000000        0xe LightDriver/BackLight.o
- .text._ZN9BackLight12backLightOffEv
-                0x00000000        0xa LightDriver/BackLight.o
  .text          0x00000000        0x0 LightDriver/FrontLight.o
  .data          0x00000000        0x0 LightDriver/FrontLight.o
  .bss           0x00000000        0x0 LightDriver/FrontLight.o
- .text._ZN10FrontLight13frontLightOffEv
-                0x00000000        0xa LightDriver/FrontLight.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
@@ -70,6 +64,21 @@ Discarded input sections
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
  .text.libgcc.fixed
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
@@ -102,21 +111,6 @@ Discarded input sections
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_ctors.o)
  .text.libgcc.fixed
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_ctors.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
- .text.libgcc.mul
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
- .text.libgcc.div
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
- .text.libgcc.prologue
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
- .text.libgcc.builtins
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
- .text.libgcc.fmul
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
- .text.libgcc.fixed
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(itoa_ncheck.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(itoa_ncheck.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(itoa_ncheck.o)
@@ -267,211 +261,222 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x778
+.text           0x00000000      0x84a
  *(.vectors)
  .vectors       0x00000000       0xe4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
                 0x00000000                __vector_default
                 0x00000000                __vectors
  *(.vectors)
  *(.progmem.gcc*)
-                0x000000e4                . = ALIGN (0x2)
-                0x000000e4                __trampolines_start = .
+ .progmem.gcc_sw_table._ZN12DriveControl16reflexControllerEi
+                0x000000e4       0x16 DriveController/DriveControl.o
+                0x000000fa                . = ALIGN (0x2)
+                0x000000fa                __trampolines_start = .
  *(.trampolines)
- .trampolines   0x000000e4        0x0 linker stubs
+ .trampolines   0x000000fa        0x0 linker stubs
  *(.trampolines*)
-                0x000000e4                __trampolines_end = .
+                0x000000fa                __trampolines_end = .
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
  *(.progmem*)
-                0x000000e4                . = ALIGN (0x2)
+                0x000000fa                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x000000e4                __ctors_start = .
+                0x000000fa                __ctors_start = .
  *(.ctors)
- .ctors         0x000000e4        0x2 main.o
-                0x000000e6                __ctors_end = .
-                0x000000e6                __dtors_start = .
+ .ctors         0x000000fa        0x2 main.o
+                0x000000fc                __ctors_end = .
+                0x000000fc                __dtors_start = .
  *(.dtors)
-                0x000000e6                __dtors_end = .
+                0x000000fc                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x000000e6        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
-                0x000000e6                __init
+ .init0         0x000000fc        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
+                0x000000fc                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x000000e6       0x10 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
+ .init2         0x000000fc       0x10 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x000000f6       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
-                0x000000f6                __do_clear_bss
+ .init4         0x0000010c       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
+                0x0000010c                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
  *(.init6)
- .init6         0x00000106       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_ctors.o)
-                0x00000106                __do_global_ctors
+ .init6         0x0000011c       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_ctors.o)
+                0x0000011c                __do_global_ctors
  *(.init6)
  *(.init7)
  *(.init7)
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00000124        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
+ .init9         0x0000013a        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
  *(.init9)
  *(.text)
- .text          0x00000128        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
-                0x00000128                __vector_38
-                0x00000128                __vector_22
-                0x00000128                __vector_28
-                0x00000128                __vector_1
-                0x00000128                __vector_32
-                0x00000128                __vector_34
-                0x00000128                __vector_24
-                0x00000128                __vector_12
-                0x00000128                __vector_55
-                0x00000128                __vector_46
-                0x00000128                __bad_interrupt
-                0x00000128                __vector_6
-                0x00000128                __vector_31
-                0x00000128                __vector_35
-                0x00000128                __vector_39
-                0x00000128                __vector_23
-                0x00000128                __vector_30
-                0x00000128                __vector_45
-                0x00000128                __vector_25
-                0x00000128                __vector_11
-                0x00000128                __vector_54
-                0x00000128                __vector_13
-                0x00000128                __vector_17
-                0x00000128                __vector_19
-                0x00000128                __vector_56
-                0x00000128                __vector_7
-                0x00000128                __vector_49
-                0x00000128                __vector_41
-                0x00000128                __vector_43
-                0x00000128                __vector_27
-                0x00000128                __vector_5
-                0x00000128                __vector_33
-                0x00000128                __vector_47
-                0x00000128                __vector_52
-                0x00000128                __vector_37
-                0x00000128                __vector_44
-                0x00000128                __vector_51
-                0x00000128                __vector_9
-                0x00000128                __vector_2
-                0x00000128                __vector_21
-                0x00000128                __vector_15
-                0x00000128                __vector_36
-                0x00000128                __vector_29
-                0x00000128                __vector_40
-                0x00000128                __vector_8
-                0x00000128                __vector_26
-                0x00000128                __vector_48
-                0x00000128                __vector_14
-                0x00000128                __vector_53
-                0x00000128                __vector_10
-                0x00000128                __vector_50
-                0x00000128                __vector_16
-                0x00000128                __vector_18
-                0x00000128                __vector_20
-                0x00000128                __vector_42
-                0x0000012a                . = ALIGN (0x2)
+ .text          0x0000013e        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
+                0x0000013e                __vector_38
+                0x0000013e                __vector_22
+                0x0000013e                __vector_28
+                0x0000013e                __vector_1
+                0x0000013e                __vector_32
+                0x0000013e                __vector_34
+                0x0000013e                __vector_24
+                0x0000013e                __vector_12
+                0x0000013e                __vector_55
+                0x0000013e                __vector_46
+                0x0000013e                __bad_interrupt
+                0x0000013e                __vector_6
+                0x0000013e                __vector_31
+                0x0000013e                __vector_35
+                0x0000013e                __vector_39
+                0x0000013e                __vector_23
+                0x0000013e                __vector_30
+                0x0000013e                __vector_45
+                0x0000013e                __vector_25
+                0x0000013e                __vector_11
+                0x0000013e                __vector_54
+                0x0000013e                __vector_13
+                0x0000013e                __vector_17
+                0x0000013e                __vector_19
+                0x0000013e                __vector_56
+                0x0000013e                __vector_7
+                0x0000013e                __vector_49
+                0x0000013e                __vector_41
+                0x0000013e                __vector_43
+                0x0000013e                __vector_27
+                0x0000013e                __vector_5
+                0x0000013e                __vector_33
+                0x0000013e                __vector_47
+                0x0000013e                __vector_52
+                0x0000013e                __vector_37
+                0x0000013e                __vector_44
+                0x0000013e                __vector_51
+                0x0000013e                __vector_9
+                0x0000013e                __vector_2
+                0x0000013e                __vector_21
+                0x0000013e                __vector_15
+                0x0000013e                __vector_36
+                0x0000013e                __vector_29
+                0x0000013e                __vector_40
+                0x0000013e                __vector_8
+                0x0000013e                __vector_26
+                0x0000013e                __vector_48
+                0x0000013e                __vector_14
+                0x0000013e                __vector_53
+                0x0000013e                __vector_10
+                0x0000013e                __vector_50
+                0x0000013e                __vector_16
+                0x0000013e                __vector_18
+                0x0000013e                __vector_20
+                0x0000013e                __vector_42
+                0x00000140                . = ALIGN (0x2)
  *(.text.*)
  .text._ZN12DriveControlC2Ev
-                0x0000012a       0x6e DriveController/DriveControl.o
-                0x0000012a                _ZN12DriveControlC1Ev
-                0x0000012a                _ZN12DriveControlC2Ev
+                0x00000140       0x6e DriveController/DriveControl.o
+                0x00000140                _ZN12DriveControlC1Ev
+                0x00000140                _ZN12DriveControlC2Ev
  .text._ZN12DriveControl16reflexControllerEi
-                0x00000198       0x7e DriveController/DriveControl.o
-                0x00000198                _ZN12DriveControl16reflexControllerEi
+                0x000001ae      0x118 DriveController/DriveControl.o
+                0x000001ae                _ZN12DriveControl16reflexControllerEi
  .text._ZN12DriveControl17startDriveControlEv
-                0x00000216       0x3e DriveController/DriveControl.o
-                0x00000216                _ZN12DriveControl17startDriveControlEv
+                0x000002c6       0x3e DriveController/DriveControl.o
+                0x000002c6                _ZN12DriveControl17startDriveControlEv
  .text._ZN9BackLightC2Ev
-                0x00000254       0x14 LightDriver/BackLight.o
-                0x00000254                _ZN9BackLightC1Ev
-                0x00000254                _ZN9BackLightC2Ev
+                0x00000304       0x14 LightDriver/BackLight.o
+                0x00000304                _ZN9BackLightC1Ev
+                0x00000304                _ZN9BackLightC2Ev
  .text._ZN9BackLight14backLightDriveEv
-                0x00000268        0xe LightDriver/BackLight.o
-                0x00000268                _ZN9BackLight14backLightDriveEv
+                0x00000318        0xe LightDriver/BackLight.o
+                0x00000318                _ZN9BackLight14backLightDriveEv
+ .text._ZN9BackLight14backLightBrakeEv
+                0x00000326        0xe LightDriver/BackLight.o
+                0x00000326                _ZN9BackLight14backLightBrakeEv
+ .text._ZN9BackLight12backLightOffEv
+                0x00000334        0xa LightDriver/BackLight.o
+                0x00000334                _ZN9BackLight12backLightOffEv
  .text._ZN10FrontLightC2Ev
-                0x00000276       0x14 LightDriver/FrontLight.o
-                0x00000276                _ZN10FrontLightC2Ev
-                0x00000276                _ZN10FrontLightC1Ev
+                0x0000033e       0x14 LightDriver/FrontLight.o
+                0x0000033e                _ZN10FrontLightC2Ev
+                0x0000033e                _ZN10FrontLightC1Ev
  .text._ZN10FrontLight12frontLightOnEv
-                0x0000028a        0xe LightDriver/FrontLight.o
-                0x0000028a                _ZN10FrontLight12frontLightOnEv
+                0x00000352        0xe LightDriver/FrontLight.o
+                0x00000352                _ZN10FrontLight12frontLightOnEv
+ .text._ZN10FrontLight13frontLightOffEv
+                0x00000360        0xa LightDriver/FrontLight.o
+                0x00000360                _ZN10FrontLight13frontLightOffEv
  .text._Z41__static_initialization_and_destruction_0ii
-                0x00000298       0x12 main.o
+                0x0000036a       0x12 main.o
  .text._Z18startReflexSensorsv
-                0x000002aa       0x12 main.o
-                0x000002aa                _Z18startReflexSensorsv
+                0x0000037c       0x12 main.o
+                0x0000037c                _Z18startReflexSensorsv
  .text._Z17stopReflexSensorsv
-                0x000002bc       0x12 main.o
-                0x000002bc                _Z17stopReflexSensorsv
+                0x0000038e       0x12 main.o
+                0x0000038e                _Z17stopReflexSensorsv
  .text._Z6reflexv
-                0x000002ce       0x42 main.o
-                0x000002ce                _Z6reflexv
+                0x000003a0       0x42 main.o
+                0x000003a0                _Z6reflexv
  .text.__vector_3
-                0x00000310       0x4e main.o
-                0x00000310                __vector_3
+                0x000003e2       0x4e main.o
+                0x000003e2                __vector_3
  .text.__vector_4
-                0x0000035e       0x4e main.o
-                0x0000035e                __vector_4
+                0x00000430       0x4e main.o
+                0x00000430                __vector_4
  .text._Z6ledfunv
-                0x000003ac       0x3a main.o
-                0x000003ac                _Z6ledfunv
+                0x0000047e       0x3a main.o
+                0x0000047e                _Z6ledfunv
  .text._Z16awaitStartButtonv
-                0x000003e6        0xa main.o
-                0x000003e6                _Z16awaitStartButtonv
- .text.main     0x000003f0       0x22 main.o
-                0x000003f0                main
+                0x000004b8        0xa main.o
+                0x000004b8                _Z16awaitStartButtonv
+ .text.main     0x000004c2       0x22 main.o
+                0x000004c2                main
  .text._GLOBAL__sub_I_reflexCount
-                0x00000412        0xc main.o
+                0x000004e4        0xc main.o
  .text._Z8delay_msi
-                0x0000041e       0x1e MotorDriver/Motor.o
-                0x0000041e                _Z8delay_msi
+                0x000004f0       0x1e MotorDriver/Motor.o
+                0x000004f0                _Z8delay_msi
  .text._ZN5MotorC2Ev
-                0x0000043c       0x3c MotorDriver/Motor.o
-                0x0000043c                _ZN5MotorC2Ev
-                0x0000043c                _ZN5MotorC1Ev
+                0x0000050e       0x3c MotorDriver/Motor.o
+                0x0000050e                _ZN5MotorC2Ev
+                0x0000050e                _ZN5MotorC1Ev
  .text._ZN5Motor14driveBackwardsEii
-                0x00000478       0xb6 MotorDriver/Motor.o
-                0x00000478                _ZN5Motor14driveBackwardsEii
+                0x0000054a       0xb6 MotorDriver/Motor.o
+                0x0000054a                _ZN5Motor14driveBackwardsEii
  .text._ZN5Motor12driveForwardEii
-                0x0000052e       0xb8 MotorDriver/Motor.o
-                0x0000052e                _ZN5Motor12driveForwardEii
+                0x00000600       0xb8 MotorDriver/Motor.o
+                0x00000600                _ZN5Motor12driveForwardEii
  .text._ZN5Motor9driveStopEi
-                0x000005e6       0x1c MotorDriver/Motor.o
-                0x000005e6                _ZN5Motor9driveStopEi
+                0x000006b8       0x1c MotorDriver/Motor.o
+                0x000006b8                _ZN5Motor9driveStopEi
  .text._ZN5SoundC2Ev
-                0x00000602       0x84 SoundDriver/Sound.o
-                0x00000602                _ZN5SoundC2Ev
-                0x00000602                _ZN5SoundC1Ev
+                0x000006d4       0x84 SoundDriver/Sound.o
+                0x000006d4                _ZN5SoundC2Ev
+                0x000006d4                _ZN5SoundC1Ev
  .text._ZN5Sound9playSoundEi
-                0x00000686       0xb6 SoundDriver/Sound.o
-                0x00000686                _ZN5Sound9playSoundEi
+                0x00000758       0xb6 SoundDriver/Sound.o
+                0x00000758                _ZN5Sound9playSoundEi
  .text._ZN4UARTC2Ev
-                0x0000073c       0x1a SoundDriver/UART.o
-                0x0000073c                _ZN4UARTC1Ev
-                0x0000073c                _ZN4UARTC2Ev
+                0x0000080e       0x1a SoundDriver/UART.o
+                0x0000080e                _ZN4UARTC1Ev
+                0x0000080e                _ZN4UARTC2Ev
  .text._ZN4UART8SendCharEc
-                0x00000756        0xe SoundDriver/UART.o
-                0x00000756                _ZN4UART8SendCharEc
- .text.libgcc   0x00000764       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
-                0x00000764                __tablejump2__
-                0x00000774                . = ALIGN (0x2)
+                0x00000828        0xe SoundDriver/UART.o
+                0x00000828                _ZN4UART8SendCharEc
+ .text.libgcc   0x00000836       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
+                0x00000836                __tablejump2__
+                0x00000846                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000774        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
-                0x00000774                _exit
-                0x00000774                exit
+ .fini9         0x00000846        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+                0x00000846                _exit
+                0x00000846                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -490,11 +495,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000774        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+ .fini0         0x00000846        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000778                _etext = .
+                0x0000084a                _etext = .
 
-.data           0x00800200        0x0 load address 0x00000778
+.data           0x00800200        0x0 load address 0x0000084a
                 [!provide]                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -518,8 +523,8 @@ END GROUP
                 0x00800209                reflexCount
  *(COMMON)
                 0x0080020b                PROVIDE (__bss_end, .)
-                0x00000778                __data_load_start = LOADADDR (.data)
-                0x00000778                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000084a                __data_load_start = LOADADDR (.data)
+                0x0000084a                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x0080020b        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -616,16 +621,16 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x2c62
+.debug_info     0x00000000     0x2e24
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0xbbc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_info    0x00000bbc      0x7a6 DriveController/DriveControl.o
- .debug_info    0x00001362      0x1a9 LightDriver/BackLight.o
- .debug_info    0x0000150b      0x162 LightDriver/FrontLight.o
- .debug_info    0x0000166d      0x6c5 main.o
- .debug_info    0x00001d32      0x45b MotorDriver/Motor.o
- .debug_info    0x0000218d      0x6f1 SoundDriver/Sound.o
- .debug_info    0x0000287e      0x3e4 SoundDriver/UART.o
+ .debug_info    0x00000bbc      0x968 DriveController/DriveControl.o
+ .debug_info    0x00001524      0x1a9 LightDriver/BackLight.o
+ .debug_info    0x000016cd      0x162 LightDriver/FrontLight.o
+ .debug_info    0x0000182f      0x6c5 main.o
+ .debug_info    0x00001ef4      0x45b MotorDriver/Motor.o
+ .debug_info    0x0000234f      0x6f1 SoundDriver/Sound.o
+ .debug_info    0x00002a40      0x3e4 SoundDriver/UART.o
 
 .debug_abbrev   0x00000000     0x1686
  *(.debug_abbrev)
@@ -638,26 +643,26 @@ END GROUP
  .debug_abbrev  0x00001317      0x17a SoundDriver/Sound.o
  .debug_abbrev  0x00001491      0x1f5 SoundDriver/UART.o
 
-.debug_line     0x00000000      0xefc
+.debug_line     0x00000000      0xf68
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x1fa C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_line    0x000001fa      0x299 DriveController/DriveControl.o
- .debug_line    0x00000493       0xb3 LightDriver/BackLight.o
- .debug_line    0x00000546       0x9f LightDriver/FrontLight.o
- .debug_line    0x000005e5      0x36e main.o
- .debug_line    0x00000953      0x2af MotorDriver/Motor.o
- .debug_line    0x00000c02      0x185 SoundDriver/Sound.o
- .debug_line    0x00000d87      0x175 SoundDriver/UART.o
+ .debug_line    0x000001fa      0x305 DriveController/DriveControl.o
+ .debug_line    0x000004ff       0xb3 LightDriver/BackLight.o
+ .debug_line    0x000005b2       0x9f LightDriver/FrontLight.o
+ .debug_line    0x00000651      0x36e main.o
+ .debug_line    0x000009bf      0x2af MotorDriver/Motor.o
+ .debug_line    0x00000c6e      0x185 SoundDriver/Sound.o
+ .debug_line    0x00000df3      0x175 SoundDriver/UART.o
 
-.debug_frame    0x00000000      0x41c
+.debug_frame    0x00000000      0x424
  *(.debug_frame)
- .debug_frame   0x00000000       0x78 DriveController/DriveControl.o
- .debug_frame   0x00000078       0x54 LightDriver/BackLight.o
- .debug_frame   0x000000cc       0x44 LightDriver/FrontLight.o
- .debug_frame   0x00000110      0x144 main.o
- .debug_frame   0x00000254       0xb4 MotorDriver/Motor.o
- .debug_frame   0x00000308       0x64 SoundDriver/Sound.o
- .debug_frame   0x0000036c       0xb0 SoundDriver/UART.o
+ .debug_frame   0x00000000       0x80 DriveController/DriveControl.o
+ .debug_frame   0x00000080       0x54 LightDriver/BackLight.o
+ .debug_frame   0x000000d4       0x44 LightDriver/FrontLight.o
+ .debug_frame   0x00000118      0x144 main.o
+ .debug_frame   0x0000025c       0xb4 MotorDriver/Motor.o
+ .debug_frame   0x00000310       0x64 SoundDriver/Sound.o
+ .debug_frame   0x00000374       0xb0 SoundDriver/UART.o
 
 .debug_str      0x00000000      0xbc8
  *(.debug_str)
@@ -677,15 +682,15 @@ END GROUP
  .debug_str     0x00000b66       0x62 SoundDriver/UART.o
                                 0x2bc (size before relaxing)
 
-.debug_loc      0x00000000      0xd29
+.debug_loc      0x00000000      0xd43
  *(.debug_loc)
- .debug_loc     0x00000000      0x217 DriveController/DriveControl.o
- .debug_loc     0x00000217       0x72 LightDriver/BackLight.o
- .debug_loc     0x00000289       0x4c LightDriver/FrontLight.o
- .debug_loc     0x000002d5      0x2ba main.o
- .debug_loc     0x0000058f      0x3c8 MotorDriver/Motor.o
- .debug_loc     0x00000957      0x14d SoundDriver/Sound.o
- .debug_loc     0x00000aa4      0x285 SoundDriver/UART.o
+ .debug_loc     0x00000000      0x231 DriveController/DriveControl.o
+ .debug_loc     0x00000231       0x72 LightDriver/BackLight.o
+ .debug_loc     0x000002a3       0x4c LightDriver/FrontLight.o
+ .debug_loc     0x000002ef      0x2ba main.o
+ .debug_loc     0x000005a9      0x3c8 MotorDriver/Motor.o
+ .debug_loc     0x00000971      0x14d SoundDriver/Sound.o
+ .debug_loc     0x00000abe      0x285 SoundDriver/UART.o
 
 .debug_macinfo
  *(.debug_macinfo)
