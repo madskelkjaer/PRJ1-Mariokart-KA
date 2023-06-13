@@ -621,16 +621,16 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x2e24
+.debug_info     0x00000000     0x2e22
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0xbbc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_info    0x00000bbc      0x968 DriveController/DriveControl.o
- .debug_info    0x00001524      0x1a9 LightDriver/BackLight.o
- .debug_info    0x000016cd      0x162 LightDriver/FrontLight.o
- .debug_info    0x0000182f      0x6c5 main.o
- .debug_info    0x00001ef4      0x45b MotorDriver/Motor.o
- .debug_info    0x0000234f      0x6f1 SoundDriver/Sound.o
- .debug_info    0x00002a40      0x3e4 SoundDriver/UART.o
+ .debug_info    0x00000bbc      0x966 DriveController/DriveControl.o
+ .debug_info    0x00001522      0x1a9 LightDriver/BackLight.o
+ .debug_info    0x000016cb      0x162 LightDriver/FrontLight.o
+ .debug_info    0x0000182d      0x6c5 main.o
+ .debug_info    0x00001ef2      0x45b MotorDriver/Motor.o
+ .debug_info    0x0000234d      0x6f1 SoundDriver/Sound.o
+ .debug_info    0x00002a3e      0x3e4 SoundDriver/UART.o
 
 .debug_abbrev   0x00000000     0x1686
  *(.debug_abbrev)

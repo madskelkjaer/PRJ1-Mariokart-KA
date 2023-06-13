@@ -57,10 +57,10 @@ void DriveControl::reflexController(int reflexCount)
 			motor_.driveForward(10, 10);
 			break;
 		case 4:
-			motor_.driveForward(50, 10);
+			motor_.driveForward(30, 10);
 			break;
 		case 5:
-			motor_.driveForward(40, 20);
+			motor_.driveForward(30, 20);
 			break;	
 		case 6:
 			backLight_.backLightBrake();

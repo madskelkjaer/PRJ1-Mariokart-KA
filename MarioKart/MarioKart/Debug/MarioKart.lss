@@ -15,19 +15,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   5 .debug_aranges 000001b0  00000000  00000000  00000930  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00002e24  00000000  00000000  00000ae0  2**0
+  6 .debug_info   00002e22  00000000  00000000  00000ae0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00001686  00000000  00000000  00003904  2**0
+  7 .debug_abbrev 00001686  00000000  00000000  00003902  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000f68  00000000  00000000  00004f8a  2**0
+  8 .debug_line   00000f68  00000000  00000000  00004f88  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00000424  00000000  00000000  00005ef4  2**2
+  9 .debug_frame  00000424  00000000  00000000  00005ef0  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000bc8  00000000  00000000  00006318  2**0
+ 10 .debug_str    00000bc8  00000000  00000000  00006314  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000d43  00000000  00000000  00006ee0  2**0
+ 11 .debug_loc    00000d43  00000000  00000000  00006edc  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000158  00000000  00000000  00007c23  2**0
+ 12 .debug_ranges 00000158  00000000  00000000  00007c1f  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -366,21 +366,21 @@ void DriveControl::reflexController(int reflexCount)
 			break;
  220:	4d c0       	rjmp	.+154    	; 0x2bc <_ZN12DriveControl16reflexControllerEi+0x10e>
 		case 4:
-			motor_.driveForward(50, 10);
+			motor_.driveForward(30, 10);
  222:	4a e0       	ldi	r20, 0x0A	; 10
  224:	50 e0       	ldi	r21, 0x00	; 0
- 226:	62 e3       	ldi	r22, 0x32	; 50
+ 226:	6e e1       	ldi	r22, 0x1E	; 30
  228:	70 e0       	ldi	r23, 0x00	; 0
  22a:	ce 01       	movw	r24, r28
  22c:	03 96       	adiw	r24, 0x03	; 3
  22e:	e8 d1       	rcall	.+976    	; 0x600 <_ZN5Motor12driveForwardEii>
 			break;
 		case 5:
-			motor_.driveForward(40, 20);
+			motor_.driveForward(30, 20);
  230:	45 c0       	rjmp	.+138    	; 0x2bc <_ZN12DriveControl16reflexControllerEi+0x10e>
  232:	44 e1       	ldi	r20, 0x14	; 20
  234:	50 e0       	ldi	r21, 0x00	; 0
- 236:	68 e2       	ldi	r22, 0x28	; 40
+ 236:	6e e1       	ldi	r22, 0x1E	; 30
  238:	70 e0       	ldi	r23, 0x00	; 0
  23a:	ce 01       	movw	r24, r28
  23c:	03 96       	adiw	r24, 0x03	; 3
@@ -722,8 +722,8 @@ void reflex() {
  3c6:	90 91 0a 02 	lds	r25, 0x020A	; 0x80020a <reflexCount+0x1>
  3ca:	85 b9       	out	0x05, r24	; 5
  3cc:	2f ef       	ldi	r18, 0xFF	; 255
- 3ce:	8f e0       	ldi	r24, 0x0F	; 15
- 3d0:	97 e2       	ldi	r25, 0x27	; 39
+ 3ce:	8c eb       	ldi	r24, 0xBC	; 188
+ 3d0:	9f e1       	ldi	r25, 0x1F	; 31
  3d2:	21 50       	subi	r18, 0x01	; 1
  3d4:	80 40       	sbci	r24, 0x00	; 0
  3d6:	90 40       	sbci	r25, 0x00	; 0
