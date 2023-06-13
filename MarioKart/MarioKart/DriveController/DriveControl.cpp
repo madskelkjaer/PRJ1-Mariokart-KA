@@ -50,6 +50,7 @@ void DriveControl::reflexController(int reflexCount)
 	{
 		case 1: // refleks 1
 			motor_.driveForward(50, 10);
+			break
 		case 2: // refleks 2
 			motor_.driveForward(100, 10);
 			break;
@@ -64,17 +65,19 @@ void DriveControl::reflexController(int reflexCount)
 			break;	
 		case 6:
 			backLight_.backLightBrake();
-			motor_.driveStop(8);
-			motor_.driveBackwards(50, 10);
+			motor_.driveStop(8); // Husk at lave brakelyset til at være tændt i 0.5 sekunder efter.
+			_delay_ms(500);
 			backLight_.backLightDrive();
+			motor_.driveBackwards(50, 10);
 			break;
 		case 7:
 			break;
 		case 8:
 			backLight_.backLightBrake();
 			motor_.driveStop(8);
-			motor_.driveForward(50, 10);
+			_delay_ms(500);
 			backLight_.backLightDrive();
+			motor_.driveForward(50, 10);
 			break;
 		case 9:
 			break;
@@ -84,9 +87,9 @@ void DriveControl::reflexController(int reflexCount)
 		case 11:
 			backLight_.backLightBrake();
 			motor_.driveStop(8);
+			_delay_ms(500);
 			backLight_.backLightOff();
 			frontLight_.frontLightOff();
-			
 			break;
 	}
 }
