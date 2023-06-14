@@ -11,9 +11,8 @@
 #include "Motor.h"
 
 #define MOTOR_PWM OCR0A
-#define MOTOR_DIRECTION OCR0B
-#define MOTOR_TIMER_A TCCR0A
-#define MOTOT_TIMER_B TCCR0B
+#define MOTOR_TIMER_A TCCR4A
+#define MOTOT_TIMER_B TCCR4B
 
 // _delay_ms() kan ikke tage en variabel som delay. Derfor en for loop hvor den venter 1ms for hver iteration.
 void delay_ms(int duration_ms) {
@@ -30,8 +29,8 @@ Motor::Motor()
 	// 10 bit
 	// 65 -> 64 prescaler (beregnet i cheatsheet)
 	// på port b
-	TCCR4A = 0b00100011; // tabel 17-4, clear OCnA on compare match.
-	TCCR4B = 0b00000011; // 64 prescaling
+	MOTOR_TIMER_A = 0b00100011; // tabel 17-4, clear OCnA on compare match.
+	MOTOT_TIMER_B = 0b00000011; // 64 prescaling
 	
 	// PWM på PH4
 	DDRH |= (1 << PH4);

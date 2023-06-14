@@ -29,7 +29,7 @@
 volatile unsigned int reflexCount = 0;
 
 // Interrupts til reflekssensorerne.
-ISR(REFLEKS1) { // Com pin 21
+ISR(REFLEKS1) {
 	// Reflekssensor 1
 	reflex();
 }
@@ -50,7 +50,7 @@ int main(void)
 	
 	awaitStartButton();
 	
-	EIMSK = EIMSK | 0b00000100;
+	EIMSK = EIMSK | REFLEKS_ENABLE_MASK;
 	EICRA |= 0b00110000;
 	sei();
 	
