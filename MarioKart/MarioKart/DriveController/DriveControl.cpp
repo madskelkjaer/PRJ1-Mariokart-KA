@@ -49,41 +49,36 @@ void DriveControl::reflexController(int reflexCount)
 	switch (reflexCount_)
 	{
 		case 1: // refleks 1
-			motor_.driveForward(50, 10);
 		case 2: // refleks 2
-			motor_.driveForward(100, 10);
+			motor_.driveForward(100, 8);
 			break;
 		case 3: // osv.
-			motor_.driveForward(10, 10);
+			motor_.driveForward(10, 8);
 			break;
 		case 4:
-			motor_.driveForward(30, 10);
+			motor_.driveForward(40, 10);
 			break;
 		case 5:
-			motor_.driveForward(30, 20);
 			break;	
 		case 6:
 			backLight_.backLightBrake();
-			motor_.driveStop(8);
-			motor_.driveBackwards(50, 10);
+			motor_.driveBackwards(40, 10);
 			backLight_.backLightDrive();
 			break;
 		case 7:
 			break;
 		case 8:
 			backLight_.backLightBrake();
-			motor_.driveStop(8);
-			motor_.driveForward(50, 10);
+			motor_.driveForward(55, 7);
 			backLight_.backLightDrive();
 			break;
 		case 9:
 			break;
 		case 10:
-			motor_.driveForward(50, 10);
 			break;
 		case 11:
 			backLight_.backLightBrake();
-			motor_.driveStop(8);
+			motor_.driveStop(2);
 			backLight_.backLightOff();
 			frontLight_.frontLightOff();
 			
@@ -101,5 +96,5 @@ void DriveControl::startDriveControl()
 	
 	frontLight_.frontLightOn();
 	backLight_.backLightDrive();
-	motor_.driveForward(70, 10);
+	motor_.driveForward(70, 1);
 }
