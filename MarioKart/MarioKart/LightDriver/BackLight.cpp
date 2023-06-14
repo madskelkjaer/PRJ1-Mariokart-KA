@@ -26,6 +26,9 @@ BackLight::BackLight()
 
 void BackLight::backLightDrive()
 {
+	if (OCR1B == 875) {
+		_delay_ms(500);
+	}
 	//Giver en middelstrøm på 10mA - beregning kommer senere
 	OCR1B = 195;
 }
@@ -38,6 +41,9 @@ void BackLight::backLightBrake()
 
 void BackLight::backLightOff()
 {
+	if (OCR1B == 875) {
+		_delay_ms(500);
+	}
 	//Duty cycle at 0% = 0mA = LightsOff
 	OCR1B = 0;
 }
